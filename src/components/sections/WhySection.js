@@ -40,7 +40,7 @@ const WhySection = ({ data }) => {
             <FeatureIcon>
               <img src={security} />
             </FeatureIcon>
-            <FeatureTitle>Security</FeatureTitle>
+            <FeatureTitle>Next-Level Security</FeatureTitle>
             <FeatureDescription>
               Static websites are more secure than any other type of site,
               because all data is hosted seperate from the site. No database, no
@@ -51,7 +51,7 @@ const WhySection = ({ data }) => {
             <FeatureIcon>
               <img src={scalability} />
             </FeatureIcon>
-            <FeatureTitle>Scalability</FeatureTitle>
+            <FeatureTitle> Infinite Scalability</FeatureTitle>
             <FeatureDescription>
               Large website? Not a problem. Static websites scale automatically
               to fit your usage, making scaling your site a breeze.
@@ -87,7 +87,7 @@ const FeatureIcon = styled.div`
     width: 95px;
     height: 95px;
     margin: 0 auto;
-    filter: hue-rotate(100deg) invert(10%);
+    filter: hue-rotate(80deg) invert(10%);
   }
 `;
 const FeatureTitle = styled.h3`

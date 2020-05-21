@@ -6,7 +6,7 @@ import Row from '../grid/Row';
 import { ThemeContext } from '../theme';
 import Spacer from '../Spacer';
 
-const FeaturesSection = ({ data }) => {
+const ServicesSection = ({ data }) => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -168,4 +168,4 @@ const FeatureSubtitle = styled.p`
   font-size: 18px !important;
 `;
 
-export default FeaturesSection;
+export default ServicesSection;

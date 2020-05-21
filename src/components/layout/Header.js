@@ -14,6 +14,7 @@ const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [width, setWidth] = useState(0);
+  const [scrollTop, setScrollTop] = useState(0);
 
   const theme = useContext(ThemeContext);
 
@@ -43,9 +44,12 @@ const Header = ({ siteTitle }) => {
     setAccountOpen(!accountOpen);
   };
 
+  console.log(scrollTop);
+
   const onScroll = () => {
+    setScrollTop(isBrowser() && window.scrollY);
     if (
-      window.scrollY > 40 &&
+      window.scrollY > 60 &&
       isBrowser() &&
       !window.location.pathname.includes('dashboard')
     ) {
@@ -69,6 +73,7 @@ const Header = ({ siteTitle }) => {
             }
             scrolled={scrolled}
             theme={theme}
+            scrollTop={scrollTop}
           >
             <div className='container'>
               <Flex theme={theme}>
@@ -199,9 +204,9 @@ const Header = ({ siteTitle }) => {
 
 const Wrapper = styled.header`
   .container {
-    padding-top: ${(props) => (props.scrolled ? '6px' : '32px')};
-    padding-bottom: ${(props) => (props.scrolled ? '6px' : '32px')};
-    transition: all 0.25s ease-out;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: ${(props) => (props.scrolled ? 0 : 30 - props.scrollTop / 2)}px;
   }
   z-index: 999999999999999;
   background: ${(props) => (props.scrolled ? 'white' : 'transparent')};
@@ -217,7 +222,7 @@ const Wrapper = styled.header`
   transition: color 0.25s ease-out;
 
   box-shadow: ${(props) => (props.scrolled ? props.theme.shadow.one : 'none')};
-  position: ${(props) => (props.dashboard ? 'absolute' : 'fixed')};
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
