@@ -2,13 +2,3 @@
   package = "netlify-plugin-gatsby-cache"
   package = "netlify-plugin-inline-critical-css"
   package = "netlify-plugin-minify-html"
-
-  # Specify which deploy contexts we'll minify HTML in.
-  # Supports any Deploy Contexts available in Netlify.
-  # https://docs.netlify.com/site-deploys/overview/#deploy-contexts
-  [plugins.inputs]
-    contexts = [
-      'production',
-      'branch-deploy',
-      'deploy-preview'
-    ]
