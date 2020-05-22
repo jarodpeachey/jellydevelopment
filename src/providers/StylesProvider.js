@@ -193,12 +193,12 @@ export const globals = css`
     }
     .tablet-mr-10 {
       @media (min-width: 769px) {
-        margin-right: 10%;
+        margin-right: 10% !important;
       }
     }
     .tablet-ml-10 {
       @media (min-width: 769px) {
-        margin-left: 10%;
+        margin-left: 10% !important;
       }
     }
   }
