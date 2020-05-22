@@ -61,13 +61,6 @@ const Header = ({ siteTitle }) => {
 
   return (
     <div>
-      <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
-        <defs>
-          <filter id='blur'>
-            <feGaussianBlur stdDeviation='5' />
-          </filter>
-        </defs>
-      </svg>
       {typeof window !== 'undefined' &&
       !window.location.pathname.includes('/signup') &&
       !window.location.pathname.includes('/login') ? (
