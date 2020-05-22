@@ -61,6 +61,13 @@ const Header = ({ siteTitle }) => {
 
   return (
     <div>
+      <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
+        <defs>
+          <filter id='blur'>
+            <feGaussianBlur stdDeviation='5' />
+          </filter>
+        </defs>
+      </svg>
       {typeof window !== 'undefined' &&
       !window.location.pathname.includes('/signup') &&
       !window.location.pathname.includes('/login') ? (
@@ -209,7 +216,7 @@ const Wrapper = styled.header`
     margin-top: ${(props) => (props.scrolled ? 0 : 30 - props.scrollTop / 2)}px;
   }
   z-index: 999999999999999;
-  background: ${(props) => (props.scrolled ? 'white' : 'transparent')};
+  background: ${(props) => (props.scrolled ? '#ffffffef' : 'transparent')};
   span,
   h1,
   h2,
@@ -219,7 +226,8 @@ const Wrapper = styled.header`
       props.scrolled ? props.theme.color.primary.main : 'white'} !important;
   }
 
-  transition: color 0.25s ease-out;
+  transition: ${(props) =>
+    props.scrolled ? 'background .3s ease-out' : 'none'};
 
   box-shadow: ${(props) => (props.scrolled ? props.theme.shadow.one : 'none')};
   position: fixed;
