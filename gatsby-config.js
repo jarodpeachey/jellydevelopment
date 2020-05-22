@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Jelly Development - Custom JAMstack Websites and Solutions',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      'JAMstack website development. Custom website solutions and integrations for businesses and developers.',
     author: '@gatsbyjs',
   },
   plugins: [
