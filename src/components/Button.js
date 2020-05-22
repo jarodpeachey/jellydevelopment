@@ -8,7 +8,7 @@ import { ThemeContext } from './theme';
 const Button = ({
   children,
   primary,
-  className,
+  className = '',
   small,
   margin,
   white,
@@ -49,7 +49,7 @@ const Button = ({
             error={error}
             small={small}
             medium={medium}
-            className={className ? className : ''}
+            className={className}
             right={right}
             left={left}
             center={center}
@@ -72,7 +72,7 @@ const Button = ({
           error={error}
           small={small}
           medium={medium}
-          className={className ? className : ''}
+          className={className}
           right={right}
           left={left}
           center={center}
@@ -97,7 +97,7 @@ const StyledButton = styled.button`
       ? `${props.theme.spacing.two}px ${props.theme.spacing.three}px`
       : `${props.theme.spacing.three}px ${props.theme.spacing.four}px`};
   border: none !important;
-  border-radius: 15px;
+  border-radius: 5px;
   text-transform: ${(props) =>
     !props.gray && !props.error && 'uppercase'} !important;
   cursor: ${(props) => (props.disabled ? 'initial' : 'pointer')} !important;
@@ -144,10 +144,25 @@ const StyledButton = styled.button`
 
   :hover {
     border-radius: 23px;
-    border-bottom-left-radius: 11px;
-    border-top-right-radius: 11px;
     box-shadow: 2px 4px 22px -10px ${(props) => (props.disabled ? 'none' : props.gray || props.error ? 'transparent' : props.secondary ? `${props.theme.color.secondary.main}90` : `${props.theme.color.primary.main}90`)};
     transition: all 0.18s 0s ease-out !important;
+    transform: scale(1.01);
+    background: ${(props) =>
+      props.outlined
+        ? props.white
+          ? '#ffffff20'
+          : props.theme.color.primary.main
+        : props.white
+        ? 'white'
+        : props.theme.color.primary.main} !important;
+    color: ${(props) =>
+      props.outlined
+        ? props.white
+          ? 'white'
+          : 'white'
+        : props.white
+        ? props.theme.color.primary.main
+        : 'white'} !important;
   }
   // :active ::before {
   //   right: 0 !important;

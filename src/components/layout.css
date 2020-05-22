@@ -1,10 +1,7 @@
 /* LAYOUT AND GRID SYSTEM
 --------------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira sans:wght@500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito+Sans:wght@400;600;700&display=swap');
 
 a {
   transition-delay: 0s !important;

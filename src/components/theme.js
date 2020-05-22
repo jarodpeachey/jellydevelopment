@@ -24,6 +24,14 @@ export const theme = {
     six: 45,
     seven: 73,
   },
+  heading: {
+    one: 46,
+    two: 36,
+    three: 27,
+    four: 21,
+    five: 16,
+    six: 13,
+  },
   color: {
     success: '#00ab66',
     error: '#ff6347',

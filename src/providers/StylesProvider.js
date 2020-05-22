@@ -30,6 +30,14 @@ const theme = {
     six: 45,
     seven: 73,
   },
+  heading: {
+    one: 42,
+    two: 32,
+    three: 26,
+    four: 20,
+    five: 16,
+    six: 13,
+  },
   color: {
     success: '#00ab66',
     error: '#ff6347',
@@ -89,8 +97,9 @@ export const globals = css`
     td,
     th,
     button {
-      font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+      font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif !important;
       font-size: 16px;
       font-weight: 400;
     }
@@ -103,7 +112,7 @@ export const globals = css`
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     }
     p {
-      line-height: 27px;
+      line-height: ${theme.spacing.five + 6}px;
       font-size: 18px;
     }
     small {
@@ -116,23 +125,81 @@ export const globals = css`
     h5,
     h6 {
       color: ${theme.color.text.heading};
+      font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif !important;
     }
     h1,
     h2 {
       margin-bottom: ${theme.spacing.five}px;
+      &.bold {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: ${theme.color.text.heading};
+      }
     }
     h3,
     h4 {
       margin-bottom: ${theme.spacing.four}px;
+      &.bold {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: ${theme.color.text.heading};
+      }
     }
     h5,
     h6 {
       margin-bottom: ${theme.spacing.three}px;
     }
+    h1 {
+      font-size: ${theme.heading.one}px;
+    }
+    h2 {
+      font-size: ${theme.heading.two}px;
+    }
+    h3 {
+      font-size: ${theme.heading.three}px;
+    }
+    h4 {
+      font-size: ${theme.heading.four}px;
+    }
+    h5 {
+      font-size: ${theme.heading.five}px;
+    }
+    h6 {
+      font-size: ${theme.heading.six}px;
+    }
     a {
       transition: none !important;
       transition-duration: 0s !important;
       transition-delay: 0s !important;
+    }
+    .right {
+      text-align: right;
+      margin-left: auto;
+    }
+    .left {
+      text-align: left;
+      margin-right: auto;
+    }
+    .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ml-10 {
+      margin-left: 10% !important;
+    }
+    .mr-10 {
+      margin-right: 10% !important;
+    }
+    .tablet-mr-10 {
+      @media (min-width: 769px) {
+        margin-right: 10%;
+      }
+    }
+    .tablet-ml-10 {
+      @media (min-width: 769px) {
+        margin-left: 10%;
+      }
     }
   }
 `;

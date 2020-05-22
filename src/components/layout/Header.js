@@ -86,10 +86,10 @@ const Header = ({ siteTitle }) => {
                   }
                   scrolled={scrolled}
                 >
-                  <svg
+                  {/* <svg
                     style={{
                       width: scrolled ? 60 : 70,
-                      top: 6,
+                      top: 4,
                       position: 'relative',
                       marginRight: 8,
                       transition: 'all .25s ease-out',
@@ -109,7 +109,7 @@ const Header = ({ siteTitle }) => {
                     style={{
                       position: 'absolute',
                       left: 3,
-                      top: 2,
+                      top: 1,
                       width: scrolled ? 50 : 60,
                       transition: 'all .25s ease-out',
                     }}
@@ -125,7 +125,7 @@ const Header = ({ siteTitle }) => {
                       d='M36.8,-57.9C47,-50.7,54.1,-39.3,59.9,-27.2C65.7,-15,70.3,-2.1,71.4,12.4C72.6,26.9,70.5,43,61.3,52.4C52.1,61.7,35.8,64.3,20,69.5C4.2,74.7,-11.2,82.6,-24.7,80.4C-38.3,78.2,-50,65.8,-56.6,52.3C-63.2,38.8,-64.7,24.2,-67.8,9.2C-70.9,-5.8,-75.5,-21.2,-71.1,-33.2C-66.8,-45.1,-53.4,-53.6,-40,-59.4C-26.6,-65.2,-13.3,-68.2,0,-68.2C13.3,-68.2,26.6,-65.1,36.8,-57.9Z'
                       transform='translate(100 100)'
                     />
-                  </svg>
+                  </svg> */}
                   Jelly
                 </SiteTitle>
                 {isBrowser() &&
@@ -204,8 +204,8 @@ const Header = ({ siteTitle }) => {
 
 const Wrapper = styled.header`
   .container {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin-top: ${(props) => (props.scrolled ? 0 : 30 - props.scrollTop / 2)}px;
   }
   z-index: 999999999999999;
@@ -240,20 +240,22 @@ const SiteTitle = styled.h1`
   position: relative;
   display: flex;
   align-items: center;
-  top: -2px;
   margin-bottom: -1px !important;
   transition: all 0.25s ease-out;
   text-transform: uppercase;
-  span {
-    font-size: 22px;
-    color: white;
-  }
+  // span {
+  font-size: 26px;
+  color: white;
+  // }
   color: white;
   @media (min-width: 769px) {
-    span {
-      font-size: 26px;
-    }
+    // span {
+    font-size: 32px;
+    // }
   }
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: ${(props) =>
+    props.scrolled ? props.theme.color.primary.main : 'white'};
 `;
 
 const MobileMenuToggle = styled.div`

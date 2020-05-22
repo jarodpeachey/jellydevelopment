@@ -4,168 +4,110 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../layout/Section';
 import Row from '../grid/Row';
 import { ThemeContext } from '../theme';
+import speed from '../../images/speed.png';
+import security from '../../images/security.png';
+import scalability from '../../images/scalability.png';
+import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
+import { Title, SmallTitle } from '../Title';
+import Button from '../Button';
 
 const ServicesSection = ({ data }) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <Section
-      customStyles={`
-        position: relative !important;
-        z-index: 1 !important;
-        display: block !important;
-        // padding-bottom: 150px;
-        // margin-bottom: -150px;
-  @media (min-width: 576px) {
+    <div>
+      <Section background={`#f7f7f7`}>
+        <SmallTitle className='center' small>
+          Our Services
+        </SmallTitle>
+        <Title type='h2' className='center'>
+          Bring the power of static to anything you want
+        </Title>
+        <p className='center'>
+          No matter what your business needs, we've got you covered with
+          everything from one-page sites to full custom solutions.
+        </p>
+        <Spacer height={theme.spacing.seven * 1.3} />
+        <Row
+          flexDirections={['column-reverse', 'row']}
+          spacing={[24, 0]}
+          breakpoints={[0, 769]}
+        >
+          <div widths={[12, 7]}>
+            <Title className='tablet-mr-10' weight={600} underline>
+              Static Websites
+            </Title>
+            <p className='tablet-mr-10'>
+              Blazing fast websites with an integrated CMS to give you
+              everything you need for your online presence.
+            </p>
+            <Button outlined>Learn More</Button>
+          </div>
+          <div widths={[12, 5]}>
+            <img
+              src='https://cdn.sanity.io/images/6m6ry3oq/production/c5529b494f031c0747e38365e9361ecf01b3845a-510x620.png'
+              style={{ width: '100%' }}
+            />
+          </div>
+        </Row>
+        <Spacer height={theme.spacing.seven * 1.3} />
 
-  }
-  @media (min-width: 670px) {
-
-  }
-  @media (min-width: 850px) {
-
-  }
-  @media (min-width: 1000px) {
-
-  }
-  @media (min-width: 1300px) {
-
-  }
-  @media (min-width: 1500px) {
-
-  }
-  @media (min-width: 1677px) {
-
-  }
-      `}
-      background='#fafafa'
-    >
-      <h1 className='center'>Built for modern development</h1>
-      <p className='center'>
-        Staticbox combines simplicity and speed with usability, giving you an
-        effortless way to moderate comments.
-      </p>
-      <Spacer height={64} />
-      <Row spacing={[12, 32]} breakpoints={[650, 1100, 2900]}>
-        <Feature widths={[6, 4, 3]}>
-          <FeatureIcon offsetY={-2} offsetX={4}>
-            <FontAwesomeIcon icon='search' />
-            <div className='icon'>
-              <FontAwesomeIcon icon='search' />
-            </div>
-          </FeatureIcon>
-          <FeatureTitle>Intuitive Moderation</FeatureTitle>
-          <FeatureSubtitle>
-            Moderate your comments with ease with bulk actions, filtering and
-            spam protection.
-          </FeatureSubtitle>
-        </Feature>
-        <Feature widths={[6, 4, 3]}>
-          <FeatureIcon offsetY={-2} offsetX={4}>
-            <FontAwesomeIcon icon='puzzle-piece' />
-            <div className='icon'>
-              <FontAwesomeIcon icon='puzzle-piece' />
-            </div>
-          </FeatureIcon>
-          <FeatureTitle>Drop-in Forms</FeatureTitle>
-          <FeatureSubtitle>
-            Staticbox makes it easy to add comments to your site, your way.
-            Choose a template, customize your form and drop it into your site!
-            Simply add a form to your site and Staticbox takes care of the rest.
-          </FeatureSubtitle>
-        </Feature>
-        <Feature widths={[6, 4, 3]}>
-          <FeatureIcon offsetY={0} offsetX={1}>
-            <FontAwesomeIcon icon='bolt' />
-            <div className='icon'>
-              <FontAwesomeIcon icon='bolt' />
-            </div>
-          </FeatureIcon>
-          <FeatureTitle>Blazing Fast</FeatureTitle>
-          <FeatureSubtitle>
-            Staticbox takes advantage of serverless architecture and static site
-            generators by loading your comments on build time, making it
-            impossible for it to slow down your site 🚀
-          </FeatureSubtitle>
-        </Feature>
-        <Feature widths={[6, 4, 3]}>
-          <FeatureIcon offsetY={-2} offsetX={4}>
-            <FontAwesomeIcon icon='binoculars' />
-            <div className='icon'>
-              <FontAwesomeIcon icon='binoculars' />
-            </div>
-          </FeatureIcon>
-          <FeatureTitle>Custom Filters</FeatureTitle>
-          <FeatureSubtitle>
-            Choose from multiple filtering presets, or create your own custom
-            filters. Never allow a spam comment onto your site again 🙅‍♂️
-          </FeatureSubtitle>
-        </Feature>
-        <Feature widths={[6, 4, 3]}>
-          <FeatureIcon>
-            <FontAwesomeIcon icon='cog' />
-            <div className='icon'>
-              <FontAwesomeIcon icon='cog' />
-            </div>
-          </FeatureIcon>
-          <FeatureTitle>Fully Customizable</FeatureTitle>
-          <FeatureSubtitle>
-            A fully-customizable form and comments display makes Staticbox blend
-            in perfectly with your brand and your style.
-          </FeatureSubtitle>
-        </Feature>
-      </Row>
-    </Section>
+        <Row spacing={[24, 0]} breakpoints={[769]}>
+          <div widths={[5]}>
+            <img
+              src='https://cdn.sanity.io/images/6m6ry3oq/production/26338d2ff2efa22ec781ee940299a44eed18785d-562x468.png'
+              style={{ width: '100%' }}
+            />
+          </div>
+          <div widths={[7]}>
+            <Title className='tablet-ml-10' weight={600} underline>
+              Custom Integrations
+            </Title>
+            <p className='tablet-ml-10'>
+              Have a favorite tool that you don't want to give up? We can make
+              sure you get to keep using it.
+            </p>
+            <p className='tablet-ml-10'>
+              We create custom integrations to allow you to get more out of the
+              tools you love, without sacrificing performance or security.
+            </p>
+            <Button outlined className='tablet-ml-10'>
+              Learn More
+            </Button>
+          </div>
+        </Row>
+        <Spacer height={theme.spacing.seven * 1.3} />
+        <Row
+          flexDirections={['column-reverse', 'row']}
+          spacing={[24, 0]}
+          breakpoints={[0, 769]}
+        >
+          <div widths={[12, 7]}>
+            <Title className='tablet-mr-10' weight={600} underline>
+              Custom Development
+            </Title>
+            <p className='tablet-mr-10'>
+              If you need more than a static site, you've come to the right
+              place.
+            </p>
+            <p className='tablet-mr-10'>
+              Go completely static with custom APIs, user management systems, or
+              anything else you can think of. If you can dream it, we can
+              JAMstack-ify it.
+            </p>
+            <Button outlined>Learn More</Button>
+          </div>
+          <div widths={[12, 5]}>
+            <img
+              src='https://cdn.sanity.io/images/6m6ry3oq/production/0e36ac6466d7ba2c50569e6acabb461b8f7b1d35-736x633.png'
+              style={{ width: '100%' }}
+            />
+          </div>
+        </Row>
+      </Section>
+    </div>
   );
 };
-
-const Feature = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  max-width: 300px;
-`;
-
-const FeatureIcon = styled.div`
-  font-size: 34px;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 100px;
-  display: flex;
-  position: relative;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  // background: ${(props) => props.theme.color.primary.backgroundLight};
-  // border: 3px solid ${(props) => props.theme.color.gray.three};
-  color: ${(props) => props.theme.color.primary.main};
-  svg {
-    position: relative;
-    top: ${(props) => props.offsetY}px;
-    left: ${(props) => props.offsetX}px;
-    font-size: 40px;
-  }
-  .icon {
-    * {
-      font-size: 140px !important;
-    }
-    position: absolute;
-    top: -5px;
-    right: -140px;
-    height: fit-content;
-    width: fit-content;
-    color: ${(props) => props.theme.color.primary.main}13;
-  }
-`;
-
-const FeatureTitle = styled.h3`
-  margin-top: ${(props) => props.theme.spacing.four}px;
-  // font-size: 22px !important;
-`;
-
-const FeatureSubtitle = styled.p`
-  font-size: 18px !important;
-`;
 
 export default ServicesSection;

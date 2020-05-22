@@ -9,6 +9,7 @@ import security from '../../images/security.png';
 import scalability from '../../images/scalability.png';
 import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
+import { Title, SmallTitle } from '../Title';
 
 const WhySection = ({ data }) => {
   const theme = useContext(ThemeContext);
@@ -16,12 +17,17 @@ const WhySection = ({ data }) => {
   return (
     <div>
       <Section background='white'>
-        <h1 className='center'>The JAMstack Advantage(s)</h1>
+        <SmallTitle className='center' small>
+          The JAMstack Advantage(s)
+        </SmallTitle>
+        <Title type='h2' className='center'>
+          The Future of Web Development
+        </Title>
         <p className='center'>
           The JAMstack is a modern tech stack used to build websites with better
           security, performance and scalability than ever before. At Jelly
-          Development, we take advantage of serverless architecture to bring all
-          these things and more to your business.
+          Development, we take advantage of serverless architecture to bring
+          these benefits directly to you or your business.
         </p>
         <Spacer height={theme.spacing.six} />
         <Row spacing={[24]} breakpoints={[769, 1000]}>
@@ -87,7 +93,7 @@ const FeatureIcon = styled.div`
     width: 95px;
     height: 95px;
     margin: 0 auto;
-    filter: hue-rotate(80deg) invert(10%);
+    filter: hue-rotate(60deg) invert(15%);
   }
 `;
 const FeatureTitle = styled.h3`
