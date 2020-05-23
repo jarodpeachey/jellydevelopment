@@ -131,6 +131,18 @@ html {
 /* TYPOGRAPHY
 ---------------------------------------- */
 
+.str0 {
+  stroke: white;
+  stroke-width: 60.67;
+  stroke-miterlimit: 2.61313;
+}
+.str0.scrolled {
+  stroke: #b4267c !important;
+}
+.fil0 {
+  fill: url(#id0);
+}
+
 .full-width {
   width: 100% !important;
 }

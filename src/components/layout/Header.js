@@ -4,11 +4,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
+import { Link } from 'gatsby';
 import Menu from './Menu';
 import { isBrowser } from '../../utils/isBrowser';
 import { AppContext } from '../../providers/AppProvider';
 import { ThemeContext } from '../theme';
-import { Link } from 'gatsby';
+import logo from '../../images/white-outlined.svg';
 
 const Header = ({ siteTitle }) => {
   const { scrolled, setScrolled } = useContext(AppContext);
@@ -96,46 +97,50 @@ const Header = ({ siteTitle }) => {
                   }
                   scrolled={scrolled}
                 >
-                  {/* <svg
-                    style={{
-                      width: scrolled ? 60 : 70,
-                      top: 4,
-                      position: 'relative',
-                      marginRight: 8,
-                      transition: 'all .25s ease-out',
-                    }}
-                    viewBox='0 0 200 200'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fill={
-                        scrolled ? `${theme.color.secondary.main}` : `#ffffff`
-                      }
-                      d='M49.6,-75.6C63.8,-68,74.5,-53.5,81.3,-37.5C88.1,-21.5,91,-4,85.9,10.5C80.9,24.9,68,36.3,55.5,44.6C42.9,53,30.8,58.2,18.6,60.4C6.4,62.6,-5.7,61.9,-19,60C-32.2,58.2,-46.4,55.4,-59.4,47.5C-72.3,39.6,-84,26.7,-86.1,12.4C-88.1,-1.9,-80.5,-17.6,-71.6,-30.9C-62.8,-44.2,-52.6,-55.2,-40.5,-63.7C-28.3,-72.3,-14.2,-78.5,1.8,-81.3C17.7,-84,35.3,-83.2,49.6,-75.6Z'
-                      transform='translate(100 100)'
-                    />
-                  </svg>
+                  {/* <img src={logo} /> */}
                   <svg
-                    style={{
-                      position: 'absolute',
-                      left: 3,
-                      top: 1,
-                      width: scrolled ? 50 : 60,
-                      transition: 'all .25s ease-out',
-                    }}
-                    viewBox='0 0 200 200'
                     xmlns='http://www.w3.org/2000/svg'
+                    xmlSpace='preserve'
+                    width='2.60417in'
+                    height='2.60417in'
+                    version='1.1'
+                    style={{
+                      shapeRendering: 'geometricPrecision',
+                      textRendering: 'geometricPrecision',
+                      imageRendering: 'optimizeQuality',
+                      fillRule: 'evenodd',
+                      clipRule: 'evenodd',
+                    }}
+                    viewBox='0 0 2604.17 2604.17'
                   >
-                    <path
-                      fill={
-                        scrolled
-                          ? `${theme.color.primary.main}`
-                          : `${theme.color.secondary.main}cc`
-                      }
-                      d='M36.8,-57.9C47,-50.7,54.1,-39.3,59.9,-27.2C65.7,-15,70.3,-2.1,71.4,12.4C72.6,26.9,70.5,43,61.3,52.4C52.1,61.7,35.8,64.3,20,69.5C4.2,74.7,-11.2,82.6,-24.7,80.4C-38.3,78.2,-50,65.8,-56.6,52.3C-63.2,38.8,-64.7,24.2,-67.8,9.2C-70.9,-5.8,-75.5,-21.2,-71.1,-33.2C-66.8,-45.1,-53.4,-53.6,-40,-59.4C-26.6,-65.2,-13.3,-68.2,0,-68.2C13.3,-68.2,26.6,-65.1,36.8,-57.9Z'
-                      transform='translate(100 100)'
-                    />
-                  </svg> */}
+                    <defs>
+                      <style type='text/css'></style>
+                      <linearGradient
+                        id='id0'
+                        gradientUnits='userSpaceOnUse'
+                        x1='-759.37'
+                        y1='1299.35'
+                        x2='3136.46'
+                        y2='1299.35'
+                      >
+                        <stop
+                          offset='0'
+                          style={{ stopOpacity: 0, stopColor: '#7eaef4' }}
+                        />
+                        <stop
+                          offset='1'
+                          style={{ stopOpacity: 0, stopColor: '#623C8D' }}
+                        />
+                      </linearGradient>
+                    </defs>
+                    <g id='Layer_x0020_1'>
+                      <metadata id='CorelCorpID_0Corel-Layer' />
+                      <path
+                        className='fil0 str0'
+                        d='M604.86 933.44c47.72,157.26 220.11,378.25 352.86,479 144.67,109.8 294.67,191.29 483.37,233.7 52.54,11.81 47.41,20.5 77.41,-10.7l109.29 -109.47c33.7,-32.79 27.94,-20.89 15.44,-76.88 -33.48,-150.02 -120.5,-347.4 -210.56,-455.5 -43.43,-52.13 -75.03,-97.09 -127.55,-147.2 -10.84,-10.34 -19.99,-14.63 -31.03,-25.06 -76.01,-71.81 -249.77,-190.66 -345.9,-212.54l-323.33 324.65zm693.9 1154.37l46.89 -342.93c-48.02,-12.07 -109.35,-34.31 -152.95,-53.57 -23.63,-10.43 -47.43,-19.88 -70.57,-31.28 -24.37,-12.01 -44.81,-26.89 -72.6,-34.54 0.79,58.33 2.38,116.74 2.52,175.04 0.13,51.13 -4.96,47.27 66.09,112.7 33.25,30.62 55.7,54.78 86.35,86.63 18.42,19.14 71.84,73.64 94.27,87.95zm446.06 -743.5l342.98 -46.22c-22.53,-34.53 -141.07,-143.74 -174.5,-180.03 -14.24,-15.46 -27,-23.7 -43.64,-42.87 -21.77,-25.08 -18.28,-22.92 -63.92,-23.21 -60.06,-0.38 -120.1,-1.72 -180.17,-2.54 9.95,35.59 84.83,151.96 119.25,294.86zm-1180.21 -540.81c21.68,-6.15 45.71,-38.5 62.05,-54.85l176.92 -184.12c-69.69,-27.37 -205.5,-43.11 -287.2,-48.16 4.65,79.58 21.72,219.33 48.23,287.13zm1110.07 955.15l161.49 158.74c19.46,-17 72.77,-64.7 82.61,-87.89 -33.65,-23.38 -125.35,-129.61 -159,-154.58l-85.09 83.73zm-124.13 127.71c9.25,17.15 101.11,109.17 117.77,117.31l81.63 -80.58c-8.25,-17.1 -100.62,-109.43 -117.23,-117.77l-82.17 81.04zm254.72 -254.4l117.15 116.42 85.92 -83.51c-39.07,-40.14 -78.57,-78.07 -116.78,-117.3l-86.29 84.4zm-747.83 -734.89c88.05,0 159.43,71.54 159.43,159.77 0,88.23 -71.38,159.77 -159.43,159.77 -88.05,0 -159.43,-71.54 -159.43,-159.77 0,-88.24 71.38,-159.77 159.43,-159.77z'
+                      />
+                    </g>
+                  </svg>
                   Jelly
                 </SiteTitle>
                 {isBrowser() &&
@@ -291,9 +296,20 @@ const SiteTitle = styled.h1`
       : '#ffffff'};
   display: flex;
   align-items: center;
+  margin-top: -12px !important;
   margin-bottom: -1px !important;
   transition: all 0.25s ease-out;
   text-transform: uppercase;
+  svg {
+    width: 65px !important;
+    height: 65px !important;
+    transform: scaleX(-1) !important;
+    margin: 0 !important;
+    margin-top: -4px !important;
+    * {
+      stroke: ${(props) => (props.scrolled ? '#b4267c' : 'white')} !important;
+    }
+  }
   // span {
   font-size: 26px;
   // }
