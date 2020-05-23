@@ -17,6 +17,12 @@ import projectDevelopment from '../../images/project-development.png';
 import projectRevision from '../../images/project-revision.png';
 import projectCompletion from '../../images/project-completion.png';
 
+import list from '../../images/list.png';
+import handshake from '../../images/handshake.png';
+import code from '../../images/code.png';
+import edit from '../../images/edit.png';
+import complete from '../../images/complete.png';
+
 const WorkflowSection = ({ data }) => {
   const theme = useContext(ThemeContext);
 
@@ -35,7 +41,7 @@ const WorkflowSection = ({ data }) => {
         <Row spacing={[24, 0]} breakpoints={[769]}>
           <Item className='mb-7' widths={[6]}>
             <ItemNumber theme={theme}>1</ItemNumber>
-            <ItemImage className='mb-5' src={projectRequirements} />
+            <ItemImage className='mb-5 icon' src={list} />
             <Title className='center' type='h3'>
               Project Requirements
             </Title>
@@ -48,7 +54,7 @@ const WorkflowSection = ({ data }) => {
 
           <Item className='mb-7' widths={[6]}>
             <ItemNumberRight theme={theme}>2</ItemNumberRight>
-            <ItemImage className='mb-5' src={projectAgreement} />
+            <ItemImage className='mb-5 icon' src={handshake} />
             <Title className='center' type='h3'>
               Project Agreement
             </Title>
@@ -61,7 +67,7 @@ const WorkflowSection = ({ data }) => {
 
           <Item className='mb-7' widths={[6]}>
             <ItemNumber theme={theme}>3</ItemNumber>
-            <ItemImage className='mb-5' src={projectDevelopment} />
+            <ItemImage className='mb-5 icon' src={code} />
             <Title className='center' type='h3'>
               Project Development
             </Title>
@@ -76,7 +82,7 @@ const WorkflowSection = ({ data }) => {
 
           <Item className='mb-7' widths={[6]}>
             <ItemNumberRight theme={theme}>4</ItemNumberRight>
-            <ItemImage className='mb-5' src={projectRevision} />
+            <ItemImage className='mb-5 icon' src={edit} />
             <Title className='center' type='h3'>
               Project Revision
             </Title>
@@ -89,7 +95,7 @@ const WorkflowSection = ({ data }) => {
 
           <Item className='mb-7' widths={[6]}>
             <ItemNumber theme={theme}>5</ItemNumber>
-            <ItemImage className='mb-5' src={projectCompletion} />
+            <ItemImage className='mb-5 icon' src={complete} />
             <Title className='center' type='h3'>
               Project Completion
             </Title>

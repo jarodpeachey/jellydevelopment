@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { styled } from 'linaria/react';
 import { css } from 'linaria';
 import { Link } from 'gatsby';
+import { ThemeContext } from './theme';
 
-const Card = ({ children, title, subtitle, customStyles }) => {
+const Card = ({ children, title, subtitle, className = '' }) => {
+  const theme = useContext(ThemeContext);
+
   return (
-    <StyledCard>
+    <StyledCard className={className} theme={theme}>
       {title && <Title border={!subtitle}>{title}</Title>}
       {subtitle && <Subtitle className='weight-light'>{subtitle}</Subtitle>}
       {children}
@@ -19,7 +22,7 @@ const StyledCard = styled.div`
   background: white;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.gray.three};
-  // box-shadow: 2px 4px 10px 0px ${(props) => props.theme.color.gray.three};
+  box-shadow: ${(props) => props.theme.shadow.four};
 `;
 
 const Title = styled.h2`

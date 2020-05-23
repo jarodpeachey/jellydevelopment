@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
 import Row from '../grid/Row';
 import { ThemeContext } from '../theme';
+import { Title } from '../Title';
 
 const Footer = () => {
   const theme = useContext(ThemeContext);
@@ -18,25 +19,11 @@ const Footer = () => {
             <Row spacing={[12, 0]} breakpoints={[1]}>
               <div widths={[6]}>
                 <FooterTitle>
-                  <h2 className='logo'>Staticbox</h2>
+                  <Title className='light-1' type='h3'>
+                    JELLY
+                  </Title>
                 </FooterTitle>
               </div>
-              <FooterMenu widths={[6]}>
-                <FooterMenuLink href='mailto:jwpeachey107@aol.com'>
-                  <FontAwesomeIcon icon='envelope' />
-                </FooterMenuLink>
-
-                <FooterMenuLink href='https://github.com/jarodpeachey'>
-                  <FontAwesomeIcon icon={['fab', 'github']} id='menu-toggle' />
-                </FooterMenuLink>
-
-                <FooterMenuLink href='https://linkedin.com/in/jarod-peachey'>
-                  <FontAwesomeIcon
-                    icon={['fab', 'linkedin']}
-                    id='menu-toggle'
-                  />
-                </FooterMenuLink>
-              </FooterMenu>
             </Row>
           </FooterContainer>
         </FooterWrapper>

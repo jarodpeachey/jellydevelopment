@@ -3,8 +3,14 @@ import React from 'react';
 
 export const theme = {
   shadow: {
-    one: '0 1px 4px 0 rgba(76, 82, 103, 0.1)',
-    two: '0 3px 10px 0 rgba(76, 82, 103, 0.15)',
+    one:
+      '0 0 4px 0 rgba(17,22,26,0.16), 0 2px 4px 0 rgba(17,22,26, 0.04), 0 4px 8px 0 rgba(17,22,26, 0.04)',
+    two:
+      '0 0 8px 0 rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26, 0.04), 0 8px 16px 0 rgba(17,22,26, 0.04)',
+    three:
+      '0 4px 16px 4px rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26, 0.04), 0 16px 24px 0 rgba(17,22,26, 0.04)',
+    four:
+      '0 4px 24px 8px rgba(17,22,26,0.16), 0 8px 16px 0 rgba(17,22,26, 0.04), 0 32px 40px 0 rgba(17,22,26, 0.04)',
   },
   radius: {
     one: '4px',

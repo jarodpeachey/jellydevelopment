@@ -11,27 +11,45 @@ import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import Button from '../Button';
+import Card from '../Card';
 
-const GetStartedSection = ({ data }) => {
+const GetStartedSection = ({ data, card, className = '' }) => {
   const theme = useContext(ThemeContext);
 
   return (
     <div>
-      <Section>
-        {/* <SmallTitle className='center light-2' small>
+      {card ? (
+        <Card className={className}>
+          <Title type='h2' className='center light-1'>
+            Ready to Go Static?
+          </Title>
+          <p className='center light-2 mb-none'>
+            Contact us for a qoute and see just how fast your business can be on
+            the web.
+          </p>
+          <Spacer height={theme.spacing.six} />
+          <Button className='center' outlined white>
+            Get Started
+          </Button>
+        </Card>
+      ) : (
+        <Section>
+          {/* <SmallTitle className='center light-2' small>
           Get Started
         </SmallTitle> */}
-        <Title type='h2' className='center light-1'>
-          Ready to Go Static?
-        </Title>
-        <p className='center light-2 mb-none'>
-          Contact us for a qoute and see just how fast your business can be on the web.
-        </p>
-        <Spacer height={theme.spacing.six} />
-        <Button className='center' outlined white>
-          Get Started
-        </Button>
-      </Section>
+          <Title type='h2' className='center light-1'>
+            Ready to Go Static?
+          </Title>
+          <p className='center light-2 mb-none'>
+            Contact us for a qoute and see just how fast your business can be on
+            the web.
+          </p>
+          <Spacer height={theme.spacing.six} />
+          <Button className='center' outlined white>
+            Get Started
+          </Button>
+        </Section>
+      )}
     </div>
   );
 };

@@ -8,6 +8,8 @@ import speed from '../../images/speed.png';
 import security from '../../images/security.png';
 import scalability from '../../images/scalability.png';
 import cost from '../../images/cost.png';
+import content from '../../images/content.png';
+import integrations from '../../images/integrations.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 
@@ -33,7 +35,7 @@ const WhySection = ({ data }) => {
         <Row spacing={[24]} breakpoints={[769, 1000]}>
           <Feature widths={[6, 4]}>
             <FeatureIcon>
-              <img src={speed} />
+              <img className='icon' src={speed} />
             </FeatureIcon>
             <FeatureTitle>High Performance</FeatureTitle>
             <FeatureDescription>
@@ -44,7 +46,7 @@ const WhySection = ({ data }) => {
           </Feature>
           <Feature widths={[6, 4]}>
             <FeatureIcon>
-              <img src={security} />
+              <img className='icon' src={security} />
             </FeatureIcon>
             <FeatureTitle>Next-Level Security</FeatureTitle>
             <FeatureDescription>
@@ -55,7 +57,7 @@ const WhySection = ({ data }) => {
           </Feature>
           <Feature widths={[6, 4]}>
             <FeatureIcon>
-              <img src={scalability} />
+              <img className='icon' src={scalability} />
             </FeatureIcon>
             <FeatureTitle> Infinite Scalability</FeatureTitle>
             <FeatureDescription>
@@ -65,13 +67,35 @@ const WhySection = ({ data }) => {
           </Feature>
           <Feature widths={[6, 4]}>
             <FeatureIcon>
-              <img src={cost} />
+              <img className='icon' src={cost} />
             </FeatureIcon>
             <FeatureTitle>Cost Effecient</FeatureTitle>
             <FeatureDescription>
               Since static websites require no database development, and are
               infinitely scalable, you save money on development, maintenance
               and hosting costs.
+            </FeatureDescription>
+          </Feature>
+          <Feature widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='icon' src={content} />
+            </FeatureIcon>
+            <FeatureTitle>Advanced Content Management</FeatureTitle>
+            <FeatureDescription>
+              JAMstack content management systems can give you full control over
+              your website. We set your website up with the CMS of your choice,
+              so you can control your online presence.
+            </FeatureDescription>
+          </Feature>
+          <Feature widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='icon' src={integrations} />
+            </FeatureIcon>
+            <FeatureTitle>Seamless Integrations</FeatureTitle>
+            <FeatureDescription>
+              JAMstack sites are fully-customizable, built from the ground up.
+              Using serverless functions, we can integrate with everything from
+              Stripe to Wordpress.
             </FeatureDescription>
           </Feature>
         </Row>
@@ -93,7 +117,6 @@ const FeatureIcon = styled.div`
     width: 95px;
     height: 95px;
     margin: 0 auto;
-    filter: hue-rotate(60deg) invert(15%);
   }
 `;
 const FeatureTitle = styled.h3`
