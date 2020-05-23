@@ -8,6 +8,7 @@ import Menu from './Menu';
 import { isBrowser } from '../../utils/isBrowser';
 import { AppContext } from '../../providers/AppProvider';
 import { ThemeContext } from '../theme';
+import { Link } from 'gatsby';
 
 const Header = ({ siteTitle }) => {
   const { scrolled, setScrolled } = useContext(AppContext);
@@ -15,6 +16,7 @@ const Header = ({ siteTitle }) => {
   const [accountOpen, setAccountOpen] = useState(false);
   const [width, setWidth] = useState(0);
   const [scrollTop, setScrollTop] = useState(0);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
   const theme = useContext(ThemeContext);
 
@@ -37,6 +39,12 @@ const Header = ({ siteTitle }) => {
   });
 
   const toggleFunction = () => {
+    if (open) {
+      document.getElementById('blur').classList.remove('blur');
+    } else {
+      document.getElementById('blur').classList.add('blur');
+    }
+
     setOpen(!open);
   };
 
@@ -78,6 +86,7 @@ const Header = ({ siteTitle }) => {
             <div className='container'>
               <Flex theme={theme}>
                 <SiteTitle
+                  open={open}
                   theme={theme}
                   className='logo'
                   light={
@@ -183,17 +192,50 @@ const Header = ({ siteTitle }) => {
             open={open}
           >
             <div className='container'>
-              <MobileMenuItems theme={theme} open={open}>
-                <MobileMenuItem theme={theme} href='/'>
-                  Home
-                </MobileMenuItem>
-                <MobileMenuItem
-                  theme={theme}
-                  href='https://github.com/jarodpeachey/triangle-comments'
-                >
-                  Docs
-                </MobileMenuItem>
-              </MobileMenuItems>
+              <MobileMenuItem scrolled={scrolled} theme={theme}>
+                <Link to='/'>Home</Link>
+              </MobileMenuItem>
+              <MobileMenuItem scrolled={scrolled} theme={theme}>
+                <Link to='/'>About</Link>
+              </MobileMenuItem>
+              <MobileMenuItem
+                scrolled={scrolled}
+                onClick={() => {
+                  setSubMenuOpen(!subMenuOpen);
+                }}
+                theme={theme}
+              >
+                <span>
+                  Services
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: 14,
+                      position: 'relative',
+                      top: 1,
+                      left: 6,
+                      transform: `${subMenuOpen ? 'rotate(180deg)' : 'none'}`,
+                      transition: 'all .1s ease-in-out',
+                    }}
+                    icon='chevron-down'
+                  />
+                </span>
+                <SubMenuWrapper theme={theme} open={subMenuOpen}>
+                  <SubMenu theme={theme} open={subMenuOpen}>
+                    <SubMenuItem theme={theme}>
+                      <Link to='/'>Static Sites</Link>
+                    </SubMenuItem>
+                    <SubMenuItem theme={theme}>
+                      <Link to='/'>Wordpress Transfers</Link>
+                    </SubMenuItem>
+                    <SubMenuItem theme={theme}>
+                      <Link to='/'>Custom Solutions</Link>
+                    </SubMenuItem>
+                  </SubMenu>
+                </SubMenuWrapper>
+              </MobileMenuItem>
+              <MobileMenuItem theme={theme} scrolled={scrolled}>
+                <Link to='/'>Contact</Link>
+              </MobileMenuItem>
             </div>
           </MobileMenu>
         </>
@@ -206,23 +248,20 @@ const Wrapper = styled.header`
   .container {
     padding-top: 16px;
     padding-bottom: 16px;
-    margin-top: ${(props) => (props.scrolled ? 0 : 30 - props.scrollTop / 2)}px;
+    margin-top: ${(props) =>
+      props.open ? 30 : props.scrolled ? 0 : 30 - props.scrollTop / 2}px;
+    padding-left: ${(props) => (props.open ? '48px' : '24px')};
+    padding-right: ${(props) => (props.open ? '48px' : '24px')};
+    transition: all 0.2s ease-out;
   }
   z-index: 999999999999999;
-  background: ${(props) => (props.scrolled ? '#ffffffef' : 'transparent')};
-  span,
-  h1,
-  h2,
-  a,
-  div {
-    color: ${(props) =>
-      props.scrolled ? props.theme.color.primary.main : 'white'} !important;
-  }
-
+  background: ${(props) =>
+    props.open ? 'transparent' : props.scrolled ? '#ffffffef' : 'transparent'};
   transition: ${(props) =>
     props.scrolled ? 'background .3s ease-out' : 'none'};
 
-  box-shadow: ${(props) => (props.scrolled ? props.theme.shadow.one : 'none')};
+  box-shadow: ${(props) =>
+    props.scrolled && !props.open ? props.theme.shadow.one : 'none'};
   position: fixed;
   left: 0;
   top: 0;
@@ -232,13 +271,21 @@ const Wrapper = styled.header`
 `;
 
 const Flex = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const SiteTitle = styled.h1`
   margin: 0;
-  position: relative;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: ${(props) =>
+    props.scrolled || props.open
+      ? `${props.theme.color.primary.main}`
+      : '#ffffff'};
   display: flex;
   align-items: center;
   margin-bottom: -1px !important;
@@ -246,9 +293,7 @@ const SiteTitle = styled.h1`
   text-transform: uppercase;
   // span {
   font-size: 26px;
-  color: white;
   // }
-  color: white;
   @media (min-width: 769px) {
     // span {
     font-size: 32px;
@@ -256,7 +301,7 @@ const SiteTitle = styled.h1`
   }
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: ${(props) =>
-    props.scrolled ? props.theme.color.primary.main : 'white'};
+    props.scrolled || props.open ? props.theme.color.primary.main : 'white'};
 `;
 
 const MobileMenuToggle = styled.div`
@@ -279,7 +324,7 @@ const MobileMenuToggle = styled.div`
     height: 4px;
     width: 100%;
     background: ${(props) =>
-      props.scrolled ? props.theme.color.text.heading : 'white'};
+      props.scrolled || props.open ? props.theme.color.text.heading : 'white'};
     border-radius: 10px;
     opacity: 1;
     left: 0;
@@ -314,24 +359,32 @@ const MobileMenuRotate = styled.div`
     props.open ? 'all 0.25s ease-in-out' : 'all 0.25s ease-in-out'};
   transform: ${(props) => (props.open ? 'rotate(-45deg)' : 'none')};
 `;
+
 const MobileMenu = styled.div`
-  display: none;
-  z-index: 9999999;
+  visibility: ${(props) => (props.open ? 'visible' : 'hidden')};
+  opacity: ${(props) => (props.open ? 1 : 0)};
+    transition: transform 0.1s .05s ease-out,
+    opacity 0.1s .05s ease-out
+      ${(props) => (props.open ? ', visibility 0s 0s' : ', visibility 0s .2s')};
+  transform: ${(props) => (props.open ? 'scale(1)' : 'scale(.98)')};
+  z-index: 99999;
+  .container {
+    padding: 0px 48px !important;
+  }
   @media (max-width: 769px) {
     display: block;
   }
-  box-shadow: ${(props) => props.theme.shadow.one};
+  box-shadow: ${(props) => props.theme.shadow.two};
   line-height: 1;
   // display: ${(props) => (props.open ? 'block' : 'none')};
   position: fixed;
   overflow: hidden;
   padding: 24px 0;
   top: 0;
-  margin-top: ${(props) => (props.scrolled ? '64px' : '112px')};
+  padding-top: 64px;
+  margin-top: 24px;
   background: white;
   width: 100%;
-  transition: all 0.15s ease-out;
-  transform: scale(${(props) => (props.open ? '1' : '0')});
   border-bottom: 1px solid #e8e8e8;
   border-radius: ${(props) => props.theme.radius.two};
   width: calc(90%);
@@ -350,43 +403,66 @@ const ButtonsContainer = styled.div`
   justify-content: flex-end;
 `;
 
-const MobileMenuItems = styled.div`
-  display: block;
-`;
-
-const MobileMenuItem = styled.a`
-  text-decoration: none;
-  transition-duration: 0.2s;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  ::after {
+const MobileMenuItem = styled.div`
+  height: 100%;
+  transition-duration: 0.25s;
+  a,
+  span {
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
     display: block;
-    position: absolute;
-    left: 16px;
-    bottom: 6px;
-    content: "";
-    width: 20%;
-    height: 2px;
-    // background: ${(props) => props.color};
-  }
-  font-size: 18px;
-  display: block;
-  padding: 12px 16px;
-  width: 100%;
-  margin: 0;
-  border-radius: ${(props) => props.theme.radius.one};
-  transition-duration: 0.2s;
-  svg {
-    margin-right: 12px;
+    padding: ${(props) => (props.button ? '0' : '16px 0')};
+    font-weight: 500;
+    color: ${(props) => `${props.theme.color.text.heading}`};
     font-size: 18px;
   }
+
+  :hover > a,
+  :hover > span {
+    // transition-duration: 0.25s;
+    // background: #ffffff50;
+    transition: all 0.18s ease-out;
+    color: ${(props) => props.theme.color.primary.main};
+  }
+  position: relative;
+`;
+
+const SubMenuWrapper = styled.div`
+  transition: ${(props) => (props.open ? 'max-height .2s' : 'max-height .2s')};
+  overflow: hidden;
+  max-height: ${(props) => (props.open ? '150px' : '0')};
+`;
+
+const SubMenu = styled.div`
+  // display: ${(props) => (props.open ? 'block' : 'none')};
+  border-radius: ${(props) => props.theme.radius.two};
+  background: #ffffff;
+  width: 100%;
+  box-shadow: ${(props) => props.theme.shadow.two};
+`;
+
+const SubMenuItem = styled.div`
+  height: 100%;
+  transition-duration: 0.25s;
+  a {
+    height: 100%;
+    text-decoration: none;
+    display: block;
+    padding: ${(props) => (props.button ? '0' : '8px 24px')};
+    font-weight: 500;
+    transition-duration: 0.25s;
+    transition: all 0.18s ease-out;
+    font-size: 16px;
+    color: ${(props) => props.theme.color.text.heading};
+  }
   :hover {
-    background: ${(props) => props.theme.color.gray.two};
-    transition-duration: 0.2s;
+    // transition-duration: 0.25s;
+    // background: #ffffff50;
+    transition: all 0.18s ease-out;
+    a {
+      color: ${(props) => props.theme.color.primary.main};
+    }
   }
 `;
 

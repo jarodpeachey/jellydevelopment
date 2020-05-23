@@ -142,7 +142,7 @@ const StyledButton = styled.button`
       : 'none'} !important;
 
   :hover {
-    border-radius: 23px;
+    // border-radius: 23px;
     box-shadow: 2px 4px 22px -10px ${(props) => (props.disabled ? 'none' : props.gray || props.error ? 'transparent' : props.secondary ? `${props.theme.color.secondary.main}90` : `${props.theme.color.primary.main}90`)};
     transition: all 0.18s 0s ease-out !important;
     transform: scale(1.01);

@@ -72,10 +72,12 @@ const Layout = (props) => {
   const theme = useContext(ThemeContext);
   return (
     <Wrapper theme={theme}>
+      <Wrapper theme={theme} id='blur'>
+        {isBrowser() && window.location.pathname !== '/' && <ContentWrapper />}
+        {props.children}
+        <Footer />
+      </Wrapper>
       <Header siteTitle={props.title} />
-      {isBrowser() && window.location.pathname !== '/' && <ContentWrapper />}
-      {props.children}
-      <Footer />
     </Wrapper>
   );
 };
