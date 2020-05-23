@@ -197,7 +197,7 @@ const Header = ({ siteTitle }) => {
                 <Link to='/'>Home</Link>
               </MobileMenuItem>
               <MobileMenuItem scrolled={scrolled} theme={theme}>
-                <Link to='/'>About</Link>
+                <Link to='/about'>About</Link>
               </MobileMenuItem>
               <MobileMenuItem
                 scrolled={scrolled}

@@ -15,7 +15,7 @@ const Menu = ({ scrolled }) => {
         <Link to='/'>Home</Link>
       </MenuItem>
       <MenuItem scrolled={scrolled} theme={theme}>
-        <Link to='/'>About</Link>
+        <Link to='/about'>About</Link>
       </MenuItem>
       <MenuItem
         scrolled={scrolled}
