@@ -40,7 +40,8 @@ const ServicesSection = ({ data }) => {
             </Title>
             <p className='tablet-mr-10'>
               Blazing fast websites with an integrated CMS to give you
-              everything you need for your online presence.
+              everything you need for your online presence. Use any CMS, data
+              source, and hosting platform.
             </p>
             <Button outlined>Learn More</Button>
           </div>

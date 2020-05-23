@@ -38,7 +38,18 @@ export const theme = {
     text: {
       paragraph: '#4c5267',
       heading: '#2c2f3b',
-      dark: '#0e1e24',
+      headingLight: '#ffffff',
+      paragraphLight: '#ffffff',
+      dark: {
+        one: '#2c2f3b',
+        two: '#4c5267',
+        three: '#b5b9c1',
+      },
+      light: {
+        one: '#ffffff',
+        two: '#ffffffaa',
+        three: '#ffffff80',
+      },
     },
     primary: {
       // light: '#fab86c',

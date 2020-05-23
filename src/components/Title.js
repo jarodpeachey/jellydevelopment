@@ -76,14 +76,17 @@ const SmallTitle = ({ children, className = '' }) => {
 const H1 = styled.h1`
   font-weight: ${(props) => (props.weight ? props.weight : '700')} !important;
   margin-bottom: ${(props) => (props.underline ? 'none' : 'inherit')};
+  margin-top: 0;
 `;
 const H2 = styled.h2`
   font-weight: ${(props) => (props.weight ? props.weight : '700')} !important;
   margin-bottom: ${(props) => (props.underline ? 'none' : 'inherit')};
+  margin-top: 0;
 `;
 const H3 = styled.h3`
   font-weight: ${(props) => (props.weight ? props.weight : '700')} !important;
   margin-bottom: ${(props) => (props.underline ? 'none' : 'inherit')};
+  margin-top: 0;
 `;
 const Underline = styled.div`
   height: 2px;
@@ -100,25 +103,7 @@ const StyledTitleSmall = styled.p`
   font-size: 14px;
   letter-spacing: 2px;
   position: relative;
-  color: #000;
-  background: #fff;
-  mix-blend-mode: multiply;
-  ::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-      to right,
-      ${(props) => props.theme.color.primary.main},
-      ${(props) => props.theme.color.primary.main}
-    );
-    pointer-events: none;
-    mix-blend-mode: screen;
-  }
+  color: ${(props) => props.theme.color.primary.main};
 `;
 
 export { Title, SmallTitle };

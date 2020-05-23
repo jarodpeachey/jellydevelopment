@@ -82,6 +82,7 @@ const Header = ({ siteTitle }) => {
             scrolled={scrolled}
             theme={theme}
             scrollTop={scrollTop}
+            width={isBrowser() && window.innerWidth}
           >
             <div className='container'>
               <Flex theme={theme}>
@@ -250,8 +251,10 @@ const Wrapper = styled.header`
     padding-bottom: 16px;
     margin-top: ${(props) =>
       props.open ? 30 : props.scrolled ? 0 : 30 - props.scrollTop / 2}px;
-    padding-left: ${(props) => (props.open ? '48px' : '24px')};
-    padding-right: ${(props) => (props.open ? '48px' : '24px')};
+    padding-left: ${(props) =>
+      props.width > 769 ? '48px' : props.open ? '48px' : '24px'};
+    padding-right: ${(props) =>
+      props.width > 769 ? '48px' : props.open ? '48px' : '24px'};
     transition: all 0.2s ease-out;
   }
   z-index: 999999999999999;

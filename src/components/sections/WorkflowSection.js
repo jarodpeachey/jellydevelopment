@@ -1,0 +1,158 @@
+import React, { useContext } from 'react';
+import { styled } from 'linaria/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Section from '../layout/Section';
+import Row from '../grid/Row';
+import { ThemeContext } from '../theme';
+import speed from '../../images/speed.png';
+import security from '../../images/security.png';
+import scalability from '../../images/scalability.png';
+import cost from '../../images/cost.png';
+import Spacer from '../Spacer';
+import { Title, SmallTitle } from '../Title';
+import Button from '../Button';
+import projectAgreement from '../../images/project-agreement.png';
+import projectRequirements from '../../images/project-requirements.png';
+import projectDevelopment from '../../images/project-development.png';
+import projectRevision from '../../images/project-revision.png';
+import projectCompletion from '../../images/project-completion.png';
+
+const WorkflowSection = ({ data }) => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <div>
+      <Section background={`#fff`}>
+        <SmallTitle small>How We Do It</SmallTitle>
+        <Title className='max-2' type='h2'>
+          You can rest assured we'll deliver what you need.
+        </Title>
+        <p className='max-3'>
+          We make sure everything we do recieves a seal of approval from you,
+          and our attention to detail ensures the highest quality for your site.
+        </p>
+        <Spacer height={theme.spacing.seven * 1.3} />
+        <Row spacing={[24, 0]} breakpoints={[769]}>
+          <Item className='mb-7' widths={[6]}>
+            <ItemNumber theme={theme}>1</ItemNumber>
+            <ItemImage className='mb-5' src={projectRequirements} />
+            <Title className='center' type='h3'>
+              Project Requirements
+            </Title>
+            <p className='center'>
+              Before beginning work on your project, you provide us with the
+              project requirements. Then, we'll discuss a timeframe for the
+              completion of the project, and we'll give a qoute.
+            </p>
+          </Item>
+
+          <Item className='mb-7' widths={[6]}>
+            <ItemNumberRight theme={theme}>2</ItemNumberRight>
+            <ItemImage className='mb-5' src={projectAgreement} />
+            <Title className='center' type='h3'>
+              Project Agreement
+            </Title>
+            <p className='center'>
+              After the project requirements and timeframe are laid out, we'll
+              put these things into writing with an agreement that both parties
+              will sign.
+            </p>
+          </Item>
+
+          <Item className='mb-7' widths={[6]}>
+            <ItemNumber theme={theme}>3</ItemNumber>
+            <ItemImage className='mb-5' src={projectDevelopment} />
+            <Title className='center' type='h3'>
+              Project Development
+            </Title>
+            <p className='center'>
+              The meat in the project sandwhich. We'll develop you website or
+              application for you within the specified time frame. We'll contact
+              you every week with updates, or if we come across something that
+              you should be alerted of. We'll have a fully-functioning
+              application before we move onto the revision stage
+            </p>
+          </Item>
+
+          <Item className='mb-7' widths={[6]}>
+            <ItemNumberRight theme={theme}>4</ItemNumberRight>
+            <ItemImage className='mb-5' src={projectRevision} />
+            <Title className='center' type='h3'>
+              Project Revision
+            </Title>
+            <p className='center'>
+              If you find something else that we may have missed, or have
+              another request, we'll apply small changes to your application or
+              site until we've met all your requirements.
+            </p>
+          </Item>
+
+          <Item className='mb-7' widths={[6]}>
+            <ItemNumber theme={theme}>5</ItemNumber>
+            <ItemImage className='mb-5' src={projectCompletion} />
+            <Title className='center' type='h3'>
+              Project Completion
+            </Title>
+            <p className='center'>We give you your website!</p>
+            <p className='center'>
+              After we've made any final adjustements and payment is collected,
+              we'll send your entire website or application, along with full
+              rights to the code and all the resources used.
+            </p>
+          </Item>
+        </Row>
+        <Button className='center' primary>
+          Get A Quote
+        </Button>
+      </Section>
+    </div>
+  );
+};
+
+const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  p,
+  h3 {
+    max-width: 450px !important;
+    z-index: 1;
+  }
+`;
+
+const ItemNumber = styled.h1`
+  font-size: 250px;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  z-index: 0;
+  margin: 0;
+  font-weight: 900 !important;
+  color: ${(props) => props.theme.color.gray.two};
+`;
+
+const ItemNumberRight = styled.h1`
+  font-size: 250px;
+  position: absolute;
+  top: -20%;
+  z-index: 0;
+  margin: 0;
+  font-weight: 900 !important;
+  color: ${(props) => props.theme.color.gray.two};
+  @media (max-width: 768px) {
+    right: 0;
+  }
+  @media (min-width: 769px) {
+    left: 0;
+  }
+`;
+
+const ItemImage = styled.img`
+  width: 80px;
+  margin: 0 auto;
+`;
+
+export default WorkflowSection;

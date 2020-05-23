@@ -6,6 +6,8 @@ import SEO from '../components/SEO';
 import Hero from '../components/sections/Hero';
 import WhySection from '../components/sections/WhySection';
 import ServicesSection from '../components/sections/ServicesSection';
+import GetStartedSection from '../components/sections/GetStartedSection';
+import WorkflowSection from '../components/sections/WorkflowSection';
 
 const IndexPage = () => (
   <Layout>
@@ -47,6 +49,8 @@ const IndexPage = () => (
     </svg>
     <WhySection />
     <ServicesSection />
+    <GetStartedSection />
+    <WorkflowSection />
   </Layout>
 );
 

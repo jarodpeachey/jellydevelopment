@@ -31,10 +31,10 @@ const theme = {
     seven: 73,
   },
   heading: {
-    one: 42,
-    two: 32,
-    three: 26,
-    four: 20,
+    one: 46,
+    two: 36,
+    three: 27,
+    four: 21,
     five: 16,
     six: 13,
   },
@@ -44,7 +44,18 @@ const theme = {
     text: {
       paragraph: '#4c5267',
       heading: '#2c2f3b',
-      dark: '#0e1e24',
+      headingLight: '#ffffff',
+      paragraphLight: '#ffffff',
+      dark: {
+        one: '#2c2f3b',
+        two: '#4c5267',
+        three: '#b5b9c1',
+      },
+      light: {
+        one: '#ffffff',
+        two: '#ffffffaa',
+        three: '#ffffff80',
+      },
     },
     primary: {
       // light: '#fab86c',
@@ -70,7 +81,6 @@ const theme = {
     },
   },
 };
-
 export const globals = css`
   :global {
     body {
@@ -83,10 +93,10 @@ export const globals = css`
     p,
     small,
     code {
-      color: ${theme.color.text.paragraph};
+      color: ${theme.color.text.dark.two};
     }
     strong {
-      color: ${theme.color.text.dark};
+      color: ${theme.color.text.dark.one};
     }
     p,
     small,
@@ -124,7 +134,7 @@ export const globals = css`
     h4,
     h5,
     h6 {
-      color: ${theme.color.text.heading};
+      color:${theme.color.text.dark.one};
       font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif !important;
@@ -134,7 +144,7 @@ export const globals = css`
       margin-bottom: ${theme.spacing.five}px;
       &.bold {
         -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: ${theme.color.text.heading};
+        -webkit-text-stroke-color:${theme.color.text.dark.one};
       }
     }
     h3,
@@ -142,7 +152,7 @@ export const globals = css`
       margin-bottom: ${theme.spacing.four}px;
       &.bold {
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: ${theme.color.text.heading};
+        -webkit-text-stroke-color:${theme.color.text.dark.one};
       }
     }
     h5,
@@ -201,6 +211,81 @@ export const globals = css`
         margin-left: 10% !important;
       }
     }
+    .dark-1 {
+      color: ${theme.color.text.dark.one} !important;
+    }
+    .dark-2 {
+      color: ${theme.color.text.dark.two} !important;
+    }
+    .dark-3 {
+      color: ${theme.color.text.dark.three} !important;
+    }
+    .light-1 {
+      color: ${theme.color.text.light.one} !important;
+    }
+    .light-2 {
+      color: ${theme.color.text.light.two} !important;
+    }
+    .light-3 {
+      color: ${theme.color.text.light.three} !important;
+    }
+    .max-1 {
+      max-width: 350px;
+    }
+    .max-2 {
+      max-width: 500px;
+    }
+    .max-3 {
+      max-width: 650px;
+    }
+    .mx-none {margin-left: none !important; margin-right: none !important;};
+    .mx-1 {margin-left: ${theme.spacing.one}px !important; margin-right: ${theme.spacing.one}px !important;};
+    .mx-2 {margin-left: ${theme.spacing.two}px !important; margin-right: ${theme.spacing.two}px !important;};
+    .mx-3 {margin-left: ${theme.spacing.three}px !important; margin-right: ${theme.spacing.three}px !important;};
+    .mx-4 {margin-left: ${theme.spacing.four}px !important; margin-right: ${theme.spacing.four}px !important;};
+    .mx-5 {margin-left: ${theme.spacing.five}px !important; margin-right: ${theme.spacing.five}px !important;};
+    .mx-6 {margin-left: ${theme.spacing.six}px !important; margin-right: ${theme.spacing.six}px !important;};
+    .mx-7 {margin-left: ${theme.spacing.seven}px !important; margin-right: ${theme.spacing.seven}px !important;};
+    .my-none {margin-top: none !important; margin-bottom: none !important;};
+    .my-1 {margin-top: ${theme.spacing.one}px !important; margin-bottom: ${theme.spacing.one}px !important;};
+    .my-2 {margin-top: ${theme.spacing.two}px !important; margin-bottom: ${theme.spacing.two}px !important;};
+    .my-3 {margin-top: ${theme.spacing.three}px !important; margin-bottom: ${theme.spacing.three}px !important;};
+    .my-4 {margin-top: ${theme.spacing.four}px !important; margin-bottom: ${theme.spacing.four}px !important;};
+    .my-5 {margin-top: ${theme.spacing.five}px !important; margin-bottom: ${theme.spacing.five}px !important;};
+    .my-6 {margin-top: ${theme.spacing.six}px !important; margin-bottom: ${theme.spacing.six}px !important;};
+    .my-7 {margin-top: ${theme.spacing.seven}px !important; margin-bottom: ${theme.spacing.seven}px !important;};
+    .mt-none {margin-top: 0 !important};
+    .mt-1 {margin-top: ${theme.spacing.one}px !important};
+    .mt-2 {margin-top: ${theme.spacing.two}px !important};
+    .mt-3 {margin-top: ${theme.spacing.three}px !important};
+    .mt-4 {margin-top: ${theme.spacing.four}px !important};
+    .mt-5 {margin-top: ${theme.spacing.five}px !important};
+    .mt-6 {margin-top: ${theme.spacing.six}px !important};
+    .mt-7 {margin-top: ${theme.spacing.seven}px !important;};
+    .mb-none {margin-bottom: 0 !important};
+    .mb-1 {margin-bottom: ${theme.spacing.one}px !important;};
+    .mb-2 {margin-bottom: ${theme.spacing.two}px !important;};
+    .mb-3 {margin-bottom: ${theme.spacing.three}px !important;};
+    .mb-4 {margin-bottom: ${theme.spacing.four}px !important;};
+    .mb-5 {margin-bottom: ${theme.spacing.five}px !important;};
+    .mb-6 {margin-bottom: ${theme.spacing.six}px !important;};
+    .mb-7 {margin-bottom: ${theme.spacing.seven}px !important;};
+    .ml-none {margin-left: 0 !important};
+    .ml-1 {margin-left: ${theme.spacing.one}px !important;};
+    .ml-2 {margin-left: ${theme.spacing.two}px !important;};
+    .ml-3 {margin-left: ${theme.spacing.three}px !important;};
+    .ml-4 {margin-left: ${theme.spacing.four}px !important;};
+    .ml-5 {margin-left: ${theme.spacing.five}px !important;};
+    .ml-6 {margin-left: ${theme.spacing.six}px !important;};
+    .ml-7 {margin-left: ${theme.spacing.seven}px !important;};
+    .mr-none {margin-right: 0 !important};
+    .mr-1 {margin-right: ${theme.spacing.one}px !important;};
+    .mr-2 {margin-right: ${theme.spacing.two}px !important;};
+    .mr-3 {margin-right: ${theme.spacing.three}px !important;};
+    .mr-4 {margin-right: ${theme.spacing.four}px !important;};
+    .mr-5 {margin-right: ${theme.spacing.five}px !important;};
+    .mr-6 {margin-right: ${theme.spacing.six}px !important;};
+    .mr-7 {margin-right: ${theme.spacing.seven}px !important;};
   }
 `;
 

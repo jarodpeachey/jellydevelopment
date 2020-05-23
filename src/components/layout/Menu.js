@@ -103,7 +103,7 @@ const SubMenuWrapper = styled.div`
   opacity: ${(props) => (props.open ? 1 : 0)};
   transition: transform 0.1s ease-out,
     opacity 0.1s ease-out
-      ${(props) => (props.open ? ', visibility 0s 0s' : ', visibility 0s .2s')};
+      ${(props) => (props.open ? ', visibility 0s 0s' : ', visibility 0s .1s')};
   transform: ${(props) => (props.open ? 'scale(1)' : 'scale(.95)')};
   position: absolute;
   min-width: 200px;
