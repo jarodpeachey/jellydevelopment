@@ -260,13 +260,13 @@ const Wrapper = styled.header`
       props.width > 769 ? '48px' : props.open ? '48px' : '24px'};
     padding-right: ${(props) =>
       props.width > 769 ? '48px' : props.open ? '48px' : '24px'};
-    transition: all 0.2s ease-out;
+    transition: all 0.25s ease-out;
   }
   z-index: 999999999999999;
   background: ${(props) =>
     props.open ? 'transparent' : props.scrolled ? '#ffffffef' : 'transparent'};
   transition: ${(props) =>
-    props.scrolled ? 'background .3s ease-out' : 'none'};
+    props.scrolled ? 'background .25s ease-out' : 'none'};
 
   box-shadow: ${(props) =>
     props.scrolled && !props.open ? props.theme.shadow.one : 'none'};
@@ -288,36 +288,37 @@ const Flex = styled.div`
 const SiteTitle = styled.h1`
   margin: 0;
   position: absolute;
-  top: 3px;
-  left: 0;
-  color: ${(props) =>
-    props.scrolled || props.open
-      ? `${props.theme.color.primary.main}`
-      : '#ffffff'};
+  top: -1px;
+  left: ${(props) => (props.open ? '-66px' : '-4px')};
   display: flex;
   align-items: center;
   margin-top: -12px !important;
   margin-bottom: -1px !important;
   transition: all 0.25s ease-out;
   text-transform: uppercase;
+  font-size: 26px;
   svg {
     width: 65px !important;
     height: 65px !important;
+    opacity: ${(props) => (props.open ? 0 : 1)};
+
     transform: scaleX(-1) !important;
     margin: 0 !important;
     margin-top: -4px !important;
     * {
-      stroke: ${(props) => (props.scrolled ? '#b4267c' : 'white')} !important;
+      transition: all 0.25s ease-out;
+
+      stroke: ${(props) =>
+        props.scrolled || props.open ? '#b4267c' : 'white'} !important;
     }
   }
   // span {
-  font-size: 26px;
+  transition: all 0.25s ease-out;
+  color: ${(props) =>
+    props.scrolled || props.open
+      ? `${props.theme.color.primary.main}`
+      : '#ffffff'};
   // }
-  @media (min-width: 769px) {
-    // span {
-    font-size: 32px;
-    // }
-  }
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: ${(props) =>
     props.scrolled || props.open ? props.theme.color.primary.main : 'white'};
