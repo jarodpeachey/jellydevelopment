@@ -5,7 +5,7 @@ import { styled } from 'linaria/react';
 import Button from '../Button';
 import { ThemeContext } from '../theme';
 
-const PageHero = ({ children }) => {
+const PageHero = ({ children, title, subtitle }) => {
   const theme = useContext(ThemeContext);
   const [scrollValue, setScrollValue] = useState(0);
   console.log(theme);
@@ -49,10 +49,10 @@ const PageHero = ({ children }) => {
       <MainWrapper theme={theme}>
         <div className='container'>
           <Title className='center' theme={theme}>
-            About Jelly Development
+            {title}
           </Title>
           <SubTitle className='center' theme={theme}>
-            An awesome company run by Jarod Peachey. They build websites.
+            {subtitle}
           </SubTitle>
         </div>
       </MainWrapper>

@@ -10,13 +10,14 @@ import GetStartedSection from '../components/sections/GetStartedSection';
 import WorkflowSection from '../components/sections/WorkflowSection';
 import AboutSection from '../components/sections/AboutSection';
 import TeamSection from '../components/sections/TeamSection';
+import CustomSolutionsSection from '../components/sections/CustomSolutionsSection';
 
-const AboutPage = () => (
+const CustomSolutionsPage = () => (
   <Layout>
     <SEO title='Home' />
     <PageHero
-      title='About Jelly Development'
-      subtitle='Modern web solutions, built on the JAMstack.'
+      title='Custom JAMstack Solutions'
+      subtitle='Business-focused JAMstack development. Fully custom, fully static.'
     />
     <svg
       viewBox='0 0 1428 174'
@@ -55,9 +56,9 @@ const AboutPage = () => (
     {/* <WhySection />
     <ServicesSection />
     <WorkflowSection /> */}
-    <AboutSection />
+    <CustomSolutionsSection />
     {/* <TeamSection /> */}
   </Layout>
 );
 
-export default AboutPage;
+export default CustomSolutionsPage;

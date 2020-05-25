@@ -4,13 +4,13 @@ import React from 'react';
 export const theme = {
   shadow: {
     one:
-      '0 0 4px 0 rgba(17,22,26,0.16), 0 2px 4px 0 rgba(17,22,26, 0.04), 0 4px 8px 0 rgba(17,22,26, 0.04)',
+      '0 0 4px 0 rgba(17,22,26,0.08), 0 2px 4px 0 rgba(17,22,26, 0.03), 0 4px 8px 0 rgba(17,22,26, 0.03)',
     two:
-      '0 0 8px 0 rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26, 0.04), 0 8px 16px 0 rgba(17,22,26, 0.04)',
+      '0 0 8px 0 rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26, 0.03), 0 8px 16px 0 rgba(17,22,26, 0.03)',
     three:
-      '0 4px 16px 4px rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26, 0.04), 0 16px 24px 0 rgba(17,22,26, 0.04)',
+      '0 4px 16px 4px rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26, 0.03), 0 16px 24px 0 rgba(17,22,26, 0.03)',
     four:
-      '0 4px 24px 8px rgba(17,22,26,0.16), 0 8px 16px 0 rgba(17,22,26, 0.04), 0 32px 40px 0 rgba(17,22,26, 0.04)',
+      '0 4px 24px 8px rgba(17,22,26,0.08), 0 8px 16px 0 rgba(17,22,26, 0.03), 0 32px 40px 0 rgba(17,22,26, 0.03)',
   },
   radius: {
     one: '4px',

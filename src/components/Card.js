@@ -4,11 +4,17 @@ import { css } from 'linaria';
 import { Link } from 'gatsby';
 import { ThemeContext } from './theme';
 
-const Card = ({ children, title, subtitle, className = '' }) => {
+const Card = ({
+  children,
+  title,
+  subtitle,
+  className = '',
+  background = '#ffffff',
+}) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <StyledCard className={className} theme={theme}>
+    <StyledCard background={background} className={className} theme={theme}>
       {title && <Title border={!subtitle}>{title}</Title>}
       {subtitle && <Subtitle className='weight-light'>{subtitle}</Subtitle>}
       {children}
@@ -19,10 +25,10 @@ const Card = ({ children, title, subtitle, className = '' }) => {
 const StyledCard = styled.div`
   padding: ${(props) => props.theme.spacing.four}px;
   // margin-bottom: 32px;
-  background: white;
+  background: ${(props) => props.background};
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.gray.three};
-  box-shadow: ${(props) => props.theme.shadow.four};
+  // box-shadow: ${(props) => props.theme.shadow.one};
 `;
 
 const Title = styled.h2`

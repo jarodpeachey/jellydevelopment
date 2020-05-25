@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { styled } from 'linaria/react';
 import { css } from 'linaria';
 import { ThemeContext } from '../theme';
+import Card from '../Card';
 
 const Section = ({
   fullHeight,
@@ -15,6 +16,7 @@ const Section = ({
   light,
   thin,
   id,
+  card,
 }) => {
   const theme = useContext(ThemeContext);
 
@@ -26,26 +28,46 @@ const Section = ({
       dark={dark}
       light={light}
       color={
-        dark
+        card
+          ? 'white'
+          : dark
           ? theme.color.primary.backgroundDark
           : light
           ? theme.color.primary.backgroundLight
           : background || 'transparent'
       }
     >
-      <div className='container'>
-        {title && (
-          <Title theme={theme} dark={dark}>
-            {title}
-          </Title>
-        )}
-        {subtitle && (
-          <SubTitle theme={theme} dark={dark}>
-            {subtitle}
-          </SubTitle>
-        )}
-        {children}
-      </div>
+      {card ? (
+        <div className='container'>
+          <Card background={background}>
+            {title && (
+              <Title theme={theme} dark={dark}>
+                {title}
+              </Title>
+            )}
+            {subtitle && (
+              <SubTitle theme={theme} dark={dark}>
+                {subtitle}
+              </SubTitle>
+            )}
+            {children}
+          </Card>
+        </div>
+      ) : (
+        <div className='container'>
+          {title && (
+            <Title theme={theme} dark={dark}>
+              {title}
+            </Title>
+          )}
+          {subtitle && (
+            <SubTitle theme={theme} dark={dark}>
+              {subtitle}
+            </SubTitle>
+          )}
+          {children}
+        </div>
+      )}
     </StyledSection>
   );
 };

@@ -10,13 +10,13 @@ import { isBrowser } from '../utils/isBrowser';
 const theme = {
   shadow: {
     one:
-      '0 0 4px 0 rgba(17,22,26,0.16), 0 2px 4px 0 rgba(17,22,26, 0.04), 0 4px 8px 0 rgba(17,22,26, 0.04)',
+      '0 0 4px 0 rgba(17,22,26,0.08), 0 2px 4px 0 rgba(17,22,26, 0.03), 0 4px 8px 0 rgba(17,22,26, 0.03)',
     two:
-      '0 0 8px 0 rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26, 0.04), 0 8px 16px 0 rgba(17,22,26, 0.04)',
+      '0 0 8px 0 rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26, 0.03), 0 8px 16px 0 rgba(17,22,26, 0.03)',
     three:
-      '0 4px 16px 4px rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26, 0.04), 0 16px 24px 0 rgba(17,22,26, 0.04)',
+      '0 4px 16px 4px rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26, 0.03), 0 16px 24px 0 rgba(17,22,26, 0.03)',
     four:
-      '0 4px 24px 8px rgba(17,22,26,0.16), 0 8px 16px 0 rgba(17,22,26, 0.04), 0 32px 40px 0 rgba(17,22,26, 0.04)',
+      '0 4px 24px 8px rgba(17,22,26,0.08), 0 8px 16px 0 rgba(17,22,26, 0.03), 0 32px 40px 0 rgba(17,22,26, 0.03)',
   },
   radius: {
     one: '4px',
@@ -98,7 +98,9 @@ export const globals = css`
     }
     p,
     small,
-    code {
+    code,
+    ul,
+    li {
       color: ${theme.color.text.dark.two};
     }
     strong {
@@ -112,6 +114,8 @@ export const globals = css`
     input,
     td,
     th,
+    ul,
+    li,
     button {
       font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
@@ -129,6 +133,10 @@ export const globals = css`
     }
     p {
       line-height: ${theme.spacing.five + 6}px;
+      font-size: 18px;
+    }
+    ul,
+    li {
       font-size: 18px;
     }
     small {
@@ -223,8 +231,11 @@ export const globals = css`
         margin-left: 10% !important;
       }
     }
-    .bg-gray {
-      background: ${theme.color.gray.one} !important;
+    .border-none {
+      border: none !important;
+    }
+    .bg-light {
+      background: ${theme.color.gray.one}90 !important;
     }
     .bg-transparent {
       background: transparent !important;
