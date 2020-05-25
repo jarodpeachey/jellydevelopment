@@ -65,8 +65,16 @@ const MainWrapper = styled.div`
     line-height: 30px;
     font-size: 24px !important;
   }
-  margin-bottom: -80px;
-  padding-top: 32px;
+  margin-bottom: -60px;
+  padding-top: 0px;
+  @media(min-width: 960px) {
+    margin-bottom: -100px;
+    padding-top: 0;
+  }
+  @media(min-width: 1300px) {
+    margin-bottom: -120px;
+    padding-top: 0;
+  }
 `;
 
 const BackgroundImage = styled.div`

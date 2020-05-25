@@ -100,7 +100,12 @@ export const globals = css`
     small,
     code,
     ul,
-    li {
+    li,
+    input,
+    label,
+    textarea,
+    select,
+    small {
       color: ${theme.color.text.dark.two};
     }
     strong {
@@ -112,16 +117,22 @@ export const globals = css`
     div,
     select,
     input,
+    textarea,
     td,
     th,
     ul,
     li,
+    label,
     button {
       font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif !important;
       font-size: 16px;
       font-weight: 400;
+    }
+    textarea {
+      margin: 0;
+      padding: 0;
     }
     .title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -192,7 +203,7 @@ export const globals = css`
       font-size: ${theme.heading.six}px;
     }
     a {
-      transition: none !important;
+      transition: 0 !important;
       transition-duration: 0s !important;
       transition-delay: 0s !important;
     }
@@ -232,7 +243,7 @@ export const globals = css`
       }
     }
     .border-none {
-      border: none !important;
+      border: 0 !important;
     }
     .bg-light {
       background: ${theme.color.gray.one}90 !important;
@@ -277,7 +288,7 @@ export const globals = css`
       max-width: 800px;
     }
     .m-none {
-      margin: none !important;
+      margin: 0 !important;
     }
     .m-1 {
       margin: ${theme.spacing.one}px !important;
@@ -305,8 +316,8 @@ export const globals = css`
       margin-right: auto !important;
     }
     .mx-none {
-      margin-left: none !important;
-      margin-right: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
     .mx-1 {
       margin-left: ${theme.spacing.one}px !important;
@@ -337,8 +348,8 @@ export const globals = css`
       margin-right: ${theme.spacing.seven}px !important;
     }
     .my-none {
-      margin-top: none !important;
-      margin-bottom: none !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
     }
     .my-1 {
       margin-top: ${theme.spacing.one}px !important;
@@ -466,7 +477,7 @@ export const globals = css`
     }
 
     .p-none {
-      padding: none !important;
+      padding: 0 !important;
     }
     .p-1 {
       padding: ${theme.spacing.one}px !important;
@@ -490,8 +501,8 @@ export const globals = css`
       padding: ${theme.spacing.seven}px !important;
     }
     .px-none {
-      padding-left: none !important;
-      padding-right: none !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
     .px-1 {
       padding-left: ${theme.spacing.one}px !important;
@@ -522,8 +533,8 @@ export const globals = css`
       padding-right: ${theme.spacing.seven}px !important;
     }
     .py-none {
-      padding-top: none !important;
-      padding-bottom: none !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
     }
     .py-1 {
       padding-top: ${theme.spacing.one}px !important;

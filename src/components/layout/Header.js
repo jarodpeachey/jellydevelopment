@@ -230,17 +230,17 @@ const Header = ({ siteTitle }) => {
                     <SubMenuItem theme={theme}>
                       <Link to='/static-sites'>Static Sites</Link>
                     </SubMenuItem>
-                    <SubMenuItem theme={theme}>
+                    {/* <SubMenuItem theme={theme}>
                       <Link to='/'>Wordpress Transfers</Link>
-                    </SubMenuItem>
+                    </SubMenuItem> */}
                     <SubMenuItem theme={theme}>
-                      <Link to='/'>Custom Solutions</Link>
+                      <Link to='/custom-solutions'>Custom Solutions</Link>
                     </SubMenuItem>
                   </SubMenu>
                 </SubMenuWrapper>
               </MobileMenuItem>
               <MobileMenuItem theme={theme} scrolled={scrolled}>
-                <Link to='/'>Contact</Link>
+                <Link to='/contact'>Contact</Link>
               </MobileMenuItem>
             </div>
           </MobileMenu>

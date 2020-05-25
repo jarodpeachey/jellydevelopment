@@ -40,10 +40,11 @@ const ServicesSection = ({ data }) => {
             </Title>
             <p className='tablet-mr-10'>
               Blazing fast websites with an integrated CMS to give you
-              everything you need for your online presence. Use any CMS, data
-              source, and hosting platform.
+              everything you need for your online presence. Whether you need a
+              site for your business, a hobby or something else, static is the
+              way to go.
             </p>
-            <Button outlined>Learn More</Button>
+            <Button outlined link='/static-sites'>Learn More</Button>
           </div>
           <div widths={[12, 5]}>
             <img
@@ -73,7 +74,7 @@ const ServicesSection = ({ data }) => {
               We create custom integrations to allow you to get more out of the
               tools you love, without sacrificing performance or security.
             </p>
-            <Button outlined className='tablet-ml-10'>
+            <Button link='/custom-solutions' outlined className='tablet-ml-10'>
               Learn More
             </Button>
           </div>
@@ -97,7 +98,7 @@ const ServicesSection = ({ data }) => {
               anything else you can think of. If you can dream it, we can
               JAMstack-ify it.
             </p>
-            <Button outlined>Learn More</Button>
+            <Button outlined link='/custom-solutions'>Learn More</Button>
           </div>
           <div widths={[12, 5]}>
             <img
