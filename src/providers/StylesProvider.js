@@ -300,6 +300,10 @@ export const globals = css`
     .m-7 {
       margin: ${theme.spacing.seven}px !important;
     }
+    .mx-auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
     .mx-none {
       margin-left: none !important;
       margin-right: none !important;

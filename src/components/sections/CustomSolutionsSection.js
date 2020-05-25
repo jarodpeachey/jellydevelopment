@@ -10,6 +10,10 @@ import maintenance from '../../images/maintenance.png';
 import cost from '../../images/cost.png';
 import security from '../../images/security.png';
 import scalability from '../../images/scalability.png';
+import api from '../../images/api.png';
+import integrations from '../../images/integrations.png';
+import computer from '../../images/computer.png';
+import gear from '../../images/gear.png';
 import Card from '../Card';
 import Button from '../Button';
 
@@ -94,29 +98,35 @@ const CustomSolutionsSection = ({ data }) => {
           </Feature>
         </Row>
       </Section>
-      <Section background='#fff'>
-        <Card className='px-6 py-6 bg-light border-none'>
-          <Title type='h2' className='max-2'>
-            Whatever You Need, We've Got You Covered
-          </Title>
-          <p>
-            Whether you need a custom integration, REST API, user/team management system or other work, we've got you covered.
-          </p>
-          <p>Here's what you get:</p>
-          <ul>
-            <li>Full source code</li>
-            <li>Content management of your choice</li>
-            <li>Custom CMS configuration</li>
-            <li>Built-in SEO optimizations</li>
-            <li>Site accesibility</li>
-            <li>Hosting provider of choice</li>
-          </ul>
-          <p>
-            Basically, we're a one-stop shop for your new website. Clean design,
-            high-quality development, custom setup and more all leading to a
-            blazing fast website 🔥
-          </p>
-        </Card>
+      <Section background='transparent'>
+        <Title className='center light-1 max-2' type='h2'>
+          Whatever You Need, We've Got You Covered
+        </Title>
+        <p className='center light-2'>
+          Whether you need a custom integration, REST API, user/team management
+          system or other work, you've come to the right place.
+        </p>
+        <Spacer height={theme.spacing.six} />
+        <Row className='max-3 mx-auto' spacing={[0, 24]} breakpoints={[576, 769]}>
+          <SmallFeature widths={[6, 4]}>
+            <SmallFeatureIcon>
+              <img className='icon' src={api} />
+            </SmallFeatureIcon>
+            <SmallFeatureTitle>Custom APIs</SmallFeatureTitle>
+          </SmallFeature>
+          <SmallFeature widths={[6, 4]}>
+            <SmallFeatureIcon>
+              <img className='icon' src={computer} />
+            </SmallFeatureIcon>
+            <SmallFeatureTitle>Management Systems</SmallFeatureTitle>
+          </SmallFeature>
+          <SmallFeature widths={[6, 4]}>
+            <SmallFeatureIcon>
+              <img className='icon' src={integrations} />
+            </SmallFeatureIcon>
+            <SmallFeatureTitle>Custom Integrations</SmallFeatureTitle>
+          </SmallFeature>
+        </Row>
       </Section>
       <Section background='transparent'>
         <Title type='h2' className='center light-1 mb-6'>
@@ -151,6 +161,31 @@ const FeatureTitle = styled.h3`
 `;
 const FeatureDescription = styled.p`
   text-align: center;
+`;
+const SmallFeature = styled.div`
+  max-width: 80%;
+  margin: 0 auto;
+`;
+const SmallFeatureIcon = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: -25px;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  img {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    filter: hue-rotate(0deg) invert(50%) brightness(300%) saturate(0);
+  }
+`;
+const SmallFeatureTitle = styled.h4`
+  text-align: center;
+  color: white;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export default CustomSolutionsSection;
