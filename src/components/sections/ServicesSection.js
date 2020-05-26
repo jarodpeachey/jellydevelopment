@@ -11,8 +11,9 @@ import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import Button from '../Button';
-import staticSites from '../../images/static-websites-two.png';
-import customIntegrations from '../../images/custom-integrations-two.png';
+import staticSites from '../../images/static-websites.png';
+import customIntegrations from '../../images/custom-integrations.png';
+import customDevelopment from '../../images/custom-development.png';
 
 const ServicesSection = ({ data }) => {
   const theme = useContext(ThemeContext);
@@ -46,30 +47,27 @@ const ServicesSection = ({ data }) => {
               site for your business, a hobby or something else, static is the
               way to go.
             </p>
-            <Button outlined link='/static-sites'>Learn More</Button>
+            <Button outlined link='/static-sites'>
+              Learn More
+            </Button>
           </div>
           <div widths={[12, 5]}>
-            <img
-              src={staticSites}
-              style={{ width: '100%' }}
-            />
+            <img src={staticSites} style={{ width: '100%' }} />
           </div>
         </Row>
         <Spacer height={theme.spacing.seven * 1.3} />
 
-        <Row spacing={[24, 0]} breakpoints={[769]}>
+        <Row spacing={[24, 16]} breakpoints={[769]}>
           <div widths={[5]}>
-            <img
-              src={customIntegrations}
-              style={{ width: '100%' }}
-            />
+            <img src={customIntegrations} style={{ width: '100%' }} />
           </div>
           <div widths={[7]}>
             <Title className='tablet-ml-10' weight={600} underline>
               High-Quality Integrations
             </Title>
             <p className='tablet-ml-10'>
-              Have a specific tool in mind that you want to use? Let us know, and we'll be sure to integrate it with your new site.
+              Have a specific tool in mind that you want to use? Let us know,
+              and we'll be sure to integrate it with your new site.
             </p>
             <p className='tablet-ml-10'>
               We create custom integrations to allow you to get more out of the
@@ -99,13 +97,12 @@ const ServicesSection = ({ data }) => {
               anything else you can think of. If you can dream it, we can
               JAMstack-ify it.
             </p>
-            <Button outlined link='/custom-solutions'>Learn More</Button>
+            <Button outlined link='/custom-solutions'>
+              Learn More
+            </Button>
           </div>
           <div widths={[12, 5]}>
-            <img
-              src='https://cdn.sanity.io/images/6m6ry3oq/production/0e36ac6466d7ba2c50569e6acabb461b8f7b1d35-736x633.png'
-              style={{ width: '100%' }}
-            />
+            <img src={customDevelopment} style={{ width: '100%' }} />
           </div>
         </Row>
       </Section>
