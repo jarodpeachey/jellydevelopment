@@ -87,13 +87,14 @@ const theme = {
     },
   },
 };
+
 export const globals = css`
   :global {
     body {
       background: linear-gradient(
         to right,
         ${theme.color.primary.main},
-        ${theme.color.secondary.main}
+        ${theme.color.secondary.main} 80%
       );
     }
     p,
