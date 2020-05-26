@@ -57,17 +57,17 @@ const Hero = ({ children }) => {
               Blazing fast and secure custom websites and solutions
             </Title>
             <SubTitle theme={theme}>
-              The future is static. We'll help you get there with custom static
-              websites and solutions for your entire team.
+              High quality websites and custom solutions, built with performance
+              and security in mind.
             </SubTitle>
             <ButtonFlex>
               <ButtonWrapper>
-                <Button white link='/'>
+                <Button white link='#get-started'>
                   Get Started
                 </Button>
               </ButtonWrapper>
               <ButtonWrapper>
-                <Button white outlined link='/'>
+                <Button white outlined link='/about'>
                   Learn More
                 </Button>
               </ButtonWrapper>

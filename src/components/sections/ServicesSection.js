@@ -11,6 +11,8 @@ import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import Button from '../Button';
+import staticSites from '../../images/static-websites-two.png';
+import customIntegrations from '../../images/custom-integrations-two.png';
 
 const ServicesSection = ({ data }) => {
   const theme = useContext(ThemeContext);
@@ -48,7 +50,7 @@ const ServicesSection = ({ data }) => {
           </div>
           <div widths={[12, 5]}>
             <img
-              src='https://cdn.sanity.io/images/6m6ry3oq/production/c5529b494f031c0747e38365e9361ecf01b3845a-510x620.png'
+              src={staticSites}
               style={{ width: '100%' }}
             />
           </div>
@@ -58,17 +60,16 @@ const ServicesSection = ({ data }) => {
         <Row spacing={[24, 0]} breakpoints={[769]}>
           <div widths={[5]}>
             <img
-              src='https://cdn.sanity.io/images/6m6ry3oq/production/26338d2ff2efa22ec781ee940299a44eed18785d-562x468.png'
+              src={customIntegrations}
               style={{ width: '100%' }}
             />
           </div>
           <div widths={[7]}>
             <Title className='tablet-ml-10' weight={600} underline>
-              Custom Integrations
+              High-Quality Integrations
             </Title>
             <p className='tablet-ml-10'>
-              Have a favorite tool that you don't want to give up? We can make
-              sure you get to keep using it.
+              Have a specific tool in mind that you want to use? Let us know, and we'll be sure to integrate it with your new site.
             </p>
             <p className='tablet-ml-10'>
               We create custom integrations to allow you to get more out of the

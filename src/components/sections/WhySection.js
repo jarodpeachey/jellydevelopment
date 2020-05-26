@@ -18,6 +18,7 @@ const WhySection = ({ data }) => {
 
   return (
     <div>
+      <span id='get-started'></span>
       <Section background='white'>
         <SmallTitle className='center' small>
           The JAMstack Advantage(s)
