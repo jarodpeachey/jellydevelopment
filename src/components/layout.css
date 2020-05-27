@@ -54,12 +54,14 @@ button a:hover {
   --space-xxl: 72px;
 }
 
+section {
+  margin-bottom: -2px;
+}
+
 body {
   width: 100%;
-  overflow-x: auto;
   margin: 0;
   padding: 0;
-  overflow-y: auto;
   background: #f7f7f7;
 }
 

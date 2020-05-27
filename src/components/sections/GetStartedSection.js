@@ -24,8 +24,8 @@ const GetStartedSection = ({ data, card, className = '' }) => {
             Ready to Go Static?
           </Title>
           <p className='center light-2 mb-none'>
-            Contact us for a qoute and see just how fast your business can be on
-            the web.
+            Contact us for a qoute and see just how fast you and your business
+            can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
           <Button className='center' outlined white>

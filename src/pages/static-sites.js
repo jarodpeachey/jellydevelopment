@@ -22,6 +22,7 @@ const StaticSitesPage = () => (
     <svg
       viewBox='0 0 1428 174'
       version='1.1'
+      style={{ marginBottom: '-2px' }}
       xmlns='http://www.w3.org/2000/svg'
     >
       <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>

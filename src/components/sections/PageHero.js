@@ -68,15 +68,18 @@ const MainWrapper = styled.div`
     line-height: 30px;
     font-size: 24px !important;
   }
-  margin-bottom: -60px;
-  padding-top: 0px;
+  position: relative;
+  margin-bottom: -112px;
+  padding-bottom: 50px;
+  padding-top: 92px;
+  margin-top: -92px;
   @media (min-width: 960px) {
-    margin-bottom: -100px;
-    padding-top: 0;
+    margin-bottom: -150px;
+    padding-bottom: 50px;
   }
   @media (min-width: 1300px) {
-    margin-bottom: -120px;
-    padding-top: 0;
+    margin-bottom: -170px;
+    padding-bottom: 50px;
   }
 `;
 

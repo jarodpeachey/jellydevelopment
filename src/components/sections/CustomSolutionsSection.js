@@ -107,7 +107,11 @@ const CustomSolutionsSection = ({ data }) => {
           system or other work, you've come to the right place.
         </p>
         <Spacer height={theme.spacing.six} />
-        <Row className='max-3 mx-auto' spacing={[0, 24]} breakpoints={[576, 769]}>
+        <Row
+          className='max-3 mx-auto'
+          spacing={[0, 24]}
+          breakpoints={[576, 769]}
+        >
           <SmallFeature widths={[6, 4]}>
             <SmallFeatureIcon>
               <img className='icon' src={api} />
@@ -127,12 +131,7 @@ const CustomSolutionsSection = ({ data }) => {
             <SmallFeatureTitle>Custom Integrations</SmallFeatureTitle>
           </SmallFeature>
         </Row>
-      </Section>
-      <Section background='transparent'>
-        <Title type='h2' className='center light-1 mb-6'>
-          Ready For Your New Site?
-        </Title>
-        <Button className='center' white outlined>
+        <Button className='center mt-6' white outlined>
           Get Started
         </Button>
       </Section>

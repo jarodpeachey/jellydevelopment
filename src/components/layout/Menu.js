@@ -27,7 +27,7 @@ const Menu = ({ scrolled }) => {
         }}
         theme={theme}
       >
-        <Link to='/'>
+        <a>
           Services
           <FontAwesomeIcon
             style={{
@@ -40,7 +40,7 @@ const Menu = ({ scrolled }) => {
             }}
             icon='chevron-down'
           />
-        </Link>
+        </a>
         <SubMenuWrapper theme={theme} open={subMenuOpen}>
           <SubMenu theme={theme} open={subMenuOpen}>
             <SubMenuItem theme={theme}>

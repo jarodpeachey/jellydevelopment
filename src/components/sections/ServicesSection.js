@@ -28,7 +28,7 @@ const ServicesSection = ({ data }) => {
           Bring the power of static to anything you want
         </Title>
         <p className='center'>
-          No matter what your business needs, we've got you covered with
+          No matter what you need, we've got you covered with
           everything from one-page sites to full custom solutions.
         </p>
         <Spacer height={theme.spacing.seven * 1.3} />
@@ -48,7 +48,7 @@ const ServicesSection = ({ data }) => {
               way to go.
             </p>
             <Button outlined link='/static-sites'>
-              Learn More
+              Get A Website
             </Button>
           </div>
           <div widths={[12, 5]}>
@@ -74,7 +74,7 @@ const ServicesSection = ({ data }) => {
               tools you love, without sacrificing performance or security.
             </p>
             <Button link='/custom-solutions' outlined className='tablet-ml-10'>
-              Learn More
+              Integrations
             </Button>
           </div>
         </Row>
@@ -89,7 +89,7 @@ const ServicesSection = ({ data }) => {
               Custom Development
             </Title>
             <p className='tablet-mr-10'>
-              If you need more than a static site, you've come to the right
+              If you need more than just a static site, you've come to the right
               place.
             </p>
             <p className='tablet-mr-10'>

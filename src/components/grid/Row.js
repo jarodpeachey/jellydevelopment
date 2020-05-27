@@ -74,7 +74,7 @@ const Wrapper = styled.div`
     margin: ${(props) =>
       props.standardWidth
         ? '0'
-        : `0 -${props.spacingX}px 0 -${props.spacingX}px`};
+        : `-${props.spacingY}px -${props.spacingX}px -${props.spacingY}px -${props.spacingX}px`};
   }
   ${(props) =>
     props.flexDirections &&
@@ -90,7 +90,7 @@ const Wrapper = styled.div`
     margin: ${
       props.standardWidth
         ? '0'
-        : `0 -${props.spacingX}px 0 -${props.spacingX}px`
+        : `-${props.spacingY}px -${props.spacingX}px -${props.spacingY}px -${props.spacingX}px`
     };
   `};
 `;
