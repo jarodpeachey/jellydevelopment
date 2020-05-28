@@ -11,10 +11,9 @@ import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import Button from '../Button';
-import staticSites from '../../images/static-websites.svg';
-import customIntegrations from '../../images/custom-integrations.svg';
+import { StaticSitesImage, CustomIntegrationsImage } from '../Image';
 
-const ServicesSection = ({ data }) => {
+const ServicesSection = () => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -37,7 +36,7 @@ const ServicesSection = ({ data }) => {
           breakpoints={[0, 769]}
         >
           <div widths={[12, 7]}>
-            <Title type="h2" className='tablet-mr-10' weight={600} underline>
+            <Title type='h2' className='tablet-mr-10' weight={600} underline>
               Modern Websites
             </Title>
             <p className='tablet-mr-10'>
@@ -50,17 +49,17 @@ const ServicesSection = ({ data }) => {
             </Button>
           </div>
           <div widths={[12, 5]}>
-            <img src={staticSites} style={{ width: '100%', maxWidth: '400px' }} />
+            <StaticSitesImage />
           </div>
         </Row>
         <Spacer height={theme.spacing.seven * 1.3} />
 
         <Row spacing={[24, 16]} breakpoints={[769]}>
           <div widths={[5]}>
-            <img src={customIntegrations} style={{ width: '100%', maxWidth: '400px' }} />
+            <CustomIntegrationsImage />
           </div>
           <div widths={[7]}>
-            <Title type="h2" className='tablet-ml-10' weight={600} underline>
+            <Title type='h2' className='tablet-ml-10' weight={600} underline>
               Custom Solutions
             </Title>
             <p className='tablet-ml-10'>
