@@ -19,34 +19,6 @@ const Hero = ({ children }) => {
 
   return (
     <span>
-      {/* // <StaticQuery */}
-      {/* query={graphql`
-        query {
-          desktop: file(relativePath: { eq: "hero_image.jpeg" }) {
-            childImageSharp {
-              fluid(quality: 90, maxWidth: 4160) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
-            }
-          }
-        }
-      `}
-      render={(data) => {
-    Extract imageData.
-    const imageData = data.desktop.childImageSharp.fluid; */}
-      {/* return ( */}
-      {/* <div
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          position: 'absolute',
-          top: 0,
-          zIndex: -5,
-          height: '100vh',
-          width: '100%',
-          opacity: 1,
-          backgroundRepeat: 'repeat',
-        }}
-      /> */}
       <MainWrapper theme={theme}>
         <BackgroundImage>
           <div></div>
@@ -54,11 +26,11 @@ const Hero = ({ children }) => {
         <HeroContainer>
           <ChildContainer className='container'>
             <Title theme={theme}>
-              Blazing fast and secure custom websites and solutions
+              Modern Websites to Optimize Your Online Presence
             </Title>
             <SubTitle theme={theme}>
-              High quality websites and custom solutions, built with performance
-              and security in mind.
+              High quality websites and custom solutions, built to take your
+              online presence to the next level.
             </SubTitle>
             <ButtonFlex>
               <ButtonWrapper>

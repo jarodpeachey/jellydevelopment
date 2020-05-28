@@ -25,11 +25,11 @@ const ServicesSection = ({ data }) => {
           Our Services
         </SmallTitle>
         <Title type='h2' className='center'>
-          Bring the power of static to anything you want
+          Advance your business with the modern web
         </Title>
         <p className='center'>
-          No matter what you need, we've got you covered with
-          everything from one-page sites to full custom solutions.
+          No matter what you need, I've got you covered with everything from
+          one-page sites to full custom solutions.
         </p>
         <Spacer height={theme.spacing.seven * 1.3} />
         <Row
@@ -39,16 +39,15 @@ const ServicesSection = ({ data }) => {
         >
           <div widths={[12, 7]}>
             <Title className='tablet-mr-10' weight={600} underline>
-              Static Websites
+              Modern Websites
             </Title>
             <p className='tablet-mr-10'>
-              Blazing fast websites with an integrated CMS to give you
-              everything you need for your online presence. Whether you need a
-              site for your business, a hobby or something else, static is the
-              way to go.
+              Blazing fast websites with an integrated content management system
+              to give you everything you need for your online presence. Websites
+              for your business, hobby or personal project.
             </p>
             <Button outlined link='/static-sites'>
-              Get A Website
+              Learn More
             </Button>
           </div>
           <div widths={[12, 5]}>
@@ -63,22 +62,23 @@ const ServicesSection = ({ data }) => {
           </div>
           <div widths={[7]}>
             <Title className='tablet-ml-10' weight={600} underline>
-              High-Quality Integrations
+              Custom Solutions
             </Title>
             <p className='tablet-ml-10'>
-              Have a specific tool in mind that you want to use? Let us know,
-              and we'll be sure to integrate it with your new site.
+              If you're looking to modernize your workflow, you've come to the
+              right place.
             </p>
             <p className='tablet-ml-10'>
-              We create custom integrations to allow you to get more out of the
-              tools you love, without sacrificing performance or security.
+              I can develop custom APIs, user managements systems, database
+              tools and more, all taking advantage of the serverless ecosystem.
+              Less cost, higher performance, better business.
             </p>
-            <Button link='/custom-solutions' outlined className='tablet-ml-10'>
-              Integrations
+            <Button className='tablet-ml-10' outlined link='/custom-solutions'>
+              Learn More
             </Button>
           </div>
         </Row>
-        <Spacer height={theme.spacing.seven * 1.3} />
+        {/* <Spacer height={theme.spacing.seven * 1.3} />
         <Row
           flexDirections={['column-reverse', 'row']}
           spacing={[24, 0]}
@@ -94,7 +94,7 @@ const ServicesSection = ({ data }) => {
             </p>
             <p className='tablet-mr-10'>
               Go completely static with custom APIs, user management systems, or
-              anything else you can think of. If you can dream it, we can
+              anything else you can think of. If you can dream it, I can
               JAMstack-ify it.
             </p>
             <Button outlined link='/custom-solutions'>
@@ -104,7 +104,7 @@ const ServicesSection = ({ data }) => {
           <div widths={[12, 5]}>
             <img src={customDevelopment} style={{ width: '100%' }} />
           </div>
-        </Row>
+        </Row> */}
       </Section>
     </div>
   );

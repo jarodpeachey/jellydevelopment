@@ -8,7 +8,16 @@ import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import control from '../../images/control.png';
 import seo from '../../images/seo.png';
-import maintenance from '../../images/maintenance.png';
+import hosting from '../../images/hosting.png';
+import color from '../../images/color.png';
+import website from '../../images/website.png';
+
+import party from '../../images/party.png';
+import cost from '../../images/cost.png';
+import support from '../../images/support.png';
+import custom from '../../images/custom.png';
+import easy from '../../images/easy.png';
+import responsive from '../../images/responsive.png';
 import Card from '../Card';
 import Button from '../Button';
 
@@ -19,118 +28,191 @@ const StaticSitesSection = ({ data }) => {
     <div>
       <Section background='#ffffff'>
         <SmallTitle className='center' small>
-          The JAMstack
+          What You Get
         </SmallTitle>
         <Title type='h2' className='center max-3'>
-          Why Go Static?
+          Fully Optimized Websites for your Business
         </Title>
         <p className='center max-4'>
-          Static sites offer more than just performance. Higher security, ease
-          of use, cost effectiveness and SEO advantages are just a few more of
-          the benefits to statically-generated websites.
+          Managing your online presence isn't easy. Choosing a hosting provider,
+          updating the content, and general maintenance takes a lot of time and
+          consideration.
+        </p>
+        <p className='center max-4'>
+          That's why I take care of all of that for you. With plenty of
+          experience in the industry, I'll provide you with the tools you need
+          to manage your site, without large overhead costs.
         </p>
         <Spacer height={theme.spacing.six} />
-        <Row spacing={[0, 24]} breakpoints={[769, 1000]}>
-          <Feature widths={[6, 4]}>
+        <Row spacing={[24, 24]} breakpoints={[769, 1200]}>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
-              <img className='icon' src={maintenance} />
+              <img className='icon' src={color} />
             </FeatureIcon>
-            <FeatureTitle>Low Maintenance</FeatureTitle>
+            <FeatureTitle className='mt-4'>Web Design</FeatureTitle>
             <FeatureDescription>
-              JAMstack sites are built like a solid brick wall. With no
-              interaction database or server on your end, you don't have to
-              worry about outages or problems.
+              Clean and modern websites that work on all screen sizes. I'll
+              create a custom design system that's unique to your brand,
+              allowing your business to stand out on the web and create a great
+              user experience.
             </FeatureDescription>
           </Feature>
-          <Feature widths={[6, 4]}>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
-              <img className='icon' src={control} />
+              <img className='icon' src={website} />
             </FeatureIcon>
-            <FeatureTitle>Control Your Brand</FeatureTitle>
+            <FeatureTitle className='mt-4'>Web Development</FeatureTitle>
             <FeatureDescription>
-              Static sites are built for using a headless CMS, which gives you
-              more control over your identity on the web. Just let us know what
-              customiability you need, and we'll make sure your site works for
-              you.
+              Security and performance are always top priority when I'm
+              developing your website. You'll get a website that's easy to
+              manage and update, even on your own.
             </FeatureDescription>
           </Feature>
-          <Feature widths={[6, 4]}>
+          <Feature widths={[6, 3]}>
+            <FeatureIcon>
+              <img className='icon' src={hosting} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Hosting</FeatureTitle>
+            <FeatureDescription>
+              Save money with a hosting provider built for simplicity and
+              performance. Your site will be simple to manage, and won't cost
+              you anything until your online business scales.
+            </FeatureDescription>
+          </Feature>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
               <img className='icon' src={seo} />
             </FeatureIcon>
-            <FeatureTitle>Connect With New Customers</FeatureTitle>
+            <FeatureTitle className='mt-4'>
+              Search Engine Optimization
+            </FeatureTitle>
             <FeatureDescription>
-              Static websites are built for speed. With a performance-optimized
-              static site, your business will be able to reach new customers by
-              ranking higher in search engines.
+              After your website is online, getting people to it is the next
+              step. I make sure that I develop your website with SEO in mind, so
+              your audience can find you easier.
             </FeatureDescription>
           </Feature>
         </Row>
       </Section>
-      <Section background='#fff'>
-        <Card className='px-6 py-6 bg-light border-none'>
-          <Title type='h2' className='max-2'>
-            Everything You Need From a Website
-          </Title>
-          <p>
-            When we develop your static site for you, we don't cut corners. We
-            make sure your site goes above and beyond your expectations, without
-            any hassle for you.
-          </p>
-          <p>Here's what you get:</p>
-          {/* <Row spacing={[6, 12]} breakpoints={[576, 769, 1000]}>
-            <Feature widths={[6, 4, 3]}>
-              <FeatureIcon>
-                <img src={control} />
-              </FeatureIcon>
-              <FeatureTitle>Custom Design</FeatureTitle>
-            </Feature>
-            <Feature widths={[6, 4, 3]}>
-              <FeatureIcon>
-                <img src={source} />
-              </FeatureIcon>
-              <FeatureTitle>Full Site Source</FeatureTitle>
-            </Feature>
-            <Feature widths={[6, 4, 3]}>
-              <FeatureIcon>
-                <img src={content} />
-              </FeatureIcon>
-              <FeatureTitle>Content Management System</FeatureTitle>
-            </Feature>
-            <Feature widths={[6, 4, 3]}>
-              <FeatureIcon>
-                <img src={search} />
-              </FeatureIcon>
-              <FeatureTitle>Built-in SEO Optimizations</FeatureTitle>
-            </Feature>
-            <Feature widths={[6, 4, 3]}>
-              <FeatureIcon>
-                <img src={accessibility} />
-              </FeatureIcon>
-              <FeatureTitle>Site Accesibility</FeatureTitle>
-            </Feature>
-            <Feature widths={[6, 4, 3]}>
-              <FeatureIcon>
-                <img src={deploy} />
-              </FeatureIcon>
-              <FeatureTitle>Hosting Provider of Choice</FeatureTitle>
-            </Feature>
-          </Row> */}
-          <ul>
-            <li>Custom site design</li>
-            <li>Site source code</li>
-            <li>Content management of your choice</li>
-            <li>Custom CMS configuration</li>
-            <li>Built-in SEO optimizations</li>
-            <li>Site accesibility</li>
-            <li>Hosting provider of choice</li>
-          </ul>
-          <p>
-            Basically, we're a one-stop shop for your new website. Clean design,
-            high-quality development, custom setup and more all leading to a
-            blazing fast website 🔥
-          </p>
-        </Card>
+      <Section background='#f7f7f7'>
+        <SmallTitle className='center'>What To Expect</SmallTitle>
+        <Title type='h2' className='max-2 center'>
+          Everything You Need For Your Website
+        </Title>
+        <p className='center max-4'>
+          When I develop your static site for you, I don't cut corners. We make
+          sure your site goes above and beyond your expectations, without any
+          hassle for you.
+        </p>
+        <p className='center max-4'>
+          Here's what you can expect from your new site.
+        </p>
+        <Spacer height={theme.spacing.six} />
+        <Row spacing={[12, 12]} breakpoints={[769, 1000]}>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={custom} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Custom Configuration</FeatureTitle>
+            <FeatureDescription>
+              Usually, content management systems are set up to work for a wide
+              range of websites. Because of this, they might not work for
+              everything you want to do.
+            </FeatureDescription>
+            <FeatureDescription>
+              Using the CMS of your choice, I configure it to meet the needs of
+              your site, giving you a smooth editing experience.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={easy} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Simplicity</FeatureTitle>
+            <FeatureDescription>
+              I know from first-hand experience that maintaing a website isn't
+              usually easy.
+            </FeatureDescription>
+            <FeatureDescription>
+              That's why I make sure you're comfortable using the tools that I
+              choose to use in your website. If you're not, I'll use something
+              else that you are comfortable with.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={support} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Support</FeatureTitle>
+            <FeatureDescription>
+              Even with the simplest website in existence, things can go wrong.
+              But they don't have to harm your business!
+            </FeatureDescription>
+            <FeatureDescription>
+              If anything with your website ever goes wrong or something
+              happens, you can contact me and I'll help you resolve the issue at
+              no extra charge.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={responsive} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Mobile Optimized</FeatureTitle>
+            <FeatureDescription>
+              Over 60% of all website visits are now on mobile. That means that
+              now more than ever, your website needs to function on all screen
+              size, or you'll miss out on customers.
+            </FeatureDescription>
+            <FeatureDescription>
+              When I create your site, I make sure it looks just as good on
+              mobile as it does on desktop.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={cost} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Low Cost</FeatureTitle>
+            <FeatureDescription>
+              Having a website doesn't have to be expensive.
+            </FeatureDescription>
+            <FeatureDescription>
+              When choosing the tools for your website, I choose ones that won't
+              cost you any money until your website grows.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={party} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Maintenance Free</FeatureTitle>
+            <FeatureDescription>
+              Most websites are hard to maintain, and need updating frequently
+              with hosting or CMS updates. This can be a pain. That's why I
+              create my websites using modern tools that don't require any
+              moderation at all!
+            </FeatureDescription>
+            <FeatureDescription>
+              However, you're still able to edit your site whenever you want,
+              giving you more flexibility for your online presence.
+            </FeatureDescription>
+          </Card>
+        </Row>
+        <ul>
+          <li>Custom site design</li>
+          <li>Site source code</li>
+          <li>Content management of your choice</li>
+          <li>Custom CMS configuration</li>
+          <li>Built-in SEO optimizations</li>
+          <li>Site accesibility</li>
+          <li>Hosting provider of choice</li>
+        </ul>
+        <p>
+          Basically, we're a one-stop shop for your new website. Clean design,
+          high-quality development, custom setup and more all leading to a
+          blazing fast website 🔥
+        </p>
       </Section>
       <Section background='transparent'>
         <Title type='h2' className='center light-1 mb-6'>

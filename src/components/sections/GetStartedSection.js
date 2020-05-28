@@ -21,10 +21,10 @@ const GetStartedSection = ({ data, card, className = '' }) => {
       {card ? (
         <Card className={className}>
           <Title type='h2' className='center light-1'>
-            Ready to Go Static?
+            Ready to Modernize Your Online Presence?
           </Title>
           <p className='center light-2 mb-none'>
-            Contact us for a qoute and see just how fast you and your business
+            Contact me for a qoute and see just how fast you and your business
             can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
@@ -38,11 +38,11 @@ const GetStartedSection = ({ data, card, className = '' }) => {
           Get Started
         </SmallTitle> */}
           <Title type='h2' className='center light-1'>
-            Ready to Go Static?
+            Ready to Modernize Your Online Presence?
           </Title>
           <p className='center light-2 mb-none'>
-            Contact us for a qoute and see just how fast your business can be on
-            the web.
+            Contact me for a qoute and see just how fast you and your business
+            can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
           <Button className='center' outlined white>

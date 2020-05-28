@@ -29,13 +29,14 @@ const WorkflowSection = ({ data }) => {
   return (
     <div>
       <Section background={`#fff`}>
-        <SmallTitle small>How We Do It</SmallTitle>
+        <SmallTitle small>How I Do It</SmallTitle>
         <Title className='max-2' type='h2'>
-          You can rest assured we'll deliver what you need.
+          Your website, your decisions
         </Title>
         <p className='max-3'>
-          We make sure everything we do recieves a seal of approval from you,
-          and our attention to detail ensures the highest quality for your site.
+          I make sure everything I do recieves a seal of approval from you
+          before I start, and my attention to detail ensures the highest quality
+          for your site.
         </p>
         <Spacer height={theme.spacing.seven * 1.3} />
         <Row spacing={[24, 0]} breakpoints={[769]}>
@@ -46,9 +47,9 @@ const WorkflowSection = ({ data }) => {
               Project Requirements
             </Title>
             <p className='center'>
-              Before beginning work on your project, you provide us with the
+              Before beginning work on your project, you'll provide me with the
               project requirements. Then, we'll discuss a timeframe for the
-              completion of the project, and we'll give a qoute.
+              completion of the project, and I'll give a qoute.
             </p>
           </Item>
 
@@ -72,11 +73,11 @@ const WorkflowSection = ({ data }) => {
               Project Development
             </Title>
             <p className='center'>
-              The meat in the project sandwhich. We'll develop you website or
-              application for you within the specified time frame. We'll contact
-              you every week with updates, or if we come across something that
-              you should be alerted of. We'll have a fully-functioning
-              application before we move onto the revision stage
+              The meat in the project sandwhich. I'll develop you website or
+              application for you within the specified time frame. I'll contact
+              you every week with updates, or if I come across something that
+              you should be alerted of. You'll have a fully-functioning
+              application before moving on to the revision stage
             </p>
           </Item>
 
@@ -87,9 +88,9 @@ const WorkflowSection = ({ data }) => {
               Project Revision
             </Title>
             <p className='center'>
-              If you find something else that we may have missed, or have
-              another request, we'll apply small changes to your application or
-              site until we've met all your requirements.
+              If you find something that I may have missed, or have another
+              request, I'll apply small changes to your application or site
+              until I've met all your requirements.
             </p>
           </Item>
 
@@ -99,10 +100,10 @@ const WorkflowSection = ({ data }) => {
             <Title className='center' type='h3'>
               Project Completion
             </Title>
-            <p className='center'>We give you your website!</p>
+            <p className='center'>I give you your website!</p>
             <p className='center'>
-              After we've made any final adjustements and payment is collected,
-              we'll send your entire website or application, along with full
+              After I've made any final adjustements and payment is collected,
+              I'll send your entire website or application, along with full
               rights to the code and all the resources used.
             </p>
           </Item>

@@ -29,7 +29,7 @@ const WhySection = ({ data }) => {
         <p className='center'>
           The JAMstack is a modern tech stack used to build websites with better
           security, performance and scalability than ever before. At Jelly
-          Development, we take advantage of serverless architecture to bring
+          Development, I take advantage of serverless architecture to bring
           these benefits directly to you or your business.
         </p>
         <Spacer height={theme.spacing.six} />
@@ -84,7 +84,7 @@ const WhySection = ({ data }) => {
             <FeatureTitle>Advanced Content Management</FeatureTitle>
             <FeatureDescription>
               JAMstack content management systems can give you full control over
-              your website. We set your website up with the CMS of your choice,
+              your website. I set your website up with the CMS of your choice,
               so you can control your online presence.
             </FeatureDescription>
           </Feature>
@@ -95,7 +95,7 @@ const WhySection = ({ data }) => {
             <FeatureTitle>Seamless Integrations</FeatureTitle>
             <FeatureDescription>
               JAMstack sites are fully-customizable, built from the ground up.
-              Using serverless functions, we can integrate with everything from
+              Using serverless functions, I can integrate with everything from
               Stripe to Wordpress.
             </FeatureDescription>
           </Feature>

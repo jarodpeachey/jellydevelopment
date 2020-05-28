@@ -214,6 +214,9 @@ export const globals = css`
     .icon {
       filter: hue-rotate(60deg) invert(15%);
     }
+    .green {
+      filter: contrast(0) sepia(100%) hue-rotate(90deg) brightness(.8) saturate(4) !important;
+    }
     .right {
       text-align: right;
       margin-left: auto;

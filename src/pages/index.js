@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/sections/Hero';
-import WhySection from '../components/sections/WhySection';
+import WhatIDoSection from '../components/sections/WhatIDoSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import GetStartedSection from '../components/sections/GetStartedSection';
 import WorkflowSection from '../components/sections/WorkflowSection';
@@ -48,7 +48,7 @@ const IndexPage = () => (
         </g>
       </g>
     </svg>
-    <WhySection />
+    <WhatIDoSection />
     <ServicesSection />
     <GetStartedSection />
     <WorkflowSection />

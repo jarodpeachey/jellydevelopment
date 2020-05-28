@@ -14,7 +14,7 @@ import TeamSection from '../components/sections/TeamSection';
 const ContactPage = () => (
   <Layout>
     <SEO title='Home' />
-    <PageHero title='Contact Us' subtitle='We want to hear from you!' />
+    <PageHero title='Contact Us' subtitle='I want to hear from you!' />
     <svg
       viewBox='0 0 1428 174'
       version='1.1'
