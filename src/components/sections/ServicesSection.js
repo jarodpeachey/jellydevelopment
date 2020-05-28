@@ -11,9 +11,8 @@ import cost from '../../images/cost.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import Button from '../Button';
-import staticSites from '../../images/static-websites.png';
-import customIntegrations from '../../images/custom-integrations.png';
-import customDevelopment from '../../images/custom-development.png';
+import staticSites from '../../images/static-websites.svg';
+import customIntegrations from '../../images/custom-integrations.svg';
 
 const ServicesSection = ({ data }) => {
   const theme = useContext(ThemeContext);
@@ -51,14 +50,14 @@ const ServicesSection = ({ data }) => {
             </Button>
           </div>
           <div widths={[12, 5]}>
-            <img src={staticSites} style={{ width: '100%' }} />
+            <img src={staticSites} style={{ width: '100%', maxWidth: '400px' }} />
           </div>
         </Row>
         <Spacer height={theme.spacing.seven * 1.3} />
 
         <Row spacing={[24, 16]} breakpoints={[769]}>
           <div widths={[5]}>
-            <img src={customIntegrations} style={{ width: '100%' }} />
+            <img src={customIntegrations} style={{ width: '100%', maxWidth: '400px' }} />
           </div>
           <div widths={[7]}>
             <Title type="h2" className='tablet-ml-10' weight={600} underline>
@@ -102,7 +101,7 @@ const ServicesSection = ({ data }) => {
             </Button>
           </div>
           <div widths={[12, 5]}>
-            <img src={customDevelopment} style={{ width: '100%' }} />
+            <img src={customDevelopment} style={{ width: '100%', maxWidth: '400px' }} />
           </div>
         </Row> */}
       </Section>

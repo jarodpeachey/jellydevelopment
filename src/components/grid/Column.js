@@ -57,6 +57,9 @@ const Info = styled.div``;
 const Wrapper = styled.div`
   // min-width: ${(props) => (props.maxColumnSize / 12) * 100}% !important;
   width: 100%;
+  > * {
+    width: 100% !important;
+  }
   flex: 1;
   padding: ${(props) => props.spacingY}px ${(props) => props.spacingX}px;
 
@@ -82,7 +85,7 @@ const Wrapper = styled.div`
           width: ${(props.widthTwo / 12) * 100}% !important;
           padding: ${props.spacingY}px ${props.spacingX}px!important;
           margin: 0 !important;
-          display: block !important;
+          display: flex !important;
           flex: none !important;
         }
       `
@@ -95,7 +98,7 @@ const Wrapper = styled.div`
           width: ${(props.widthThree / 12) * 100}% !important;
           padding: ${props.spacingY}px ${props.spacingX}px !important;
           margin: 0 !important;
-          display: block !important;
+          display: flex !important;
           flex: none !important;
         }
       `
