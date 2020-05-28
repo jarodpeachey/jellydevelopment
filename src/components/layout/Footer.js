@@ -92,7 +92,7 @@ const Footer = () => {
 
 const FooterWrapper = styled.div`
   width: 100%;
-  background: ${(props) => props.theme.color.text.dark.one};
+  background: #191a29;
   color: white;
   display: block;
   margin-top: auto;

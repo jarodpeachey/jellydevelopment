@@ -44,7 +44,7 @@ const Menu = ({ scrolled }) => {
         <SubMenuWrapper theme={theme} open={subMenuOpen}>
           <SubMenu theme={theme} open={subMenuOpen}>
             <SubMenuItem theme={theme}>
-              <Link to='/static-sites'>Static Sites</Link>
+              <Link to='/static-sites'>Static Websites</Link>
             </SubMenuItem>
             {/* <SubMenuItem theme={theme}>
               <Link to='/'>Wordpress Transfers</Link>

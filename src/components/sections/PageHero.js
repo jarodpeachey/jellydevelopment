@@ -54,7 +54,7 @@ const PageHero = ({ children, title, subtitle }) => {
           <Title className='center' theme={theme}>
             {title}
           </Title>
-          <SubTitle className='center' theme={theme}>
+          <SubTitle className='center light-2 max-4' theme={theme}>
             {subtitle}
           </SubTitle>
         </div>
