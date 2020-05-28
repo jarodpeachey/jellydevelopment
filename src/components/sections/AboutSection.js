@@ -19,31 +19,31 @@ const AboutSection = ({ data }) => {
     <div>
       <Section background='#ffffff'>
         <SmallTitle className='center' small>
-          About Us
+          About Me
         </SmallTitle>
         <Title type='h2' className='center max-3'>
           Building the Modern Web, One Site at a Time
         </Title>
         <p className='center max-4'>
-          I started building websites using the JAMstack over the last year or
-          two, and was thourougly impressed with the performance, security and
-          everything else they had to offer. Every site I've built with this
-          stack has been incredibly fast, easy to work with, and modern.
+          When I started developing websites using the JAMstack, I was
+          thourougly impressed with the performance, security and scalability
+          these sites had. Every site I've built with this stack has been
+          incredibly fast, easy to work with, and overall amazing.
         </p>
         <p className='center max-4'>
-          However, I had some doubts about static sites. There's no way they can
-          handle dynamic content very well, is there?
+          I decided to start developing these websites for other people as well,
+          so that they could take advantage of the modern web. By doing so, they
+          save money on development costs, maintenance costs and hosting costs.
+          Whether it's a custom API, website, management system or full-blown
+          app, the benefits are clear.
         </p>
         <p className='center max-4'>
-          Well, there is. As I quickly found out, it's possible to build complex
-          systems with static sites by taking advantage of serverless
-          architechture. Building an API? Not a problem. How about
-          authentication, or a full-blown application? Not a problem either!
+          Each website I build is optimized for speed, accesibility and SEO, so
+          you can reach more people through your online presence.
         </p>
         <p className='center max-4'>
-          So, I created Jelly Development to offer custom solutions for the
-          JAMstack that can take your business beyond outdated website platforms
-          like Wordpress, Joomla, or other CMSs.
+          So, what are you waiting for? Contact me for a quote and I'll start
+          developing your new website right away.
         </p>
         <Spacer height={theme.spacing.six} />
         <GetStartedSection className='bg-primary p-6 max-4 center' card />

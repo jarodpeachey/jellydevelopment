@@ -29,22 +29,22 @@ const CustomSolutionsSection = ({ data }) => {
         <Title type='h2' className='center max-3'>
           Advanced JAMstack Solutions
         </Title>
-        <p className='center'>
+        <p className='center max-4'>
           Static websites used to be just that: static, boring, and not very
           dynamic.
         </p>
-        <p className='center'>
+        <p className='center max-4'>
           But today, static sites are more than that. They're even more than a
           fast website with a CMS integrated.
         </p>
-        <p className='center'>
+        <p className='center max-4'>
           With the JAMstack, creating advanced web applications, such as APIs,
           Software-as-a-Service, and user management systems is simpler than
           ever. By taking advantage of serverless architecture, your business
           can save money on development costs, hosting costs, management
           costs... well, you get the idea.
         </p>
-        <p className='center'>The possibilities are endless.</p>
+        <p className='center max-4'>The possibilities are endless.</p>
       </Section>
       <Section background='#f7f7f7'>
         <SmallTitle className='center'>The JAMstack Advantage</SmallTitle>

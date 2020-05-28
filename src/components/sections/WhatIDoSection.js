@@ -12,6 +12,7 @@ import content from '../../images/content.png';
 import accessibility from '../../images/accessibility.png';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
+import Button from '../Button';
 
 const WhatIDoSection = ({ data }) => {
   const theme = useContext(ThemeContext);
@@ -19,21 +20,59 @@ const WhatIDoSection = ({ data }) => {
   return (
     <div>
       <span id='get-started'></span>
-      <Section background='white'>
+      <Section background='#fff'>
         <SmallTitle className='center' small>
-          What I Do
+          About Me
         </SmallTitle>
         <Title type='h2' className='center'>
           Building The Modern Web
         </Title>
-        <p className='center'>
-          Managing a website is difficult. I make that easier by offering
-          everything your website needs, from start to finish. Every website I
-          build, I build with these 4 end goals in mind.
+        <p className='center max-4'>
+          Hey! My name is Jarod Peachey. I'm a web develop building modern
+          website for people so they can improve their online presence and their
+          business, using a modern method called the <strong>JAMstack.</strong>
+        </p>
+        <p className='center max-4'>
+          When I started developing websites using the JAMstack, I was
+          thourougly impressed with the performance, security and scalability
+          these sites had. Every site I've built with this stack has been
+          incredibly fast, easy to work with, and overall amazing.
+        </p>
+        <p className='center max-4'>
+          I decided to start developing these websites for other people as well,
+          so that they could take advantage of the modern web. By doing so, they
+          save money on development costs, maintenance costs and hosting costs.
+          Whether it's a custom API, website, management system or full-blown
+          app, the benefits are clear.
+        </p>
+        <p className='center max-4'>
+          Each website I build is optimized for speed, accesibility and SEO, so
+          you can reach more people through your online presence.
+        </p>
+        <p className='center max-4'>
+          So what are you waiting for? Your new website is waiting for you!
+        </p>
+        <Button className='center' primary>
+          Contact Me
+        </Button>
+      </Section>
+      <Section background='white'>
+        <SmallTitle className='center'>What I Do</SmallTitle>
+        <Title type='h2' className='center'>
+          My Quality Pledge
+        </Title>
+        <p className='center max-4'>
+          When I develop websites and applications for people, I don't cut
+          corners. I make sure their site is up to not only their standards, but
+          mine as well. If your site doesn't satisfy me, I'll keep updating it
+          until it does.
+        </p>
+        <p className='center max-4'>
+          These are my standards for every website I build.
         </p>
         <Spacer height={theme.spacing.six} />
-        <Row spacing={[24]} breakpoints={[769, 1000]}>
-          <Feature widths={[6, 4]}>
+        <Row spacing={[24]} breakpoints={[769, 1200]}>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
               <img className='icon' src={design} />
             </FeatureIcon>
@@ -44,7 +83,7 @@ const WhatIDoSection = ({ data }) => {
               system, unique to your business.
             </FeatureDescription>
           </Feature>
-          <Feature widths={[6, 4]}>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
               <img className='icon' src={content} />
             </FeatureIcon>
@@ -56,7 +95,7 @@ const WhatIDoSection = ({ data }) => {
               websites content.
             </FeatureDescription>
           </Feature>
-          <Feature widths={[6, 4]}>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
               <img className='icon' src={speed} />
             </FeatureIcon>
@@ -67,7 +106,7 @@ const WhatIDoSection = ({ data }) => {
               of your website for performance.
             </FeatureDescription>
           </Feature>
-          <Feature widths={[6, 4]}>
+          <Feature widths={[6, 3]}>
             <FeatureIcon>
               <img className='icon' src={accessibility} />
             </FeatureIcon>
@@ -86,8 +125,11 @@ const WhatIDoSection = ({ data }) => {
 };
 
 const Feature = styled.div`
-  max-width: 80%;
+  // max-width: 80%;
   margin: 0 auto;
+  @media (max-width: 1999px) {
+    max-width: 80%;
+  }
 `;
 const FeatureIcon = styled.div`
   margin: 0 auto;

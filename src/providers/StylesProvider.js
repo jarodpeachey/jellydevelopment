@@ -144,11 +144,13 @@ export const globals = css`
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     }
     p {
-      line-height: ${theme.spacing.five + 6}px;
+      line-height: ${theme.spacing.five}px;
       font-size: 18px;
     }
     ul,
-    li {
+    li,
+    a,
+    div {
       font-size: 18px;
     }
     small {
@@ -211,11 +213,21 @@ export const globals = css`
     p:last-child {
       margin-bottom: 0;
     }
+    .font-1 {
+      font-size: 14px !important;
+    }
+    .font-2 {
+      font-size: 16px !important;
+    }
+    .font-3 {
+      font-size: 18px !important;
+    }
     .icon {
       filter: hue-rotate(60deg) invert(15%);
     }
     .green {
-      filter: contrast(0) sepia(100%) hue-rotate(90deg) brightness(.8) saturate(4) !important;
+      filter: contrast(0) sepia(100%) hue-rotate(90deg) brightness(0.8)
+        saturate(4) !important;
     }
     .right {
       text-align: right;

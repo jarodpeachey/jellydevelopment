@@ -25,22 +25,20 @@ const Hero = ({ children }) => {
         </BackgroundImage>
         <HeroContainer>
           <ChildContainer className='container'>
-            <Title theme={theme}>
-              Modern Websites to Optimize Your Online Presence
-            </Title>
+            <Title theme={theme}>Modern Website Design and Development</Title>
             <SubTitle theme={theme}>
               High quality websites and custom solutions, built to take your
-              online presence to the next level.
+              business/organization to the next level.
             </SubTitle>
             <ButtonFlex>
               <ButtonWrapper>
                 <Button white link='#get-started'>
-                  Get Started
+                  Learn More
                 </Button>
               </ButtonWrapper>
               <ButtonWrapper>
                 <Button white outlined link='/about'>
-                  Learn More
+                  About
                 </Button>
               </ButtonWrapper>
             </ButtonFlex>

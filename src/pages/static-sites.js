@@ -16,8 +16,8 @@ const StaticSitesPage = () => (
   <Layout>
     <SEO title='Home' />
     <PageHero
-      title='Static Sites'
-      subtitle='Custom website from scratch. Design, development, and deployment'
+      title='Website Development'
+      subtitle='Your one-stop shop for your new website. Clean design, high-quality development, and dead-simple management'
     />
     <svg
       viewBox='0 0 1428 174'

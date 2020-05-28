@@ -26,7 +26,7 @@ const WhySection = ({ data }) => {
         <Title type='h2' className='center'>
           The Future of Web Development
         </Title>
-        <p className='center'>
+        <p className='center max-4'>
           The JAMstack is a modern tech stack used to build websites with better
           security, performance and scalability than ever before. At Jelly
           Development, I take advantage of serverless architecture to bring

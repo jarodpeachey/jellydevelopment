@@ -22,14 +22,14 @@ const ServicesSection = ({ data }) => {
     <div>
       <Section background={`#f7f7f7`}>
         <SmallTitle className='center' small>
-          Our Services
+          My Services
         </SmallTitle>
         <Title type='h2' className='center'>
-          Advance your business with the modern web
+          Web Solutions for Whatever You Need
         </Title>
-        <p className='center'>
-          No matter what you need, I've got you covered with everything from
-          one-page sites to full custom solutions.
+        <p className='center max-4'>
+          From blogs, landing pages, portfolios and full-blown applications,
+          I've got you covered with modern solutions for the modern web.
         </p>
         <Spacer height={theme.spacing.seven * 1.3} />
         <Row
@@ -38,7 +38,7 @@ const ServicesSection = ({ data }) => {
           breakpoints={[0, 769]}
         >
           <div widths={[12, 7]}>
-            <Title className='tablet-mr-10' weight={600} underline>
+            <Title type="h2" className='tablet-mr-10' weight={600} underline>
               Modern Websites
             </Title>
             <p className='tablet-mr-10'>
@@ -61,7 +61,7 @@ const ServicesSection = ({ data }) => {
             <img src={customIntegrations} style={{ width: '100%' }} />
           </div>
           <div widths={[7]}>
-            <Title className='tablet-ml-10' weight={600} underline>
+            <Title type="h2" className='tablet-ml-10' weight={600} underline>
               Custom Solutions
             </Title>
             <p className='tablet-ml-10'>

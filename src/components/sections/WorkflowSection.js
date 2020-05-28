@@ -46,7 +46,7 @@ const WorkflowSection = ({ data }) => {
             <Title className='center' type='h3'>
               Project Requirements
             </Title>
-            <p className='center'>
+            <p className='center max-4'>
               Before beginning work on your project, you'll provide me with the
               project requirements. Then, we'll discuss a timeframe for the
               completion of the project, and I'll give a qoute.
@@ -59,7 +59,7 @@ const WorkflowSection = ({ data }) => {
             <Title className='center' type='h3'>
               Project Agreement
             </Title>
-            <p className='center'>
+            <p className='center max-4'>
               After the project requirements and timeframe are laid out, we'll
               put these things into writing with an agreement that both parties
               will sign.
@@ -72,7 +72,7 @@ const WorkflowSection = ({ data }) => {
             <Title className='center' type='h3'>
               Project Development
             </Title>
-            <p className='center'>
+            <p className='center max-4'>
               The meat in the project sandwhich. I'll develop you website or
               application for you within the specified time frame. I'll contact
               you every week with updates, or if I come across something that
@@ -87,7 +87,7 @@ const WorkflowSection = ({ data }) => {
             <Title className='center' type='h3'>
               Project Revision
             </Title>
-            <p className='center'>
+            <p className='center max-4'>
               If you find something that I may have missed, or have another
               request, I'll apply small changes to your application or site
               until I've met all your requirements.
@@ -100,8 +100,8 @@ const WorkflowSection = ({ data }) => {
             <Title className='center' type='h3'>
               Project Completion
             </Title>
-            <p className='center'>I give you your website!</p>
-            <p className='center'>
+            <p className='center max-4'>I give you your website!</p>
+            <p className='center max-4'>
               After I've made any final adjustements and payment is collected,
               I'll send your entire website or application, along with full
               rights to the code and all the resources used.

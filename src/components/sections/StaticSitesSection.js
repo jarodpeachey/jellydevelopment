@@ -100,7 +100,7 @@ const StaticSitesSection = ({ data }) => {
           Everything You Need For Your Website
         </Title>
         <p className='center max-4'>
-          When I develop your static site for you, I don't cut corners. We make
+          When I develop your static site for you, I don't cut corners. I make
           sure your site goes above and beyond your expectations, without any
           hassle for you.
         </p>
@@ -199,20 +199,6 @@ const StaticSitesSection = ({ data }) => {
             </FeatureDescription>
           </Card>
         </Row>
-        <ul>
-          <li>Custom site design</li>
-          <li>Site source code</li>
-          <li>Content management of your choice</li>
-          <li>Custom CMS configuration</li>
-          <li>Built-in SEO optimizations</li>
-          <li>Site accesibility</li>
-          <li>Hosting provider of choice</li>
-        </ul>
-        <p>
-          Basically, we're a one-stop shop for your new website. Clean design,
-          high-quality development, custom setup and more all leading to a
-          blazing fast website 🔥
-        </p>
       </Section>
       <Section background='transparent'>
         <Title type='h2' className='center light-1 mb-6'>

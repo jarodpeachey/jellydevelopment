@@ -15,55 +15,71 @@ const Footer = () => {
     <>
       <FooterWrapper theme={theme}>
         <FooterContainer className='container'>
-          <Row spacing={[18, 18]} breakpoints={[576, 960]}>
-            <div widths={[4, 3]}>
-              <Title className='light-1 mb-4' type='h3'>
+          <Row spacing={[18, 26]} breakpoints={[769, 1100]}>
+            <div widths={[6, 4]}>
+              <Title className='light-1 mb-4' type='h2'>
                 JELLY
               </Title>
-              <div className='light-2'>
+              <div className='light-2 mb-6'>
                 Modern web solutions for you and your business.
               </div>
+              <SmallTitle className='light-1 mb-none'>Email</SmallTitle>
+              <p className='light-2 mt-none'>jarod@jellydevelopment.com</p>
+              <SmallTitle className='light-1 mb-none'>Phone</SmallTitle>
+              <p className='light-2 mt-none'>717-682-2910</p>
+              <SmallTitle className='light-1 mb-none'>Address</SmallTitle>
+              <p className='light-2 mt-none'>
+                Jelly Development LLC
+                <br />
+                411 Walnut St #14431
+                <br />
+                Green Cove Springs, FL 32043
+              </p>
             </div>
-            <div widths={[4, 2]}>
+            <div widths={[3, 2]}>
               <SmallTitle className='light-1 mt-none mb-4'>
                 Navigation
               </SmallTitle>
-              <Link style={{ display: 'block' }} to='/' className='light-2'>
+              <Link
+                style={{ display: 'block' }}
+                to='/'
+                className='light-2 my-2'
+              >
                 Home
               </Link>
               <Link
                 style={{ display: 'block' }}
                 to='/about'
-                className='light-2'
+                className='light-2 my-2'
               >
                 About
               </Link>
               <Link
                 style={{ display: 'block' }}
                 to='/contact'
-                className='light-2'
+                className='light-2 my-2'
               >
                 Contact
               </Link>
             </div>
-            <div widths={[4, 3]}>
+            <div widths={[3, 2]}>
               <SmallTitle className='light-1 mt-none mb-4'>Services</SmallTitle>
               <Link
                 style={{ display: 'block' }}
                 to='/static-sites'
-                className='light-2'
+                className='light-2 my-2'
               >
                 Static Websites
               </Link>
               <Link
                 style={{ display: 'block' }}
                 to='/custom-solutions'
-                className='light-2'
+                className='light-2 my-2'
               >
                 Custom Solutions
               </Link>
             </div>
-            <div widths={['auto', 4]}>
+            <div widths={[12, 4]} className='full-width'>
               <SmallTitle className='light-1 mt-none mb-4'>Contact</SmallTitle>
               <ContactForm footer />
             </div>

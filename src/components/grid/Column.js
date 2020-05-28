@@ -69,7 +69,7 @@ const Wrapper = styled.div`
     width: ${(props.widthOne / 12) * 100}% !important;
     padding: ${props.spacingY}px ${props.spacingX}px !important;
     margin: 0 !important;
-    display: block !important;
+    display: flex !important;
     flex: none !important;
   }
   `
