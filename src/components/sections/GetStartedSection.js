@@ -28,7 +28,7 @@ const GetStartedSection = ({ data, card, className = '' }) => {
             can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
-          <Button className='center' outlined white>
+          <Button link='/contact' className='center' outlined white>
             Get Started
           </Button>
         </Card>
@@ -45,7 +45,7 @@ const GetStartedSection = ({ data, card, className = '' }) => {
             can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
-          <Button className='center' outlined white>
+          <Button link='/contact' className='center' outlined white>
             Get Started
           </Button>
         </Section>

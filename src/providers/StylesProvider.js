@@ -128,12 +128,18 @@ export const globals = css`
       font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif !important;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
+    }
+    input:focus,
+    textarea:focus {
+      outline: ${theme.color.primary.main} auto 1px;
     }
     textarea {
       margin: 0;
       padding: 0;
+      display: block;
+      height: 100%;
     }
     .title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -222,12 +228,21 @@ export const globals = css`
     .font-3 {
       font-size: 18px !important;
     }
+    .bold {
+      font-weight: bold !important;
+    }
     .icon {
       filter: hue-rotate(60deg) invert(15%);
     }
     .green {
       filter: contrast(0) sepia(100%) hue-rotate(90deg) brightness(0.8)
         saturate(4) !important;
+    }
+    .display-block {
+      display: block !important;
+    }
+    .cursor-pointer {
+      cursor: pointer !important;
     }
     .right {
       text-align: right;
@@ -241,6 +256,9 @@ export const globals = css`
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+    }
+    .width-auto {
+      width: fit-content !important;
     }
     .ml-10 {
       margin-left: 10% !important;

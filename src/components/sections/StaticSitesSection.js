@@ -204,7 +204,7 @@ const StaticSitesSection = ({ data }) => {
         <Title type='h2' className='center light-1 mb-6'>
           Ready For Your New Site?
         </Title>
-        <Button className='center' white outlined>
+        <Button link='/contact' className='center' white outlined>
           Get Started
         </Button>
       </Section>

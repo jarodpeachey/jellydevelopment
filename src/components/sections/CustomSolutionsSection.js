@@ -131,7 +131,7 @@ const CustomSolutionsSection = ({ data }) => {
             <SmallFeatureTitle>Custom Integrations</SmallFeatureTitle>
           </SmallFeature>
         </Row>
-        <Button className='center mt-6' white outlined>
+        <Button link='/contact' className='center mt-6' white outlined>
           Get Started
         </Button>
       </Section>

@@ -52,6 +52,7 @@ const WhatIDoSection = ({ data }) => {
         <p className='center max-4'>
           So what are you waiting for? Your new website is waiting for you!
         </p>
+        <Spacer height={theme.spacing.four} />
         <Button className='center' primary>
           Contact Me
         </Button>

@@ -14,13 +14,12 @@ import TeamSection from '../components/sections/TeamSection';
 const ContactPage = () => (
   <Layout>
     <SEO title='Home' />
-    <PageHero title='Contact Us' subtitle='I want to hear from you!' />
+    <PageHero title='Contact Me' subtitle="Let's make a website!" />
     <svg
       viewBox='0 0 1428 174'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
-            style={{marginBottom: '-2px'}}
-
+      style={{ marginBottom: '-2px' }}
     >
       <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
         <g
