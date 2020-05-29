@@ -49,6 +49,7 @@ const ContactForm = ({ footer }) => {
             <input
               required='required'
               aria-required='true'
+              name='Name'
               style={{
                 border: 'none',
                 padding: footer ? '12px 16px' : '16px 22px',
@@ -67,6 +68,7 @@ const ContactForm = ({ footer }) => {
           </Label>
           <Card className='p-none'>
             <input
+              name='Email'
               required='required'
               aria-required='true'
               style={{
@@ -87,6 +89,7 @@ const ContactForm = ({ footer }) => {
           </Label>
           <Card className='p-none'>
             <textarea
+              name='Message'
               required='required'
               aria-required='true'
               style={{
@@ -111,8 +114,8 @@ const ContactForm = ({ footer }) => {
               <input
                 className='mr-4'
                 type='checkbox'
-                name='services'
-                value='web-design'
+                name='Services'
+                value='web design'
               />
               Web Design
             </label>
@@ -120,8 +123,8 @@ const ContactForm = ({ footer }) => {
               <input
                 className='mr-4'
                 type='checkbox'
-                name='services'
-                value='web-development'
+                name='Services'
+                value='web development'
               />
               Web Development
             </label>
@@ -129,13 +132,13 @@ const ContactForm = ({ footer }) => {
               <input
                 className='mr-4'
                 type='checkbox'
-                name='updates'
+                name='Services'
                 value='updates'
               />
               Website Fixes + Updates
             </label>
             {/* <label className='mb-1 display-bloc4 cursor-pointer'>
-              <input className="mr-3" type='checkbox' name='services' value='hosting' />
+              <input className="mr-3" type='checkbox' name='Services' value='hosting' />
               Hosting
             </label> */}
             <label className='mb-1 display-block cursor-pointer width-auto'>
@@ -143,8 +146,8 @@ const ContactForm = ({ footer }) => {
                 className='mr-4'
                 onChange={() => setCustomSolutions(!customSolutions)}
                 type='checkbox'
-                name='custom-solutions'
-                value='custom-solutions'
+                name='Services'
+                value='custom solutions'
               />
               Custom Solutions
             </label>
@@ -160,6 +163,7 @@ const ContactForm = ({ footer }) => {
                       padding: '8px 12px',
                       background: 'transparent',
                     }}
+                    name='Custom Solutions'
                     placeholder='Specify...'
                   />
                 </Card>
