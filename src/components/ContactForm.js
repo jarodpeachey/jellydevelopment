@@ -39,10 +39,7 @@ const ContactForm = ({ footer }) => {
   };
 
   return (
-    <form
-      action='https://app.formking.io/submit/db08459412cc401887247e4a4f02cf6a'
-      method='POST'
-    >
+    <form action='https://formspree.io/mwkrlzjn' method='POST'>
       <Row spacing={[18, 12]} breakpoints={footer ? [769, 1100] : [769]}>
         <div widths={footer ? [6, 12] : [6]}>
           <Label className={footer ? 'light-1 bold' : 'font-3 bold'}>
