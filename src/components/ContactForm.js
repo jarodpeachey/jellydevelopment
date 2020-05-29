@@ -180,7 +180,7 @@ const ContactForm = ({ footer }) => {
             type='submit'
             left
           >
-            Get Started
+            Submit
           </Button>
         </div>
       </Row>

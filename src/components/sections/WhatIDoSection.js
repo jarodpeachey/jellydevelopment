@@ -57,7 +57,7 @@ const WhatIDoSection = ({ data }) => {
           Contact Me
         </Button>
       </Section>
-      <Section background='white'>
+      <Section background='#f7f7f7'>
         <SmallTitle className='center'>What I Do</SmallTitle>
         <Title type='h2' className='center'>
           My Quality Pledge
@@ -111,7 +111,7 @@ const WhatIDoSection = ({ data }) => {
             <FeatureIcon>
               <img className='icon' src={accessibility} />
             </FeatureIcon>
-            <FeatureTitle>Accesibility</FeatureTitle>
+            <FeatureTitle>Accessibility</FeatureTitle>
             <FeatureDescription>
               Web accessibility ensures that users with disabilities will be
               able to navigate your website. I make sure my sites are up to web

@@ -8,6 +8,7 @@ import WhatIDoSection from '../components/sections/WhatIDoSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import GetStartedSection from '../components/sections/GetStartedSection';
 import WorkflowSection from '../components/sections/WorkflowSection';
+import WhatPeopleSaySection from '../components/sections/WhatPeopleSaySection';
 
 const IndexPage = () => (
   <Layout>
@@ -49,6 +50,7 @@ const IndexPage = () => (
       </g>
     </svg>
     <WhatIDoSection />
+    <WhatPeopleSaySection />
     <ServicesSection />
     <GetStartedSection />
     <WorkflowSection />

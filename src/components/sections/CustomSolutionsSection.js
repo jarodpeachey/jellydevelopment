@@ -24,46 +24,23 @@ const CustomSolutionsSection = ({ data }) => {
     <div>
       <Section background='#ffffff'>
         <SmallTitle className='center' small>
-          Static Everything
+          Custom Solutions
         </SmallTitle>
-        <Title type='h2' className='center max-3'>
-          Advanced JAMstack Solutions
-        </Title>
-        <p className='center max-4'>
-          Static websites used to be just that: static, boring, and not very
-          dynamic.
-        </p>
-        <p className='center max-4'>
-          But today, static sites are more than that. They're even more than a
-          fast website with a CMS integrated.
-        </p>
-        <p className='center max-4'>
-          With the JAMstack, creating advanced web applications, such as APIs,
-          Software-as-a-Service, and user management systems is simpler than
-          ever. By taking advantage of serverless architecture, your business
-          can save money on development costs, hosting costs, management
-          costs... well, you get the idea.
-        </p>
-        <p className='center max-4'>The possibilities are endless.</p>
-      </Section>
-      <Section background='#f7f7f7'>
-        <SmallTitle className='center'>The JAMstack Advantage</SmallTitle>
         <Title type='h2' className='center'>
-          Everything Better About Static
+          Modern Applications for Modern Businesses
         </Title>
+        <p className='center max-4'>
+          By taking advantage of serverless technology, your business can save
+          money, time and effort on advanced web applications such as APIs,
+          management systems and integrations.
+        </p>
+        <p className='center max-4'>
+          With JAMstack industry knowledge, I can upgrade your business to the
+          modern web, making it faster, more secure and easy to maintain.
+        </p>
         <Spacer height={theme.spacing.six} />
+
         <Row spacing={[0, 24]} breakpoints={[769, 1000]}>
-          <Feature widths={[6, 4]}>
-            <FeatureIcon>
-              <img className='icon' src={maintenance} />
-            </FeatureIcon>
-            <FeatureTitle>Low Maintenance</FeatureTitle>
-            <FeatureDescription>
-              Using the JAMstack ecosystem, your user management system just got
-              easier to manage. Your API, database, and development just did
-              too.
-            </FeatureDescription>
-          </Feature>
           <Feature widths={[6, 4]}>
             <FeatureIcon>
               <img className='icon' src={security} />
@@ -72,7 +49,7 @@ const CustomSolutionsSection = ({ data }) => {
             <FeatureDescription>
               Static applications allow us to take security to the next level
               with minimal data flow and security on both the cloud database and
-              your app.
+              your app. You data won't be going anywhere.
             </FeatureDescription>
           </Feature>
           <Feature widths={[6, 4]}>
@@ -91,47 +68,71 @@ const CustomSolutionsSection = ({ data }) => {
             </FeatureIcon>
             <FeatureTitle>Cost Effectiveness</FeatureTitle>
             <FeatureDescription>
-              By taking advantage of the JAMstack ecosystem, you'll save money
-              on servers, maintenance, development and hosting. Plus, using
-              cloud databases, you'll only pay for what you need.
+              By using pay-as-you-go services and modern cloud technologies, I
+              can save your business money on every aspect of your application.
             </FeatureDescription>
           </Feature>
         </Row>
       </Section>
-      <Section background='transparent'>
-        <Title className='center light-1 max-2' type='h2'>
-          Whatever You Need, We've Got You Covered
+      <Section background='#f7f7f7'>
+        <SmallTitle className='center'>Services</SmallTitle>
+        <Title className='center dark-1 max-3' type='h2'>
+          Whatever You Need, I've Got You Covered
         </Title>
-        <p className='center light-2'>
+        <p className='center dark-2 max-4'>
           Whether you need a custom integration, REST API, user/team management
           system or other work, you've come to the right place.
         </p>
         <Spacer height={theme.spacing.six} />
-        <Row
-          className='max-3 mx-auto'
-          spacing={[0, 24]}
-          breakpoints={[576, 769]}
-        >
-          <SmallFeature widths={[6, 4]}>
-            <SmallFeatureIcon>
-              <img className='icon' src={api} />
-            </SmallFeatureIcon>
-            <SmallFeatureTitle>Custom APIs</SmallFeatureTitle>
-          </SmallFeature>
-          <SmallFeature widths={[6, 4]}>
-            <SmallFeatureIcon>
-              <img className='icon' src={computer} />
-            </SmallFeatureIcon>
-            <SmallFeatureTitle>Management Systems</SmallFeatureTitle>
-          </SmallFeature>
-          <SmallFeature widths={[6, 4]}>
-            <SmallFeatureIcon>
-              <img className='icon' src={integrations} />
-            </SmallFeatureIcon>
-            <SmallFeatureTitle>Custom Integrations</SmallFeatureTitle>
-          </SmallFeature>
+        <Row spacing={[12, 12]} breakpoints={[769, 1000]}>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={api} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Custom API</FeatureTitle>
+            <FeatureDescription>
+              A custom API will save you money on external services, and give
+              you more control over the user experience of your application.
+            </FeatureDescription>
+            <FeatureDescription>
+              I can develop and deploy your API on virtually any hosting
+              platform, such as Google Cloud Platform, Netlify, or Heroku.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={computer} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>
+              Data Management Systems
+            </FeatureTitle>
+            <FeatureDescription>
+              Custom database solutions built to fit your business.
+            </FeatureDescription>
+            <FeatureDescription>
+              I'll set up a completely custom data management system for your
+              business, giving you the best possible solution to manage your
+              customers, team members or business relationships.
+            </FeatureDescription>
+          </Card>
+          <Card widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='green my-3' src={integrations} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Custom Integrations</FeatureTitle>
+            <FeatureDescription>
+              Integrations to help your business communicate with your audience
+              better.
+            </FeatureDescription>
+            <FeatureDescription>
+              Whatever tools you use or like, I'll integrate them into your
+              application. Whether it's email lists, push notifications, or
+              other services, I can integrate them with almost anything on your
+              website.
+            </FeatureDescription>
+          </Card>
         </Row>
-        <Button link='/contact' className='center mt-6' white outlined>
+        <Button link='/contact' className='center mt-6' outlined>
           Get Started
         </Button>
       </Section>

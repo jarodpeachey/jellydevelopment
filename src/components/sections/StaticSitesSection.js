@@ -94,6 +94,14 @@ const StaticSitesSection = ({ data }) => {
           </Feature>
         </Row>
       </Section>
+      <Section background='transparent'>
+        <p className='center light-1 mobile-font-4 font-5' small>
+          Jarod is easy to work with and delivered the results I expected.
+        </p>
+        <SmallTitle className='light-2 center mobile-font-2 font-3'>
+          - Pablo
+        </SmallTitle>
+      </Section>
       <Section background='#f7f7f7'>
         <SmallTitle className='center'>What To Expect</SmallTitle>
         <Title type='h2' className='max-2 center'>

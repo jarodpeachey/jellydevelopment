@@ -228,6 +228,33 @@ export const globals = css`
     .font-3 {
       font-size: 18px !important;
     }
+    .font-4 {
+      font-size: 22px !important;
+      line-height: ${theme.spacing.six}px;
+    }
+    .font-5 {
+      font-size: 28px !important;
+      line-height: ${theme.spacing.six}px;
+    }
+    @media (max-width: 769px) {
+      .mobile-font-1 {
+        font-size: 14px !important;
+      }
+      .mobile-font-2 {
+        font-size: 16px !important;
+      }
+      .mobile-font-3 {
+        font-size: 18px !important;
+      }
+      .mobile-font-4 {
+        font-size: 22px !important;
+        line-height: ${theme.spacing.six}px;
+      }
+      .mobile-font-5 {
+        font-size: 28px !important;
+        line-height: ${theme.spacing.six}px;
+      }
+    }
     .bold {
       font-weight: bold !important;
     }

@@ -23,6 +23,13 @@ function withImageData(WrappedComponent) {
               }
             }
           }
+          daleMcGrewImage: file(relativePath: { eq: "dale-mcgrew.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
       render={(data) => <WrappedComponent {...props} imageData={data} />}
@@ -36,5 +43,8 @@ const StaticSitesImage = withImageData((props) => (
 const CustomIntegrationsImage = withImageData((props) => (
   <Img fluid={props.imageData.customIntegrationsImage.childImageSharp.fluid} />
 ));
+const DaleMcGrewImage = withImageData((props) => (
+  <Img fluid={props.imageData.daleMcGrewImage.childImageSharp.fluid} />
+));
 
-export { StaticSitesImage, CustomIntegrationsImage };
+export { StaticSitesImage, CustomIntegrationsImage, DaleMcGrewImage };

@@ -29,6 +29,7 @@ import {
   faChevronRight,
   faChevronLeft,
   faChevronDown,
+  faQuoteLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import { fab, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -65,7 +66,8 @@ library.add(
   faPaintBrush,
   faChevronDown,
   faChevronRight,
-  faChevronLeft
+  faChevronLeft,
+  faQuoteLeft
 );
 
 const Layout = (props) => {
