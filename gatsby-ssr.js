@@ -1,7 +1,7 @@
 import React from 'react';
 import { StylesProvider } from './src/providers/StylesProvider';
 import { AppProvider } from './src/providers/AppProvider';
-import 'typeface-roboto-mono';
+import 'typeface-nunito-sans';
 
 export const wrapRootElement = ({ element }) => {
   console.log(element);
