@@ -28,29 +28,29 @@ const WhatIDoSection = ({ data }) => {
           Building The Modern Web
         </Title>
         <p className='center max-4'>
-          Hey! My name is Jarod Peachey. I'm a web develop building modern
-          website for people so they can improve their online presence and their
-          business, using a modern method called the <strong>JAMstack.</strong>
+          Hey! My name is Jarod Peachey. I'm a web developer building modern
+          websites for people so they can improve their online presence and
+          their business, using a modern method called the JAMstack.
         </p>
         <p className='center max-4'>
           When I started developing websites using the JAMstack, I was
-          thourougly impressed with the performance, security and scalability
+          thoroughly impressed with the performance, security, and scalability
           these sites had. Every site I've built with this stack has been
           incredibly fast, easy to work with, and overall amazing.
         </p>
         <p className='center max-4'>
-          I decided to start developing these websites for other people as well,
+          I decided to start developing these websites for other people as well
           so that they could take advantage of the modern web. By doing so, they
-          save money on development costs, maintenance costs and hosting costs.
-          Whether it's a custom API, website, management system or full-blown
+          save money on development costs, maintenance costs, and hosting costs.
+          Whether it's a custom API, website, management system, or full-blown
           app, the benefits are clear.
         </p>
         <p className='center max-4'>
-          Each website I build is optimized for speed, accesibility and SEO, so
-          you can reach more people through your online presence.
+          Each website I build is optimized for speed, accessibility, and SEO,
+          so you can reach more people through your online presence.
         </p>
         <p className='center max-4'>
-          So what are you waiting for? Your new website is waiting for you!
+          So what are you waiting for? Your new website is waiting for you!{' '}
         </p>
         <Spacer height={theme.spacing.four} />
         <Button className='center' primary>
@@ -64,7 +64,7 @@ const WhatIDoSection = ({ data }) => {
         </Title>
         <p className='center max-4'>
           When I develop websites and applications for people, I don't cut
-          corners. I make sure their site is up to not only their standards, but
+          corners. I make sure their site is up to not only their standards but
           mine as well. If your site doesn't satisfy me, I'll keep updating it
           until it does.
         </p>
@@ -90,10 +90,10 @@ const WhatIDoSection = ({ data }) => {
             </FeatureIcon>
             <FeatureTitle>Painless Content Management</FeatureTitle>
             <FeatureDescription>
-              Simple and intuitive content management systems, integrated
+              Simple and intuitive content management systems integrated
               directly into your site. I hook up every site I build to a content
-              management system that makes it easy for you to update your
-              websites content.
+              management system that makes it easy for you to update the content
+              of your website.
             </FeatureDescription>
           </Feature>
           <Feature widths={[6, 3]}>
@@ -115,7 +115,7 @@ const WhatIDoSection = ({ data }) => {
             <FeatureDescription>
               Web accessibility ensures that users with disabilities will be
               able to navigate your website. I make sure my sites are up to web
-              accesibility standards, so your business can keep up with what's
+              accessibility standards, so your business can keep up with what's
               expected.
             </FeatureDescription>
           </Feature>

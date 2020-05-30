@@ -34,7 +34,7 @@ const WorkflowSection = ({ data }) => {
           Your website, your decisions
         </Title>
         <p className='max-3'>
-          I make sure everything I do recieves a seal of approval from you
+          I make sure everything I do receives a seal of approval from you
           before I start, and my attention to detail ensures the highest quality
           for your site.
         </p>
@@ -49,7 +49,7 @@ const WorkflowSection = ({ data }) => {
             <p className='center max-4'>
               Before beginning work on your project, you'll provide me with the
               project requirements. Then, we'll discuss a timeframe for the
-              completion of the project, and I'll give a qoute.
+              completion of the project, and I'll give a quote.
             </p>
           </Item>
 
@@ -73,7 +73,7 @@ const WorkflowSection = ({ data }) => {
               Project Development
             </Title>
             <p className='center max-4'>
-              The meat in the project sandwhich. I'll develop you website or
+              The meat in the project sandwich. I'll develop your website or
               application for you within the specified time frame. I'll contact
               you every week with updates, or if I come across something that
               you should be alerted of. You'll have a fully-functioning
@@ -102,7 +102,7 @@ const WorkflowSection = ({ data }) => {
             </Title>
             <p className='center max-4'>I give you your website!</p>
             <p className='center max-4'>
-              After I've made any final adjustements and payment is collected,
+              After I've made any final adjustments and payment is collected,
               I'll send your entire website or application, along with full
               rights to the code and all the resources used.
             </p>

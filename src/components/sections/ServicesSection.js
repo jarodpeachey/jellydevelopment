@@ -26,7 +26,7 @@ const ServicesSection = () => {
           Web Solutions for Whatever You Need
         </Title>
         <p className='center max-4'>
-          From blogs, landing pages, portfolios and full-blown applications,
+          From blogs, landing pages, portfolios, and full-blown applications,
           I've got you covered with modern solutions for the modern web.
         </p>
         <Spacer height={theme.spacing.seven * 1.3} />
@@ -42,7 +42,7 @@ const ServicesSection = () => {
             <p className='tablet-mr-10'>
               Blazing fast websites with an integrated content management system
               to give you everything you need for your online presence. Websites
-              for your business, hobby or personal project.
+              for your business, hobby, or personal project.
             </p>
             <Button outlined link='/static-sites'>
               Learn More
@@ -67,8 +67,8 @@ const ServicesSection = () => {
               right place.
             </p>
             <p className='tablet-ml-10'>
-              I can develop custom APIs, user managements systems, database
-              tools and more, all taking advantage of the serverless ecosystem.
+              I can develop custom APIs, user management systems, database
+              tools, and more, all taking advantage of the serverless ecosystem.
               Less cost, higher performance, better business.
             </p>
             <Button className='tablet-ml-10' outlined link='/custom-solutions'>

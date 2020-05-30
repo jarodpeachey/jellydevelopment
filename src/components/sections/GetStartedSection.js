@@ -24,7 +24,7 @@ const GetStartedSection = ({ data, card, className = '' }) => {
             Ready to Modernize Your Online Presence?
           </Title>
           <p className='center light-2 mb-none'>
-            Contact me for a qoute and see just how fast you and your business
+            Contact me for a quote and see just how fast you and your business
             can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
@@ -41,7 +41,7 @@ const GetStartedSection = ({ data, card, className = '' }) => {
             Ready to Modernize Your Online Presence?
           </Title>
           <p className='center light-2 mb-none'>
-            Contact me for a qoute and see just how fast you and your business
+            Contact me for a quote and see just how fast you and your business
             can be on the web.
           </p>
           <Spacer height={theme.spacing.six} />
