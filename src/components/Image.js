@@ -7,7 +7,7 @@ function withImageData(WrappedComponent) {
     <StaticQuery
       query={graphql`
         query {
-          staticSitesImage: file(relativePath: { eq: "static-websites.png" }) {
+          staticSitesImage: file(relativePath: { eq: "static-websites-mockup.png" }) {
             childImageSharp {
               fluid(maxWidth: 600) {
                 ...GatsbyImageSharpFluid
@@ -15,7 +15,7 @@ function withImageData(WrappedComponent) {
             }
           }
           customIntegrationsImage: file(
-            relativePath: { eq: "custom-integrations.png" }
+            relativePath: { eq: "custom-solutions-mockup.png" }
           ) {
             childImageSharp {
               fluid(maxWidth: 600) {

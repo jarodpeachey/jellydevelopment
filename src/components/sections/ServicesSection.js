@@ -29,7 +29,7 @@ const ServicesSection = () => {
           From blogs, landing pages, portfolios, and full-blown applications,
           I've got you covered with modern solutions for the modern web.
         </p>
-        <Spacer height={theme.spacing.seven * 1.3} />
+        <Spacer height={theme.spacing.seven * 1.6} />
         <Row
           flexDirections={['column-reverse', 'row']}
           spacing={[24, 0]}
@@ -48,16 +48,16 @@ const ServicesSection = () => {
               Learn More
             </Button>
           </div>
-          <div widths={[12, 5]}>
+          <Image widths={[12, 5]}>
             <StaticSitesImage />
-          </div>
+          </Image>
         </Row>
-        <Spacer height={theme.spacing.seven * 1.3} />
+        <Spacer height={theme.spacing.seven * 1.6} />
 
         <Row spacing={[24, 16]} breakpoints={[769]}>
-          <div widths={[5]}>
+          <Image widths={[5]}>
             <CustomIntegrationsImage />
-          </div>
+          </Image>
           <div widths={[7]}>
             <Title type='h2' className='tablet-ml-10' weight={600} underline>
               Custom Solutions
@@ -107,5 +107,10 @@ const ServicesSection = () => {
     </div>
   );
 };
+
+const Image = styled.div`
+  position: relative;
+  top: -24px;
+`;
 
 export default ServicesSection;

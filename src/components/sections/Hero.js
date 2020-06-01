@@ -25,7 +25,9 @@ const Hero = ({ children }) => {
         </BackgroundImage>
         <HeroContainer>
           <ChildContainer className='container'>
-            <Title theme={theme}>Modern Website Design and Development</Title>
+            <Title theme={theme}>
+              Modern Web Solutions for You and Your Business
+            </Title>
             <SubTitle theme={theme}>
               High quality websites and custom solutions, built to take your
               business/organization to the next level.
