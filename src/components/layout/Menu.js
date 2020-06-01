@@ -7,23 +7,62 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Menu = ({ scrolled }) => {
   const theme = useContext(ThemeContext);
-  const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [servicesSubMenuOpen, setServicesSubMenuOpen] = useState(false);
+  const [aboutSubMenuOpen, setAboutSubMenuOpen] = useState(false);
 
   return (
     <MenuWrapper scrolled={scrolled}>
       <MenuItem scrolled={scrolled} theme={theme}>
         <Link to='/'>Home</Link>
       </MenuItem>
-      <MenuItem scrolled={scrolled} theme={theme}>
-        <Link to='/about'>About</Link>
+      <MenuItem
+        scrolled={scrolled}
+        onMouseEnter={() => {
+          setAboutSubMenuOpen(true);
+        }}
+        onMouseLeave={() => {
+          setAboutSubMenuOpen(false);
+        }}
+        theme={theme}
+      >
+        <Link to='/about'>
+          About
+          <FontAwesomeIcon
+            style={{
+              fontSize: 14,
+              position: 'relative',
+              top: 1,
+              left: 6,
+              transform: `${aboutSubMenuOpen ? 'rotate(180deg)' : 'none'}`,
+              transition: 'all .1s ease-in-out',
+            }}
+            icon='chevron-down'
+          />
+        </Link>
+        <SubMenuWrapper theme={theme} open={aboutSubMenuOpen}>
+          <SubMenu theme={theme} open={aboutSubMenuOpen}>
+            <SubMenuItem theme={theme}>
+              <Link to='#why-jelly'>Why Jelly?</Link>
+            </SubMenuItem>
+            <SubMenuItem theme={theme}>
+              <Link to='#what-i-do'>What I Do</Link>
+            </SubMenuItem>
+            {/* <SubMenuItem theme={theme}>
+              <Link to='/'>Wordpress Transfers</Link>
+            </SubMenuItem> */}
+            <SubMenuItem theme={theme}>
+              <Link to='#how-i-do-it'>My Process</Link>
+            </SubMenuItem>
+          </SubMenu>
+        </SubMenuWrapper>
       </MenuItem>
       <MenuItem
         scrolled={scrolled}
         onMouseEnter={() => {
-          setSubMenuOpen(true);
+          setServicesSubMenuOpen(true);
         }}
         onMouseLeave={() => {
-          setSubMenuOpen(false);
+          setServicesSubMenuOpen(false);
         }}
         theme={theme}
       >
@@ -35,14 +74,14 @@ const Menu = ({ scrolled }) => {
               position: 'relative',
               top: 1,
               left: 6,
-              transform: `${subMenuOpen ? 'rotate(180deg)' : 'none'}`,
+              transform: `${servicesSubMenuOpen ? 'rotate(180deg)' : 'none'}`,
               transition: 'all .1s ease-in-out',
             }}
             icon='chevron-down'
           />
         </a>
-        <SubMenuWrapper theme={theme} open={subMenuOpen}>
-          <SubMenu theme={theme} open={subMenuOpen}>
+        <SubMenuWrapper theme={theme} open={servicesSubMenuOpen}>
+          <SubMenu theme={theme} open={servicesSubMenuOpen}>
             <SubMenuItem theme={theme}>
               <Link to='/static-sites'>Static Websites</Link>
             </SubMenuItem>

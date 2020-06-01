@@ -20,6 +20,7 @@ const WhatIDoSection = ({ data }) => {
   return (
     <div>
       <span id='get-started'></span>
+      <span id='why-jelly'></span>
       <Section background='#fff'>
         <SmallTitle className='center' small>
           About Me
@@ -28,15 +29,10 @@ const WhatIDoSection = ({ data }) => {
           Building The Modern Web
         </Title>
         <p className='center max-4'>
-          Hey! My name is Jarod Peachey. I'm a web developer building modern
-          websites for people so they can improve their online presence and
-          their business, using a modern method called the JAMstack.
-        </p>
-        <p className='center max-4'>
-          When I started developing websites using the JAMstack, I was
-          thoroughly impressed with the performance, security, and scalability
-          these sites had. Every site I've built with this stack has been
-          incredibly fast, easy to work with, and overall amazing.
+          When I started developing websites using a new method called the
+          JAMstack, I was thoroughly impressed with the performance, security,
+          and scalability these sites had. Every site I've built with this stack
+          has been incredibly fast, easy to work with, and overall amazing.
         </p>
         <p className='center max-4'>
           I decided to start developing these websites for other people as well
@@ -50,13 +46,14 @@ const WhatIDoSection = ({ data }) => {
           so you can reach more people through your online presence.
         </p>
         <p className='center max-4'>
-          So what are you waiting for? Your new website is waiting for you!{' '}
+          So what are you waiting for? Let's get your business a website.
         </p>
         <Spacer height={theme.spacing.four} />
         <Button className='center' primary>
           Contact Me
         </Button>
       </Section>
+      <span id='what-i-do'></span>
       <Section background='#f7f7f7'>
         <SmallTitle className='center'>What I Do</SmallTitle>
         <Title type='h2' className='center'>

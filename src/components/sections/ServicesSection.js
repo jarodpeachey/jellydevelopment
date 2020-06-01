@@ -18,7 +18,7 @@ const ServicesSection = () => {
 
   return (
     <div>
-      <Section background={`#f7f7f7`}>
+      <Section background={`#ffffff`}>
         <SmallTitle className='center' small>
           My Services
         </SmallTitle>

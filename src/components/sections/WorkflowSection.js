@@ -28,6 +28,7 @@ const WorkflowSection = ({ data }) => {
 
   return (
     <div>
+      <span id='how-i-do-it'></span>
       <Section background={`#fff`}>
         <SmallTitle small>How I Do It</SmallTitle>
         <Title className='max-2' type='h2'>
