@@ -33,5 +33,12 @@ module.exports = {
     // `gatsby-plugin-offline`,
     'gatsby-plugin-styled-components',
     'gatsby-plugin-linaria',
+    {
+      resolve: 'gatsby-plugin-zopfli',
+      options: {
+        extensions: ['css', 'html', 'js', 'svg'],
+      },
+    },
+    'gatsby-plugin-sitemap',
   ],
 };
