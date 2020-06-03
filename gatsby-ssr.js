@@ -9,9 +9,11 @@ export const wrapRootElement = ({ element }) => {
 
   return (
     <AppProvider>
-      <StylesProvider>
-        <Layout>{element}</Layout>
-      </StylesProvider>
+      <StylesProvider>{element}</StylesProvider>
     </AppProvider>
   );
+};
+
+export const wrapPageElement = ({ element }) => {
+  return <Layout>{element}</Layout>;
 };

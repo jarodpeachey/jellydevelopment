@@ -12,7 +12,7 @@ const ThankYouPage = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <Layout>
+    <span>
       <SEO title='Thanks! - Jelly Development' />
       <MainWrapper theme={theme}>
         <BackgroundImage>
@@ -33,7 +33,7 @@ const ThankYouPage = () => {
           </Card>
         </div>
       </MainWrapper>
-    </Layout>
+    </span>
   );
 };
 

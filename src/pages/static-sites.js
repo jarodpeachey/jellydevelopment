@@ -13,7 +13,7 @@ import TeamSection from '../components/sections/TeamSection';
 import StaticSitesSection from '../components/sections/StaticSitesSection';
 
 const StaticSitesPage = () => (
-  <Layout>
+  <span>
     <SEO title='Home' />
     <PageHero
       title='Website Development'
@@ -22,7 +22,7 @@ const StaticSitesPage = () => (
     <svg
       viewBox='0 0 1428 174'
       version='1.1'
-      style={{ marginBottom: '-2px' }}
+      style={{ marginBottom: '-7px' }}
       xmlns='http://www.w3.org/2000/svg'
     >
       <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
@@ -59,7 +59,7 @@ const StaticSitesPage = () => (
     <WorkflowSection /> */}
     <StaticSitesSection />
     {/* <TeamSection /> */}
-  </Layout>
+  </span>
 );
 
 export default StaticSitesPage;

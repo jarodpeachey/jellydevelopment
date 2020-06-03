@@ -13,7 +13,7 @@ import TeamSection from '../components/sections/TeamSection';
 import CustomSolutionsSection from '../components/sections/CustomSolutionsSection';
 
 const CustomSolutionsPage = () => (
-  <Layout>
+  <span>
     <SEO title='Home' />
     <PageHero
       title='Custom JAMstack Solutions'
@@ -23,7 +23,7 @@ const CustomSolutionsPage = () => (
       viewBox='0 0 1428 174'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
-      style={{ marginBottom: '-2px' }}
+      style={{ marginBottom: '-7px' }}
     >
       <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
         <g
@@ -59,7 +59,7 @@ const CustomSolutionsPage = () => (
     <WorkflowSection /> */}
     <CustomSolutionsSection />
     {/* <TeamSection /> */}
-  </Layout>
+  </span>
 );
 
 export default CustomSolutionsPage;

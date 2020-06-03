@@ -12,14 +12,14 @@ import ContactSection from '../components/sections/ContactSection';
 import TeamSection from '../components/sections/TeamSection';
 
 const ContactPage = () => (
-  <Layout>
+  <span>
     <SEO title='Home' />
     <PageHero title='Contact Me' subtitle="Let's make a website!" />
     <svg
       viewBox='0 0 1428 174'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
-      style={{ marginBottom: '-2px' }}
+      style={{ marginBottom: '-7px' }}
     >
       <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
         <g
@@ -55,7 +55,7 @@ const ContactPage = () => (
     <WorkflowSection /> */}
     <ContactSection />
     {/* <TeamSection /> */}
-  </Layout>
+  </span>
 );
 
 export default ContactPage;
