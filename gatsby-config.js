@@ -4,6 +4,7 @@ module.exports = {
     description:
       'JAMstack website development. Custom website solutions and integrations for businesses and developers.',
     author: '@gatsbyjs',
+    siteUrl: 'https://jellydevelopment.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
