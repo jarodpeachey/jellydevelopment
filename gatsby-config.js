@@ -15,6 +15,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-cosmicjs',
+      options: {
+        bucketSlug: 'jelly-development', // Bucket Slug
+        objectTypes: ['posts', 'categories'], // List of the Object Types you want to be able to request from Gatsby.
+        apiAccess: {
+          read_key: 'vIhcYABflIb3IjpLFVCKbIdGCcKw8a3934CZ1g1CN5IcOtwxka',
+        },
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

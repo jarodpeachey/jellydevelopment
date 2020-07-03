@@ -68,6 +68,10 @@ const Header = ({ siteTitle }) => {
     }
   };
 
+  const onMenuItemClick = () => {
+    toggleFunction();
+  };
+
   return (
     <div>
       {typeof window !== 'undefined' &&
@@ -99,48 +103,21 @@ const Header = ({ siteTitle }) => {
                 >
                   Jelly
                 </SiteTitle>
-                {isBrowser() &&
-                !window.location.pathname.includes('dashboard') ? (
-                  <>
-                    <Menu theme={theme} scrolled={scrolled} />
-                    {/* <MobileMenu scrolled={scrolled} /> */}
-                    <MobileMenuToggle
-                      theme={theme}
-                      scrolled={scrolled}
-                      onClick={toggleFunction}
-                      open={open}
-                    >
-                      <MobileMenuRotate theme={theme} open={open}>
-                        <span />
-                        <span />
-                        <span />
-                      </MobileMenuRotate>
-                    </MobileMenuToggle>
-                  </>
-                ) : (
-                  <AccountMenuToggle
-                    theme={theme}
-                    scrolled={scrolled}
-                    onClick={accountToggleFunction}
-                    open={accountOpen}
-                  >
-                    <FontAwesomeIcon icon='user' />
-                    <AccountMenu
-                      theme={theme}
-                      open={accountOpen}
-                      scolled={scrolled}
-                    >
-                      <MobileMenuItems theme={theme} open={accountOpen}>
-                        <AccountMenuItem theme={theme} href='/'>
-                          Home
-                        </AccountMenuItem>
-                        <AccountMenuItem theme={theme} href='/'>
-                          Profile
-                        </AccountMenuItem>
-                      </MobileMenuItems>
-                    </AccountMenu>
-                  </AccountMenuToggle>
-                )}
+
+                <Menu theme={theme} scrolled={scrolled} />
+                {/* <MobileMenu scrolled={scrolled} /> */}
+                <MobileMenuToggle
+                  theme={theme}
+                  scrolled={scrolled}
+                  onClick={toggleFunction}
+                  open={open}
+                >
+                  <MobileMenuRotate theme={theme} open={open}>
+                    <span />
+                    <span />
+                    <span />
+                  </MobileMenuRotate>
+                </MobileMenuToggle>
               </Flex>
             </div>
             {/* <MobileMenuOverlay open={open}> */}
@@ -153,11 +130,35 @@ const Header = ({ siteTitle }) => {
             scrolled={scrolled}
             open={open}
           >
+            <div style={{ padding: '0px 24px 0px 0px' }}>
+              <Flex theme={theme}>
+                <MobileMenuToggle
+                  theme={theme}
+                  scrolled={scrolled}
+                  onClick={toggleFunction}
+                  open={open}
+                >
+                  <MobileMenuRotate theme={theme} open={open}>
+                    <span />
+                    <span />
+                    <span />
+                  </MobileMenuRotate>
+                </MobileMenuToggle>
+              </Flex>
+            </div>
             <div className='container'>
-              <MobileMenuItem scrolled={scrolled} theme={theme}>
+              <MobileMenuItem
+                onClick={() => onMenuItemClick()}
+                scrolled={scrolled}
+                theme={theme}
+              >
                 <Link to='/'>Home</Link>
               </MobileMenuItem>
-              <MobileMenuItem scrolled={scrolled} theme={theme}>
+              <MobileMenuItem
+                onClick={() => onMenuItemClick()}
+                scrolled={scrolled}
+                theme={theme}
+              >
                 <Link to='/about'>About</Link>
               </MobileMenuItem>
               <MobileMenuItem
@@ -183,19 +184,29 @@ const Header = ({ siteTitle }) => {
                 </span>
                 <SubMenuWrapper theme={theme} open={subMenuOpen}>
                   <SubMenu theme={theme} open={subMenuOpen}>
-                    <SubMenuItem theme={theme}>
+                    <SubMenuItem
+                      onClick={() => onMenuItemClick()}
+                      theme={theme}
+                    >
                       <Link to='/static-sites'>Static Websites</Link>
                     </SubMenuItem>
                     {/* <SubMenuItem theme={theme}>
                       <Link to='/'>Wordpress Transfers</Link>
                     </SubMenuItem> */}
-                    <SubMenuItem theme={theme}>
+                    <SubMenuItem
+                      onClick={() => onMenuItemClick()}
+                      theme={theme}
+                    >
                       <Link to='/custom-solutions'>Custom Solutions</Link>
                     </SubMenuItem>
                   </SubMenu>
                 </SubMenuWrapper>
               </MobileMenuItem>
-              <MobileMenuItem theme={theme} scrolled={scrolled}>
+              <MobileMenuItem
+                onClick={() => onMenuItemClick()}
+                theme={theme}
+                scrolled={scrolled}
+              >
                 <Link to='/contact'>Contact</Link>
               </MobileMenuItem>
             </div>
@@ -212,13 +223,11 @@ const Wrapper = styled.header`
     padding-bottom: 16px;
     margin-top: ${(props) =>
       props.open ? 30 : props.scrolled ? 0 : 30 - props.scrollTop / 2}px;
-    padding-left: ${(props) =>
-      props.width > 769 ? '48px' : props.open ? '48px' : '24px'};
-    padding-right: ${(props) =>
-      props.width > 769 ? '48px' : props.open ? '48px' : '24px'};
+    padding-left: ${(props) => (props.width > 769 ? '48px' : '24px')};
+    padding-right: ${(props) => (props.width > 769 ? '48px' : '24px')};
     transition: all 0.25s ease-out;
   }
-  z-index: 999999999999999;
+  z-index: 10;
   background: ${(props) =>
     props.open ? 'transparent' : props.scrolled ? '#ffffffef' : 'transparent'};
   transition: ${(props) =>
@@ -231,7 +240,7 @@ const Wrapper = styled.header`
   top: 0;
   right: 0;
   bottom: auto;
-  z-index: 999;
+  z-index: 10;
 `;
 
 const Flex = styled.div`
@@ -277,7 +286,6 @@ const SiteTitle = styled.h1`
 
 const MobileMenuToggle = styled.div`
   display: none;
-  z-index: 9999;
   width: 30px;
   height: 30px;
   @media (max-width: 768px) {
@@ -287,7 +295,7 @@ const MobileMenuToggle = styled.div`
     transition: all .25s ease-out;
   cursor: pointer;
   margin-left: auto;
-  position: ${(props) => (props.open ? 'relative' : 'static')};
+  // position: ${(props) => (props.open ? 'relative' : 'static')};
   // right: ${(props) => (props.open ? '12px' : 'none')};
   span {
     display: block;
@@ -338,7 +346,7 @@ const MobileMenu = styled.div`
     opacity 0.1s .05s ease-out
       ${(props) => (props.open ? ', visibility 0s 0s' : ', visibility 0s .2s')};
   transform: ${(props) => (props.open ? 'scale(1)' : 'scale(.98)')};
-  z-index: 99999;
+  z-index: 99999 !important;
   .container {
     padding: 0px 48px !important;
   }
@@ -352,7 +360,7 @@ const MobileMenu = styled.div`
   overflow: hidden;
   padding: 24px 0;
   top: 0;
-  padding-top: 64px;
+  // padding-top: 64px;
   margin-top: 24px;
   background: white;
   width: 100%;
