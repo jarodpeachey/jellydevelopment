@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Jelly Development - Blazing Fast JAMstack Websites`,
-    description: `Custom JAMstack website development. High-performance, extremely secure websites for you and your business.`,
-    defaultTitle: `Jarod Peachey - Front End Web Developer`,
-    defaultDescription: `Custom JAMstack website development. High-performance, extremely secure websites for you and your business.`,
+    title: 'Jelly Development - Blazing Fast JAMstack Websites',
+    description: 'Custom JAMstack website development. High-performance, extremely secure websites for you and your business.',
+    defaultTitle: 'Jarod Peachey - Front End Web Developer',
+    defaultDescription: 'Custom JAMstack website development. High-performance, extremely secure websites for you and your business.',
     baseUrl: '/',
     author: '@jarod_peachey',
     siteUrl: 'https://jellydevelopment.com',
