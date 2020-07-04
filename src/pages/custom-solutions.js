@@ -14,7 +14,7 @@ import CustomSolutionsSection from '../components/sections/CustomSolutionsSectio
 
 const CustomSolutionsPage = () => (
   <span>
-    <SEO title='Home' />
+    <SEO title='Custom JAMstack Solutions - Jelly Development' />
     <PageHero
       title='Custom JAMstack Solutions'
       subtitle='Business-focused JAMstack development. Fully custom, fully static.'

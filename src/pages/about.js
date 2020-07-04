@@ -13,7 +13,7 @@ import TeamSection from '../components/sections/TeamSection';
 
 const AboutPage = () => (
   <span>
-    <SEO title='Home' />
+    <SEO title='About - Jelly Development' />
     <PageHero
       title='About Jelly Development'
       subtitle='Modern web solutions, built on the JAMstack.'

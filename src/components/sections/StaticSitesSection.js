@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import React, { useContext, useState } from 'react';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../layout/Section';
 import Row from '../grid/Row';
-import { ThemeContext } from '../theme';
+import { theme } from '../theme';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import control from '../../images/control.png';
@@ -18,15 +18,73 @@ import support from '../../images/support.png';
 import custom from '../../images/custom.png';
 import easy from '../../images/easy.png';
 import responsive from '../../images/responsive.png';
+import speed from '../../images/speed.png';
+import security from '../../images/security.png';
 import Card from '../Card';
 import Button from '../Button';
+import Tabs from '../Tabs';
+import Tab from '../Tab';
+import TabContent from '../TabContent';
 
 const StaticSitesSection = ({ data }) => {
-  const theme = useContext(ThemeContext);
+  const [activeTab, setActiveTab] = useState('design');
 
   return (
     <div>
       <Section background='#ffffff'>
+        <SmallTitle small>The Benefits</SmallTitle>
+        <Title type='h2' className='max-3'>
+          Faster Website, Better Security, Lower Cost
+        </Title>
+        <p className='max-4'>
+          The JAMstack is a modern way of building websites that moves away from
+          large, hard-to-manage platforms like Wordpress in favor of the next
+          generation of websites.
+        </p>
+        <p className='max-4'>
+          Not only are JAMstack sites blazing fast: they're extremely secure and
+          easy to manage as well. Plus, with reduced website size, you'll pay
+          less for hosting than you would using Wordpress or something else.
+        </p>
+        <Spacer height={theme.spacing.six} />
+        <Row spacing={[24, 24]} breakpoints={[769, 1200]}>
+          <Feature widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='icon' src={speed} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>High Performance</FeatureTitle>
+            <FeatureDescription>
+              JAMstack websites can load in under 1s, over 6 seconds less than
+              the average website load time. JAMstack websites allow you to
+              prevent over 50% of your users from clicking away before the page
+              loads.
+            </FeatureDescription>
+          </Feature>
+          <Feature widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='icon' src={security} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Secure</FeatureTitle>
+            <FeatureDescription>
+              JAMstack websites use a new database method called serverless
+              architecture. It allows you to retrieve your data for your site
+              WITHOUT any way for hackers to steal or change your data.
+            </FeatureDescription>
+          </Feature>
+          <Feature widths={[6, 4]}>
+            <FeatureIcon>
+              <img className='icon' src={cost} />
+            </FeatureIcon>
+            <FeatureTitle className='mt-4'>Cheap</FeatureTitle>
+            <FeatureDescription>
+              Modern websites are extremely cheap. You pay absolutely nothing
+              for hosting your website until you reach 1,000s of users. Plus,
+              you'll save money on maintenance and database management.
+            </FeatureDescription>
+          </Feature>
+        </Row>
+      </Section>
+      <Section background='#f7f7f7'>
         <SmallTitle className='center' small>
           What You Get
         </SmallTitle>
@@ -44,55 +102,86 @@ const StaticSitesSection = ({ data }) => {
           to manage your site, without large overhead costs.
         </p>
         <Spacer height={theme.spacing.six} />
-        <Row spacing={[24, 24]} breakpoints={[769, 1200]}>
-          <Feature widths={[6, 3]}>
-            <FeatureIcon>
-              <img className='icon' src={color} />
-            </FeatureIcon>
-            <FeatureTitle className='mt-4'>Web Design</FeatureTitle>
-            <FeatureDescription>
-              Clean and modern websites that work on all screen sizes. I'll
-              create a custom design system that's unique to your brand,
-              allowing your business to stand out on the web and create a great
-              user experience.
-            </FeatureDescription>
-          </Feature>
-          <Feature widths={[6, 3]}>
-            <FeatureIcon>
-              <img className='icon' src={website} />
-            </FeatureIcon>
-            <FeatureTitle className='mt-4'>Web Development</FeatureTitle>
-            <FeatureDescription>
-              Security and performance are always top priority when I'm
-              developing your website. You'll get a website that's easy to
-              manage and update, even on your own.
-            </FeatureDescription>
-          </Feature>
-          <Feature widths={[6, 3]}>
-            <FeatureIcon>
-              <img className='icon' src={hosting} />
-            </FeatureIcon>
-            <FeatureTitle className='mt-4'>Hosting</FeatureTitle>
-            <FeatureDescription>
-              Save money with a hosting provider built for simplicity and
-              performance. Your site will be simple to manage, and won't cost
-              you anything until your online business scales.
-            </FeatureDescription>
-          </Feature>
-          <Feature widths={[6, 3]}>
-            <FeatureIcon>
-              <img className='icon' src={seo} />
-            </FeatureIcon>
-            <FeatureTitle className='mt-4'>
-              Search Engine Optimization
-            </FeatureTitle>
-            <FeatureDescription>
-              After your website is online, getting people to it is the next
-              step. I make sure that I develop your website with SEO in mind, so
-              your audience can find you easier.
-            </FeatureDescription>
-          </Feature>
+        <Row spacing={[12]} breakpoints={[111111]}>
+          <div widths={[4, 3]}>
+            <Tabs
+              onChange={(value) => setActiveTab(value)}
+              fullWidth
+              value={activeTab}
+            >
+              <Tab name='design'>
+                Design
+              </Tab>
+              <Tab name='develop'>
+                Develop
+              </Tab>
+              <Tab name='hosting'>
+                Hosting
+              </Tab>
+              <Tab name='seo'>
+                SEO
+              </Tab>
+            </Tabs>
+          </div>
+          <div widths={[8, 9]}>
+            <TabContent name='design' value={activeTab}>
+              <Feature>
+                <FeatureIcon>
+                  <img className='icon' src={color} />
+                </FeatureIcon>
+                <FeatureTitle className='mt-4'>Web Design</FeatureTitle>
+                <FeatureDescription>
+                  Clean and modern websites that work on all screen sizes. I'll
+                  create a custom design system that's unique to your brand,
+                  allowing your business to stand out on the web and create a
+                  great user experience.
+                </FeatureDescription>
+              </Feature>
+            </TabContent>
+            <TabContent name='develop' value={activeTab}>
+              <Feature widths={[6, 3]}>
+                <FeatureIcon>
+                  <img className='icon' src={website} />
+                </FeatureIcon>
+                <FeatureTitle className='mt-4'>Web Development</FeatureTitle>
+                <FeatureDescription>
+                  Security and performance are always top priority when I'm
+                  developing your website. You'll get a website that's easy to
+                  manage and update, even on your own.
+                </FeatureDescription>
+              </Feature>
+            </TabContent>
+            <TabContent name='hosting' value={activeTab}>
+              <Feature widths={[6, 3]}>
+                <FeatureIcon>
+                  <img className='icon' src={hosting} />
+                </FeatureIcon>
+                <FeatureTitle className='mt-4'>Hosting</FeatureTitle>
+                <FeatureDescription>
+                  Save money with a hosting provider built for simplicity and
+                  performance. Your site will be simple to manage, and won't
+                  cost you anything until your online business scales.
+                </FeatureDescription>
+              </Feature>
+            </TabContent>
+            <TabContent name='seo' value={activeTab}>
+              <Feature widths={[6, 3]}>
+                <FeatureIcon>
+                  <img className='icon' src={seo} />
+                </FeatureIcon>
+                <FeatureTitle className='mt-4'>
+                  Search Engine Optimization
+                </FeatureTitle>
+                <FeatureDescription>
+                  After your website is online, getting people to it is the next
+                  step. I make sure that I develop your website with SEO in
+                  mind, so your audience can find you easier.
+                </FeatureDescription>
+              </Feature>
+            </TabContent>
+          </div>
         </Row>
+        <Row spacing={[24, 24]} breakpoints={[769, 1200]}></Row>
       </Section>
       <Section background='transparent'>
         <p className='center light-1 mobile-font-4 font-5' small>

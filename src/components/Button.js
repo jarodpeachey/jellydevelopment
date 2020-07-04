@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { css } from 'linaria';
 import { Link } from 'gatsby';
 import { ThemeContext } from './theme';

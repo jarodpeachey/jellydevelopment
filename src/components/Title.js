@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-fragments */
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { css } from 'linaria';
 import { Link } from 'gatsby';
 import { ThemeContext } from './theme';
@@ -75,17 +75,17 @@ const SmallTitle = ({ children, className = '' }) => {
 
 const H1 = styled.h1`
   font-weight: ${(props) => (props.weight ? props.weight : '700')} !important;
-  margin-bottom: ${(props) => (props.underline ? 'none' : 'inherit')};
+  margin-bottom: ${(props) => (props.underline ? 'none' : 'initial')};
   margin-top: 0;
 `;
 const H2 = styled.h2`
   font-weight: ${(props) => (props.weight ? props.weight : '700')} !important;
-  margin-bottom: ${(props) => (props.underline ? 'none' : 'inherit')};
+  margin-bottom: ${(props) => (props.underline ? 'none' : 'initial')};
   margin-top: 0;
 `;
 const H3 = styled.h3`
   font-weight: ${(props) => (props.weight ? props.weight : '700')} !important;
-  margin-bottom: ${(props) => (props.underline ? 'none' : 'inherit')};
+  margin-bottom: ${(props) => (props.underline ? 'none' : 'initial')};
   margin-top: 0;
 `;
 const Underline = styled.div`

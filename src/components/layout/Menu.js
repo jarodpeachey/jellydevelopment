@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Button from '../Button';
 import { ThemeContext } from '../theme';

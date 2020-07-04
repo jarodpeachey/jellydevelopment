@@ -13,7 +13,7 @@ import TeamSection from '../components/sections/TeamSection';
 
 const ContactPage = () => (
   <span>
-    <SEO title='Home' />
+    <SEO title='Contact - Jelly Development' />
     <PageHero title='Contact Me' subtitle="Let's make a website!" />
     <svg
       viewBox='0 0 1428 174'

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-fragments */
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import Row from '../grid/Row';
 import { ThemeContext } from '../theme';
 import { Title, SmallTitle } from '../Title';

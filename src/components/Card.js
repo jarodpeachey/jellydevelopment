@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { css } from 'linaria';
 import { Link } from 'gatsby';
 import { ThemeContext } from './theme';
@@ -10,11 +10,12 @@ const Card = ({
   subtitle,
   className = '',
   background = '#ffffff',
+  customStyles
 }) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <StyledCard background={background} className={className} theme={theme}>
+    <StyledCard customStyles={customStyles} background={background} className={className} theme={theme}>
       {title && <Title border={!subtitle}>{title}</Title>}
       {subtitle && <Subtitle className='weight-light'>{subtitle}</Subtitle>}
       {children}
@@ -29,6 +30,7 @@ const StyledCard = styled.div`
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.gray.three};
   // box-shadow: ${(props) => props.theme.shadow.one};
+  ${props => props.customStyles}
 `;
 
 const Title = styled.h2`

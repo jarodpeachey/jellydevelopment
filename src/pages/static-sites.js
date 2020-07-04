@@ -14,10 +14,13 @@ import StaticSitesSection from '../components/sections/StaticSitesSection';
 
 const StaticSitesPage = () => (
   <span>
-    <SEO title='Home' />
+    <SEO
+      title='Blazing Fast JAMstack Websites - Jelly Development'
+      description='JAMstack websites are blazing fast and easy to manage. Using Javascript, APIs and Markdown, the JAMstack allows your website to be faster and more secure than ever.'
+    />
     <PageHero
-      title='Website Development'
-      subtitle='Your one-stop shop for your new website. Clean design, high-quality development, and dead-simple management'
+      title='Blazing Fast Websites'
+      subtitle='Your one-stop shop for the perfect website for your business. Clean design, high-quality development, and dead-simple management'
     />
     <svg
       viewBox='0 0 1428 174'

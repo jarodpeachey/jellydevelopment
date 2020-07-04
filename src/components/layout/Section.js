@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { css } from 'linaria';
 import { ThemeContext } from '../theme';
 import Card from '../Card';

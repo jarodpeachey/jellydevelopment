@@ -1,7 +1,7 @@
 import Card from './Card';
 import Button from './Button';
 import React, { useState, useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { ThemeContext } from './theme';
 import Row from './grid/Row';
 

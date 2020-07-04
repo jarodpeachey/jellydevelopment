@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../layout/Section';
 import Row from '../grid/Row';
-import { ThemeContext } from '../theme';
+import { theme } from '../theme';
 import speed from '../../images/speed.png';
 import security from '../../images/security.png';
 import scalability from '../../images/scalability.png';
@@ -14,8 +14,6 @@ import Button from '../Button';
 import Card from '../Card';
 
 const GetStartedSection = ({ data, card, className = '' }) => {
-  const theme = useContext(ThemeContext);
-
   return (
     <div>
       {card ? (

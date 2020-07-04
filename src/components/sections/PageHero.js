@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-fragments */
 import React, { useState, useEffect, useContext } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import Button from '../Button';
 import { ThemeContext } from '../theme';
 

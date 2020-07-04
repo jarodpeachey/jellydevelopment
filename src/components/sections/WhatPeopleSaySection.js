@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../layout/Section';
 import Row from '../grid/Row';
-import { ThemeContext } from '../theme';
+import { theme } from '../theme';
 import speed from '../../images/speed.png';
 import security from '../../images/security.png';
 import computer from '../../images/computer.png';
@@ -16,8 +16,6 @@ import Button from '../Button';
 import { DaleMcGrewImage } from '../Image';
 
 const WhatPeopleSaySection = ({ data }) => {
-  const theme = useContext(ThemeContext);
-
   return (
     <div>
       <span id='get-started'></span>

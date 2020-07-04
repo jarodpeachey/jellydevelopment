@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jelly Development - Custom JAMstack Websites and Solutions',
-    description:
-      'JAMstack website development. Custom website solutions and integrations for businesses and developers.',
-    author: '@gatsbyjs',
+    title: `Jelly Development - Blazing Fast JAMstack Websites`,
+    description: `Custom JAMstack website development. High-performance, extremely secure websites for you and your business.`,
+    defaultTitle: `Jarod Peachey - Front End Web Developer`,
+    defaultDescription: `Custom JAMstack website development. High-performance, extremely secure websites for you and your business.`,
+    baseUrl: '/',
+    author: '@jarod_peachey',
     siteUrl: 'https://jellydevelopment.com',
   },
   plugins: [
@@ -43,7 +45,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-linaria',
     {
       resolve: 'gatsby-plugin-zopfli',
       options: {

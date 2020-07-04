@@ -3,7 +3,7 @@
 // import PropTypes from 'prop-types';
 import React, { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Menu from './Menu';
 import { isBrowser } from '../../utils/isBrowser';
@@ -188,7 +188,7 @@ const Header = ({ siteTitle }) => {
                       onClick={() => onMenuItemClick()}
                       theme={theme}
                     >
-                      <Link to='/static-sites'>Static Websites</Link>
+                      <Link to='/static-sites'>JAMstack Websites</Link>
                     </SubMenuItem>
                     {/* <SubMenuItem theme={theme}>
                       <Link to='/'>Wordpress Transfers</Link>

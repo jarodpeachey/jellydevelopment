@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../layout/Section';
 import Row from '../grid/Row';
-import { ThemeContext } from '../theme';
+import { theme } from '../theme';
 import Spacer from '../Spacer';
 import { Title, SmallTitle } from '../Title';
 import maintenance from '../../images/maintenance.png';
@@ -18,8 +18,6 @@ import Card from '../Card';
 import Button from '../Button';
 
 const CustomSolutionsSection = ({ data }) => {
-  const theme = useContext(ThemeContext);
-
   return (
     <div>
       <Section background='#ffffff'>

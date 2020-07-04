@@ -1,6 +1,6 @@
 // /* eslint-disable react/jsx-fragments */
 // import React, { useState, useEffect } from 'react';
-// import { styled } from 'linaria/react';
+// import styled from 'styled-components';
 // import { Link } from 'gatsby';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import Row from '../grid/row';

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../layout/Section';
 import Row from '../grid/Row';
-import { ThemeContext } from '../theme';
+import { theme } from '../theme';
 import speed from '../../images/speed.png';
 import security from '../../images/security.png';
 import scalability from '../../images/scalability.png';
@@ -24,8 +24,6 @@ import edit from '../../images/edit.png';
 import complete from '../../images/complete.png';
 
 const WorkflowSection = ({ data }) => {
-  const theme = useContext(ThemeContext);
-
   return (
     <div>
       <span id='how-i-do-it'></span>
@@ -109,7 +107,7 @@ const WorkflowSection = ({ data }) => {
             </p>
           </Item>
         </Row>
-        <Button className='center' primary>
+        <Button className='center' link='/contact' primary>
           Get A Quote
         </Button>
       </Section>
