@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { css } from 'linaria';
 import { library } from '@fortawesome/fontawesome-svg-core';
